@@ -3,9 +3,11 @@
   <h1>LMTokenCook</h1>
   <h3 align="center" style="font-weight: normal; margin-top: -10px; margin-bottom: 10px;">Cook Your Files into AI-Ready Servings 🍳</h3>
   <p><strong>A tool for AI power-users by <a href="https://www.dropshockdigital.com" target="_blank" rel="noopener noreferrer">Steven Seagondollar, DropShock Digital LLC</a></strong></p>
+  <br>
   <a href="https://www.dropshockdigital.com" target="_blank" rel="noopener noreferrer">
     <img src="assets/(White) DropShock Digital - Photography Watermark Version 2.png" alt="DropShock Digital - Creators for Creators" width="350" style="margin-top: 5px; margin-bottom: 20px;"/>
   </a>
+  <br>
   <p>
     <a href="LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/></a>
     <a href="https://www.python.org/downloads/release/python-380/"><img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="Python 3.8+"/></a>
