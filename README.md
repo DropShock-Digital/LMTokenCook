@@ -1,4 +1,3 @@
-```markdown
 <div align="center">
   <img src="assets/LMTC_Patch.png" alt="LMTokenCook Logo" width="150" style="margin-bottom:10px;"/>
   <h1>LMTokenCook</h1>
@@ -589,4 +588,3 @@ A copy of the license is included in the `LICENSE.md` file in the root of this p
 *   The software is provided "AS IS", without warranty of any kind. The authors or copyright holders are not liable for any claim, damages, or other liability.
 
 Please review the full `LICENSE.md` text for complete details.
-```
