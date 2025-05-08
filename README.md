@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/LMTC_Patch.png" alt="LMTokenCook Logo" width="150" style="margin-bottom:10px;"/>
+  <img src="assets/LMTC_Patch.png" alt="LMTokenCook Logo" width="500" style="margin-bottom:10px;"/>
   <h1>LMTokenCook</h1>
   <h3 align="center" style="font-weight: normal; margin-top: -10px; margin-bottom: 10px;">Cook Your Files into AI-Ready Servings 🍳</h3>
   <p><strong>A tool for AI power-users by <a href="https://www.dropshockdigital.com" target="_blank" rel="noopener noreferrer">Steven Seagondollar, DropShock Digital LLC</a></strong></p>
@@ -37,6 +37,7 @@ Get the latest version of LMTokenCook directly:
 <div align="center">
   <figure style="margin: 25px auto;">
     <img src="assets/Program_Preview.png" alt="LMTokenCook GUI Screenshot on macOS" width="75%" style="max-width: 750px; border: 2px solid #FFEB70; border-radius: 10px; box-shadow: 0 6px 12px rgba(0,0,0,0.15);"/>
+    <br>
     <figcaption style="font-size: 0.95em; color: #666; margin-top: 10px;"><em>LMTokenCook's intuitive interface, ready to process your data (macOS version shown, Windows is nearly identical).</em></figcaption>
   </figure>
 </div>
@@ -312,6 +313,7 @@ Using LMTokenCook is straightforward:
     <div align="center" style="margin-top: 20px; margin-bottom: 20px;">
       <figure>
         <img src="assets/working-example.png" alt="Working Example: Gemini receiving multiple LMTokenCook servings" width="60%" style="max-width: 600px; border: 1px solid #FFEB70; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+        <br>
         <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;"><em>Example: Sequentially pasting LMTokenCook servings into Google Gemini, enabling analysis of content far exceeding single prompt limits.</em></figcaption>
       </figure>
     </div>
