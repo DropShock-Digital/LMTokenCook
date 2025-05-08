@@ -7,8 +7,8 @@
   <a href="https://www.dropshockdigital.com" target="_blank" rel="noopener noreferrer">
     <img src="assets/(White) DropShock Digital - Photography Watermark Version 2.png" alt="DropShock Digital - Creators for Creators" width="350" style="margin-top: 5px; margin-bottom: 20px;"/>
   </a>
-  <br>
   <p>
+  <br>
     <a href="LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/></a>
     <a href="https://www.python.org/downloads/release/python-380/"><img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="Python 3.8+"/></a>
     <a href="https://github.com/seagpt/LMTokenCook/releases/latest"><img src="https://img.shields.io/github/v/release/seagpt/LMTokenCook?label=latest%20version" alt="Latest Release"/></a>
