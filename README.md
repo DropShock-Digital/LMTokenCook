@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="assets/LMTC_Patch.png" alt="LMTokenCook Logo" width="500" style="margin-bottom:10px;"/>
+  <img src="assets/LMTC_Patch.png" alt="LMTokenCook Logo" width="400" style="margin-bottom:10px;"/>
   <h1>LMTokenCook</h1>
   <h3 align="center" style="font-weight: normal; margin-top: -10px; margin-bottom: 10px;">Cook Your Files into AI-Ready Servings 🍳</h3>
-  <p><strong>A tool for AI power-users by <a href="https://www.dropshockdigital.com" target="_blank" rel="noopener noreferrer">Steven Seagondollar, DropShock Digital LLC</a></strong></p>
+  <p><strong>A powerful utility for AI users by <a href="https://www.dropshockdigital.com" target="_blank" rel="noopener noreferrer">Steven Seagondollar, DropShock Digital LLC</a></strong></p>
   <br>
   <a href="https://www.dropshockdigital.com" target="_blank" rel="noopener noreferrer">
     <img src="assets/(White) DropShock Digital - Photography Watermark Version 2.png" alt="DropShock Digital - Creators for Creators" width="350" style="margin-top: 5px; margin-bottom: 20px;"/>
@@ -11,32 +11,32 @@
   <br>
     <a href="LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"/></a>
     <a href="https://www.python.org/downloads/release/python-380/"><img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="Python 3.8+"/></a>
-    <a href="https://github.com/seagpt/LMTokenCook/releases/latest"><img src="https://img.shields.io/github/v/release/seagpt/LMTokenCook?label=latest%20version" alt="Latest Release"/></a>
-    <a href="https://github.com/seagpt/LMTokenCook/releases"><img src="https://img.shields.io/github/downloads/seagpt/LMTokenCook/total?label=downloads" alt="Total Downloads"/></a>
+    <a href="https://github.com/seagpt/LMTokenCook/releases/latest"><img src="https://img.shields.io/github/v/release/seagpt/LMTokenCook?label=latest%20version&sort=semver&color=blueviolet" alt="Latest Release"/></a>
+    <a href="https://github.com/seagpt/LMTokenCook/releases"><img src="https://img.shields.io/github/downloads/seagpt/LMTokenCook/total?label=downloads&color=brightgreen" alt="Total Downloads"/></a>
   </p>
 </div>
 
 ---
 
-## 🚀 Quick Download Links
+## 🚀 Quick Download Links (v1.0.0 - First Release)
 
-Get the latest version of LMTokenCook directly:
+Get the first official version of LMTokenCook directly for your operating system:
 
 *   🪟 **Windows:**
-    *   [**LMTokenCook Installer (.exe)**](https://github.com/seagpt/LMTokenCook/releases/latest/download/LMTokenCook_Installer.exe)
-    *   [**LMTokenCook Portable (.zip)**](https://github.com/seagpt/LMTokenCook/releases/latest/download/LMTokenCook_Portable.zip)
+    *   [**LMTokenCook Installer (v1.0.0) (.exe)**](https://github.com/seagpt/LMTokenCook/releases/download/v1.0.0/LMTokenCook_Installer.exe) <!-- Update with actual v1.0.0 EXE link -->
 *   🍎 **macOS:**
-    *   [**LMTokenCook Universal (.dmg)**](https://github.com/seagpt/LMTokenCook/releases/latest/download/LMTokenCook.dmg)
+    *   [**LMTokenCook Universal (v1.0.0) (.dmg.zip)**](https://github.com/seagpt/LMTokenCook/releases/download/v1.0.0/LMTokenCook.dmg.zip) <!-- Update with actual v1.0.0 ZIPPED DMG link -->
+        *(The macOS DMG is provided as a ZIP archive to improve download reliability and help prevent potential security blocks by browsers or operating systems on direct DMG downloads from GitHub.)*
 
 <div align="center" style="margin-top:10px; font-size:0.9em;">
-  <em>Always check the <a href="https://github.com/seagpt/LMTokenCook/releases/latest" target="_blank" rel="noopener noreferrer"><strong>Official Releases Page</strong></a> for the very latest versions, release notes, and other assets.</em>
+  <em>For all versions, including future updates or pre-releases, please visit the <a href="https://github.com/seagpt/LMTokenCook/releases" target="_blank" rel="noopener noreferrer"><strong>Official LMTokenCook Releases Page</strong></a>.</em>
 </div>
 
 ---
 
 <div align="center">
   <figure style="margin: 25px auto;">
-    <img src="assets/Program_Preview.png" alt="LMTokenCook GUI Screenshot on macOS" width="75%" style="max-width: 750px; border: 2px solid #FFEB70; border-radius: 10px; box-shadow: 0 6px 12px rgba(0,0,0,0.15);"/>
+    <img src="assets/Program_Preview.png" alt="LMTokenCook GUI Screenshot on macOS" width="70%" style="max-width: 700px; border: 2px solid #FFEB70; border-radius: 10px; box-shadow: 0 6px 12px rgba(0,0,0,0.15);"/>
     <br>
     <figcaption style="font-size: 0.95em; color: #666; margin-top: 10px;"><em>LMTokenCook's intuitive interface, ready to process your data (macOS version shown, Windows is nearly identical).</em></figcaption>
   </figure>
@@ -46,549 +46,827 @@ Get the latest version of LMTokenCook directly:
 
 ## 📖 Overview: Unleash Your AI's Full Contextual Power
 
-**LMTokenCook** is an indispensable utility for AI power-users, data scientists, researchers, writers, and developers who work extensively with web interface–based Large Language Models (LLMs) such as Google's Gemini family, OpenAI's GPT-4 series (including GPT-4o), and Anthropic's Claude models.
+**LMTokenCook** is an indispensable utility for AI power-users, data scientists, researchers, writers, developers, and anyone working extensively with web interface–based Large Language Models (LLMs) that feature large context windows. This includes popular models like Google's Gemini series, OpenAI's GPT-4 family (including GPT-4o), and Anthropic's Claude models.
 
-Modern LLMs often boast enormous context capabilities (e.g., 1 million to 2 million tokens or more via their APIs), allowing them to "remember" and process vast amounts of information for unparalleled coherence and depth. However, a common frustration arises: their publicly accessible **web interfaces** frequently impose much stricter *per-prompt input limits* (e.g., typically ranging from ~32,000 to ~128,000 tokens, and sometimes less). This creates "The Context Gap" – the 1M token promise versus the 60k prompt reality. How do you provide the *full context* of a large codebase, an entire novel, extensive research documentation, or lengthy transcripts to the LLM if you can't paste it all in one go?
+Modern LLMs often possess enormous context capabilities, sometimes advertised with context windows of 1 million tokens or more, especially when accessed via their APIs. This allows them to "remember" and process vast amounts of information, leading to more coherent, nuanced, and deeply informed responses. However, a common challenge arises when using the publicly accessible **web interfaces** for these models: these interfaces frequently impose much stricter *per-prompt input limits* (e.g., typically ranging from ~32,000 to ~128,000 tokens, and sometimes even less for free tiers or certain model versions). This discrepancy creates what can be called "The Context Gap" – the promise of a massive context window versus the reality of a much smaller single-prompt input capacity. How can you effectively provide the *full context* of a large codebase, an entire book, a collection of extensive research papers, or lengthy meeting transcripts to the LLM if you cannot paste all of that information in one go?
 
-**LMTokenCook is your sophisticated solution.** It elegantly bridges this gap for users who rely on web interfaces rather than direct API access. It systematically processes your local file collections (text, code, documents) and transforms them into LLM-ready input:
+**LMTokenCook is your sophisticated, practical solution to this problem.** It elegantly bridges this context gap, especially for users who rely on web interfaces rather than direct, programmatic API access (which often has higher token limits but may involve costs or require coding skills). LMTokenCook systematically processes your local file collections (containing text, code, or document data) and transforms them into LLM-ready input through a clear, multi-step process:
 
-1.  **🔎 Intelligent Scanning & Consolidation:** LMTokenCook meticulously traverses your selected directory or individual files. It identifies relevant text-based content from a wide array of supported formats (including `.txt`, `.md`, `.py`, `.js`, `.java`, `.c`, `.cpp`, `.html`, `.css`, `.json`, `.xml`, `.docx`, `.pdf` [text layer], `.ipynb`, and many more), while safely skipping binary files, archives, media, and common exclusion folders (like `.git`, `.venv`, `node_modules`).
-2.  **📚 Structured & Enhanced Output:** All extracted text is compiled into a single, meticulously structured data stream. This stream ingeniously begins with a **complete file hierarchy map** of your input, providing the LLM with an "index" or "table of contents" to your data. Following this map, each file's content is then clearly delineated with its full path and an estimated token count, enabling the LLM to understand the origin and scope of each piece of information.
-3.  **🔪 Precision "Serving" Division:** This is where LMTokenCook truly shines. It automatically and intelligently divides the consolidated content into manageable **"servings"** (e.g., `serving_001_of_015.txt`). Each serving is precisely sized according to a token limit *you* specify, perfectly tailored for sequential pasting into your target AI's prompt window. Instructional comments are embedded within each serving to guide both you and the LLM through the process.
-4.  **💡 Enables True Context Augmented Generation (CAG):** By feeding these servings one after another into the LLM's interface – following the simple instructions LMTokenCook provides – you can effectively saturate the LLM's available context window, even if it takes multiple prompts. This ensures the AI operates with the *complete* background information necessary for generating high-quality, contextually aware, and deeply informed responses.
+1.  **🔎 Intelligent Scanning & Consolidation:** LMTokenCook meticulously traverses your selected directory (or individual files). It intelligently identifies relevant text-based content from a wide array of supported file formats (including common plain text files like `.txt` and `.md`; code files like `.py`, `.js`, `.java`, `.c`, `.cpp`, `.html`, `.css`, `.json`, `.xml`; and document formats like `.docx`, `.pdf` [from text layer only, no OCR], and `.ipynb` Jupyter Notebooks, among many others). Importantly, it is designed to safely skip binary files, common archives (like `.zip` or `.tar.gz`), media files (images, audio, video which are not text-based), symbolic links, and common exclusion folders that are usually not relevant for LLM context (e.g., `.git` repositories, `.venv` virtual environments, `node_modules` folders, `__pycache__` directories). This ensures that only relevant textual data is processed, saving time and tokens.
+2.  **📚 Structured & Enhanced Output for LLM Comprehension:** All the extracted text content from your files is compiled into a single, meticulously structured master data stream. This stream ingeniously begins with a **complete file hierarchy map** of your input source. This map acts like an "index" or "table of contents" for your data, providing the LLM with a clear overview of the structure and origin of the information it's about to receive. Following this map, the actual content of each processed file is then clearly delineated with its full path and an estimated token count for that specific file. This clear demarcation helps the LLM to differentiate between information from different files and to better understand the source and scope of each piece of context.
+3.  **🔪 Precision "Serving" Division – The Core Functionality:** This is where LMTokenCook truly shines and provides its main value. If the total token count of your consolidated content exceeds a "Serving Size (Max Tokens)" limit that *you* specify, LMTokenCook automatically and intelligently divides the entire content into multiple, manageable **"servings."** These servings are saved as sequentially named plain text files (e.g., `serving_001_of_015.txt`, `serving_002_of_015.txt`, etc., with zero-padded numbering for correct sorting). Each serving is precisely sized according to your specified token limit, making it perfectly tailored for sequential copying and pasting into your target AI's prompt window without exceeding its input restrictions. Furthermore, instructional comments are embedded within each serving file to guide both you (the user) and the LLM through the multi-part input process.
+4.  **💡 Enables True Context Augmented Generation (CAG) through Web Interfaces:** By feeding these generated servings one after another into the LLM's chat interface – following the simple instructional comments provided within each serving file – you can effectively saturate the LLM's available context window, even if it requires multiple prompts to input all the data. This methodical approach ensures that the AI model operates with the *complete* background information necessary for generating high-quality, contextually aware, and deeply informed responses, analyses, or creative outputs.
 
-LMTokenCook empowers you to leverage the full cognitive power of your AI subscriptions, transforming frustrating input limits into manageable, strategic steps. The output is clean, token-efficient plain text, designed for maximum compatibility and optimal recall by the LLM. **Stop underutilizing your AI – let LMTokenCook prepare the contextual feast!**
+LMTokenCook empowers you to leverage the full cognitive power of your AI subscriptions, even when faced with restrictive web interface input limits. It transforms a potentially frustrating limitation into a series of manageable, strategic steps. The output is always clean, token-efficient plain text, designed for maximum compatibility with various LLM interfaces and for optimal recall and understanding by the AI models. **Stop underutilizing your AI's large context capabilities – let LMTokenCook prepare the contextual feast!**
 
 ---
 
 ## ✨ Key Features: Your AI Preparation Kitchen
 
-LMTokenCook is packed with features meticulously designed to make your interaction with LLMs more productive, powerful, and insightful:
+LMTokenCook is packed with features meticulously designed to make your interaction with Large Language Models more productive, powerful, and insightful, streamlining the often tedious process of preparing large amounts of text data for AI consumption:
 
-*   **🖥️ Cross-Platform & Intuitive GUI:**
-    A sleek, modern, and user-friendly graphical interface built with CustomTkinter. Features an aesthetically pleasing dark theme with vibrant yellow accents, ensuring a comfortable experience during extended use. Natively supports macOS (Universal Binary for Apple Silicon & Intel) and Windows (Installer & Portable versions).
+*   **🖥️ Cross-Platform & Intuitive Graphical User Interface (GUI):**
+    A sleek, modern, and user-friendly graphical interface built with the **CustomTkinter** library. It features an aesthetically pleasing dark theme with vibrant yellow accents, ensuring a comfortable and visually clear experience, even during extended use. LMTokenCook provides native application packages for **macOS (Universal Binary supporting Apple Silicon & Intel)** and **Windows (Installer)**, ensuring a seamless experience on your operating system of choice.
 
-*   **📁 Flexible Input Methods:**
-    Effortlessly select input directories or individual files using a standard system file browser. For added convenience, **drag-and-drop** functionality is supported for quickly adding your target content.
+*   **📁 Flexible Input Methods – Easy Data Ingestion:**
+    Effortlessly select your input source. You can choose entire directories for recursive processing or select one or more individual files using a standard system file browser. For added convenience and speed, LMTokenCook also supports **drag-and-drop** functionality, allowing you to quickly add your target folder or file(s) directly onto the designated area in the GUI.
 
-*   **💾 Organized Timestamped Output:**
-    Each processing run automatically creates a unique, timestamped subfolder within your chosen main output directory (e.g., `Output_YYYY-MM-DD_HH-MM-SS`). This keeps your results clearly separated, organized, and easy to locate, preventing accidental overwrites and facilitating version control.
+*   **💾 Organized Timestamped Output – Keep Your Runs Separate and Clear:**
+    For every processing job you run, LMTokenCook automatically creates a unique, **timestamped subfolder** within your chosen main output directory (e.g., `Output_YYYY-MM-DD_HH-MM-SS`). This meticulous organization keeps the results from each run clearly separated, tidy, and easy to locate later. It prevents accidental overwriting of previous results and facilitates better version control or comparison if you process the same data with different settings.
 
-*   **🧐 Intelligent & Comprehensive File Scanning:**
-    Recursively scans directories, identifying and processing files based on an extensive, extensible list of text, code, and document extensions (see `lmtokencook/scanner.py` for the full, up-to-date list). It intelligently and safely skips binary files, common archives (like `.zip`, `.tar.gz`), media files (images, audio, video), symbolic links, and common exclusion folders (e.g., `.git`, `.venv`, `node_modules`, `__pycache__`), ensuring only relevant textual data is processed.
+*   **🧐 Intelligent & Comprehensive File Scanning – Focus on What Matters:**
+    LMTokenCook recursively scans your specified input directories, intelligently identifying and processing files based on an extensive, and extensible, list of text, code, and document extensions. You can see the full, up-to-date list of supported extensions by looking at the `lmtokencook/scanner.py` file in the source code, but it includes a vast range such as `.txt`, `.md` (Markdown), code files like `.py` (Python), `.js` (JavaScript), `.java`, `.c`, `.cpp`, `.cs` (C#), `.go`, `.rb` (Ruby), `.php`, `.swift`, `.kt` (Kotlin), web files like `.html`, `.css`, data files like `.json`, `.xml`, `.yaml`, scripting files like `.sh`, `.bat`, and many more.
+    Crucially, it is also designed to **safely skip** common file types that are typically not relevant for LLM textual context or cannot be processed as text. This includes:
+    *   Binary files (e.g., executables, compiled libraries).
+    *   Common archives (like `.zip`, `.tar.gz`, `.rar`).
+    *   Media files (images like `.jpg`, `.png`; audio like `.mp3`, `.wav`; video like `.mp4`, `.mov`).
+    *   Symbolic links (to avoid potential infinite loops or unintended processing).
+    *   Commonly excluded folders that usually contain non-source content or large numbers of irrelevant files (e.g., `.git` version control repositories, `.venv` Python virtual environments, `node_modules` JavaScript package folders, `__pycache__` Python bytecode folders).
+    This intelligent filtering ensures that only relevant textual data is processed, saving time, reducing unnecessary token consumption, and preventing errors.
 
-*   **📝 Robust Text Extraction from Diverse Formats:**
-    Leverages dedicated, robust libraries for reliable content extraction:
-    *   **Plain Text & Code:** Numerous formats including `.txt`, `.md`, `.py`, `.js`, `.java`, `.c`, `.cpp`, `.cs`, `.go`, `.rb`, `.php`, `.swift`, `.kt`, `.html`, `.css`, `.json`, `.xml`, `.yaml`, `.sh`, `.bat`, and more.
-    *   **Microsoft Word (`.docx`):** Utilizes `python-docx` for best-effort text extraction from modern Word documents.
-    *   **PDF (`.pdf`):** Employs `pypdf` for best-effort text extraction from PDF files that contain a text layer. **Note:** LMTokenCook does *not* perform Optical Character Recognition (OCR) on image-only PDFs. (PDF support is continuously being refined).
-    *   **Jupyter Notebooks (`.ipynb`):** Intelligently processes notebooks to extract content from both code cells and markdown cells, preserving the textual information.
+*   **📝 Robust Text Extraction from Diverse Formats – Unlock Your Data:**
+    LMTokenCook leverages dedicated, robust Python libraries to ensure reliable content extraction from a variety of common file formats beyond plain text:
+    *   **Plain Text & Numerous Code Formats:** As listed above, a wide array of plain text and source code file types are handled natively.
+    *   **Microsoft Word (`.docx`):** Utilizes the `python-docx` library for best-effort text extraction from modern Microsoft Word documents (files with the `.docx` extension).
+    *   **PDF (`.pdf`):** Employs the `pypdf` library for best-effort text extraction from PDF files. **Important Note:** This PDF extraction relies on the PDF having a proper, selectable text layer. LMTokenCook does *not* perform Optical Character Recognition (OCR) on image-only PDFs (e.g., scanned documents saved as images within a PDF wrapper). For such files, you would need to use an external OCR tool first to convert them into PDFs with a text layer. (PDF support in LMTokenCook is an area of ongoing refinement and improvement).
+    *   **Jupyter Notebooks (`.ipynb`):** Intelligently processes Jupyter Notebook files to extract the textual content from both code cells (the code itself) and markdown cells (the explanatory text, headings, lists, etc.), thereby preserving the valuable textual information contained within these notebooks.
 
-*   **🪙 Accurate Tokenization with `tiktoken`:**
-    Employs OpenAI's official `tiktoken` library, specifically using the `cl100k_base` encoding. This encoding is widely used by models like the GPT-3.5/GPT-4 families and is also highly relevant for Google's Gemini models, ensuring that token counting and serving size calculations are accurate and practical for real-world use.
+*   **🪙 Accurate Tokenization with OpenAI's `tiktoken` – Relevant for Major Models:**
+    For all token counting and serving size calculations, LMTokenCook employs OpenAI's official `tiktoken` library. Specifically, it uses the **`cl100k_base` encoding**. This particular encoding is widely used by many of OpenAI's own leading models, including the GPT-3.5 and GPT-4 families (like GPT-4o). It is also known to be highly relevant and closely aligned with the tokenization methods used by Google's Gemini models and other major LLMs. This ensures that the token counts generated by LMTokenCook are accurate and practical for real-world use, allowing you to size your servings reliably for your target AI model.
 
-*   **🔗 Optimized Concatenation & Smart Formatting:**
-    Efficiently processes and combines text streams from multiple files. Applies optional formatting (like line numbering or skipping empty lines) *before* writing the final output. Crucially, it clearly marks the beginning and end of each individual file's content within the consolidated stream using highly visible delimiters:
+*   **🔗 Optimized Concatenation & Smart Formatting for LLM Readability:**
+    LMTokenCook efficiently processes and combines the text streams extracted from your multiple input files. It can apply optional formatting choices (like adding line numbers or skipping empty lines – see below) *before* writing the final consolidated output. Crucially, for LLM comprehension, it clearly marks the beginning and end of each individual file's content within the consolidated output stream. This is done using highly visible and distinct delimiters:
+    ```text
+    === File Start: path/to/your/specific_file.py ===
+    [Content of specific_file.py goes here...]
+    === File End: path/to/your/specific_file.py (Tokens: XXX) === 
     ```
-    === File Start: path/to/your/file.py ===
-    [Content of file.py]
-    === File End: path/to/your/file.py (Tokens: XXX) ===
-    ```
-    This structure helps the LLM differentiate between files and understand the source of specific information.
+    This structural formatting helps the LLM to differentiate between content originating from different files and to better understand the source, context, and relative size (in tokens) of each piece of information it processes. The file hierarchy map at the beginning of the master output further aids this.
 
-*   **📜 Optional Master File (`masterfile.t-XXXXX.txt`):**
-    Gives you the choice to retain the full, concatenated `masterfile.t-XXXXX.txt` (where `XXXXX` reflects the *final* estimated total token count after all processing and formatting). Alternatively, you can opt to automatically discard it if only the token-based servings are needed, saving valuable disk space.
+*   **📜 Optional Master File (`masterfile.t-XXXXX.txt`) – Keep the Whole Context or Just Servings:**
+    LMTokenCook gives you the choice to retain the full, concatenated `masterfile.t-XXXXX.txt`. The `XXXXX` in the filename will reflect the *final* estimated total token count of all your processed content after any formatting options (like line numbering) have been applied. This master file contains the initial file hierarchy map followed by all file contents. Alternatively, if you only need the token-based servings (because your total context is very large), you can opt to have LMTokenCook automatically discard this master file after creating the servings. This option can save valuable disk space, especially when dealing with extremely large input datasets.
 
-*   **🔢 Intelligent Token-Based Servings with Guidance:**
-    If the total processed token count exceeds your specified "Serving Size (Max Tokens)" limit, the content is automatically divided into sequentially named `serving_XXX_of_YYY.txt` files (e.g., `serving_001_of_015.txt`). Each serving intelligently includes:
-    *   Instructional comments at the beginning (e.g., `# [LMTokenCook] This is serving X of Y. Please wait for all servings before asking your main question.`) to guide your sequential input into the LLM interface and to inform the LLM about the multi-part nature of the context.
-    *   A portion of the file hierarchy map at the start of the *first* serving.
-    *   Careful splitting logic to avoid breaking words or critical syntax where possible.
+*   **🔢 Intelligent Token-Based Servings with Embedded Guidance – The Core Functionality:**
+    This is the central feature of LMTokenCook for handling large contexts. If the total processed token count of your consolidated content exceeds the "Serving Size (Max Tokens)" limit that you specify in the GUI, the content is automatically and intelligently divided into multiple, sequentially named `serving_XXX_of_YYY.txt` files (e.g., `serving_001_of_015.txt`, `serving_002_of_015.txt`, etc., with zero-padded numbering for correct sorting). Each of these serving files is designed to be a self-contained unit for pasting into an LLM and intelligently includes:
+    *   **Instructional Comments:** Clear, concise comments are embedded at the beginning of each serving file (e.g., `# [LMTokenCook] This is serving X of Y. Please wait for all Y servings to be loaded before asking your main question or giving instructions.`). These comments serve two purposes: they guide you (the user) on how to sequentially input the context into the LLM's interface, and they also inform the LLM itself about the multi-part nature of the context it is receiving, helping it to assemble the full picture.
+    *   **File Hierarchy Map (in First Serving):** A portion of the overall file hierarchy map (or the complete map if it's small enough) is typically included at the start of the *first* serving (`serving_001_of_YYY.txt`). This gives the LLM an early overview of the entire dataset structure.
+    *   **Careful Splitting Logic:** LMTokenCook attempts to split the content between servings at logical points (like newlines) to avoid breaking words or critical syntax elements (like code structures or markdown formatting) in the middle where possible, although perfect splitting at the token level across all content types is a complex challenge.
 
-*   **#️⃣ Optional Line Numbering:**
-    Optionally prepend `NNNN ` (a 4-digit, zero-padded line number followed by a space) to every line of the output content. This is incredibly useful for precisely citing specific parts of the source material in your prompts, especially when working with code repositories or legal documents (e.g., "Refer to lines 0123-0145 in `src/utils/parser.py`...").
+*   **#️⃣ Optional Line Numbering – For Precise Referencing:**
+    LMTokenCook provides an option to prepend a line number to every line of the output content (in both the master file and all serving files). The format used is `NNNN ` (a 4-digit, zero-padded line number followed by a single space). This feature is incredibly useful when you need to precisely cite or refer to specific parts of the source material in your subsequent prompts to the LLM. For example, when working with code repositories, you can instruct the LLM to "Refer to lines 0123-0145 in the file `src/utils/parser.py` for the relevant parsing logic..." or when analyzing legal documents, "Consider the clause found at lines 0042-0050 of `contract_agreement.txt`."
 
-*   **🧹 Optional Skip Empty Lines:**
-    Provides an option to remove completely blank lines (lines containing only whitespace) from the output. This can create denser, potentially more token-efficient content, especially useful when dealing with files that have inconsistent formatting.
+*   **🧹 Optional Skip Empty Lines – For Denser, More Token-Efficient Content:**
+    You can choose to have LMTokenCook automatically remove completely blank lines (i.e., lines that contain only whitespace characters, or no characters at all) from the output content. This can help to create a denser, more compact representation of your text, which can be particularly useful for making your input slightly more token-efficient, especially when dealing with files that have inconsistent or excessive empty line formatting.
 
-*   **📊 Detailed Manifest (`manifest.json`):**
-    Every processing run generates a comprehensive JSON report (`manifest.json`) in the output folder, providing full transparency, traceability, and diagnostic information:
-    *   **Run Metadata:** Input/output paths, timestamp, all processing options selected by the user, final file counts (total scanned, processed, skipped, failed), total estimated tokens, and detailed serving information (if applicable).
-    *   **Directory Structure:** A nested dictionary mirroring the scanned input directory, showing the processing status (`PROCESSED`, `SKIPPED_BINARY`, `SKIPPED_EXTENSION`, `ERROR_READING`, etc.) for each file and folder.
-    *   **Processed File Details:** An ordered list for each successfully processed file, including its relative and absolute paths, character offsets in the final concatenated stream (useful for programmatic analysis), character count, *final* estimated token count for that file, the extraction status/method, and the encoding used.
+*   **📊 Detailed Manifest File (`manifest.json`) – Full Transparency and Traceability:**
+    For every processing run, LMTokenCook generates a comprehensive JSON (JavaScript Object Notation) report file named `manifest.json`. This manifest is saved in the unique timestamped output folder for that run and provides full transparency, traceability, and valuable diagnostic information about the entire processing job. The `manifest.json` typically includes:
+    *   **Run Metadata:** Contains a summary of the run, including the input source path(s), the output path for that specific run, the timestamp of when the run was executed, a record of all the processing options that were selected by the user in the GUI (like serving size, line numbering, etc.), final counts of files (total scanned, successfully processed, skipped due to various reasons like being binary or having an unsupported extension, and files that failed extraction), the total estimated token count for all processed content, and detailed information about the servings created (if any), such as the number of servings and the target tokens per serving.
+    *   **Directory Structure (Input Source Map):** Provides a nested dictionary (or similar JSON structure) that mirrors the directory structure of your scanned input source. For each file and folder encountered, it shows its processing status (e.g., `PROCESSED`, `SKIPPED_BINARY`, `SKIPPED_MEDIA`, `SKIPPED_UNSUPPORTED_EXTENSION`, `ERROR_READING_FILE`, etc.) and often a brief reason if it was skipped or failed.
+    *   **Processed File Details (Summary List):** An ordered list containing detailed information for each file that was successfully processed and included in the output. For each processed file, this list typically includes: its unique ID for the run, its relative path (from the input source root), its absolute path on your system, its original character count, its processed character count (which might differ if options like skipping empty lines were used), its *final* estimated token count (after all processing and formatting), the method used for text extraction (e.g., "text/plain", "docx_extraction", "pdf_extraction"), the character encoding that was detected or used for reading the file (e.g., "utf-8"), and a final processing status (e.g., "PROCESSED_OK").
+    *   **Error Log Summary (If any files failed):** A list of any files that were encountered but could not be processed successfully, along with the error message or reason for the failure (e.g., "Failed to extract text: Document is corrupted," "File is password-protected," "Unsupported encoding").
 
-*   **⏳ Responsive User Interface (Background Threading):**
-    Utilizes background threading and a queue system to ensure the GUI remains interactive and responsive during potentially long-running file scanning, text extraction, tokenization, and output writing processes. Provides real-time progress updates via a progress bar and status messages in the log area. A "Cancel" button is available to gracefully halt ongoing operations.
+*   **⏳ Responsive User Interface (Thanks to Background Threading):**
+    LMTokenCook utilizes background threading techniques (using Python's `threading` and `queue.Queue` modules) to ensure that its Graphical User Interface remains interactive and responsive, even when it is performing potentially long-running tasks such as scanning large directories with many files, extracting text from complex document formats, tokenizing huge amounts of content, or writing large output files to disk. This prevents the GUI from freezing or appearing to hang. It provides real-time progress updates to the user via a visual progress bar and status messages displayed in the application's log area. A "Cancel" button is also available, allowing users to gracefully halt ongoing processing operations if needed.
 
-*   **⚙️ Configuration Persistence (`config.json`):**
-    LMTokenCook remembers your last-used output folder path and serving size setting in a `config.json` file. This file is stored in the standard user application configuration directory (via the `appdirs` library), making subsequent uses faster and more convenient.
+*   **⚙️ Configuration Persistence (`config.json`) – Remembers Your Preferences:**
+    LMTokenCook aims to make your workflow more convenient by remembering some of your most frequently used settings between sessions. It saves your last-used output folder path, your last-entered serving size (max tokens), and your last choices for the processing options (Keep Master File, Add Line Numbers, Skip Empty Lines) in a configuration file named `config.json`. This file is stored in the standard user application configuration directory on your operating system (LMTokenCook uses the `appdirs` Python library to determine the correct platform-specific location for this file). This persistence means that when you next launch LMTokenCook, these fields will often be pre-filled with your previous settings, saving you setup time.
 
 ---
 
-## 💡 Understanding the AI Playground: Tokens, Context, Prompts & Models
+## 💡 Understanding the AI Playground: Tokens, Context Windows, Prompt Limits & Major Models
 
-To maximize LMTokenCook's value, it's crucial to understand how Large Language Models (LLMs) "think" about text. Here’s a quick primer:
+To get the absolute most value out of LMTokenCook and the Large Language Models (LLMs) you feed its output to, it's very helpful to have a solid understanding of how these AI systems "think" about and process text. Here’s a quick primer on some key concepts:
 
-*   **🤖 What are LLMs?**
-    Think of models like **Google Gemini** (1.0 Pro, 1.5 Flash/Pro, upcoming 2.0 Ultra), **OpenAI's ChatGPT series** (GPT-3.5, GPT-4, GPT-4 Turbo, GPT-4o), **Anthropic's Claude family** (Claude 2, Claude 3 Haiku/Sonnet/Opus), **Mistral AI's models** (Mistral 7B, Mixtral 8x7B, Mistral Large), and **Meta's Llama series** as highly advanced pattern-matching and text-generation engines. Trained on colossal datasets, they learn the structure, nuances, and information within human language and code, allowing them to perform tasks like summarization, translation, coding, conversation, and complex reasoning.
+*   **🤖 What are Large Language Models (LLMs)?**
+    Think of prominent AI models like **Google's Gemini family** (which includes versions like 1.0 Pro, 1.5 Flash, 1.5 Pro, and potentially upcoming more advanced versions), **OpenAI's ChatGPT series** (which encompasses models like GPT-3.5, GPT-4, GPT-4 Turbo, and the latest GPT-4o), **Anthropic's Claude family** (including Claude 2, and the Claude 3 series with Haiku, Sonnet, and Opus models), **Mistral AI's models** (such as Mistral 7B, the mixture-of-experts Mixtral 8x7B, and the larger Mistral Large), and **Meta's Llama series** (like Llama 2 and Llama 3). These are all examples of highly advanced pattern-matching and text-generation engines. They have been trained on colossal datasets containing text and code from the internet and other sources. Through this training, they learn the intricate structure, nuances, grammar, semantics, and vast amounts of information embedded within human language and various programming languages. This learned knowledge allows them to perform a wide array of complex tasks, including text summarization, translation between languages, writing various kinds of creative content, generating computer code, engaging in coherent conversations, answering questions, and performing complex reasoning based on provided context.
 
-*   **🪙 What are Tokens?**
-    LLMs don't process text character-by-character or even strictly word-by-word. They break input text into **tokens**. A token is the fundamental unit the model "sees" and processes. It could be a whole word (`"language"`), a common part of a word (e.g., `"token"`, `"iza"`, `"tion"` forming "tokenization"), a single character (`"a"`), punctuation (`.`, `?`), or even whitespace. This **tokenization** process uses specific algorithms (like Byte Pair Encoding (BPE), WordPiece, or SentencePiece).
-    **Key Takeaway:** Model limits (context windows, prompt inputs) and API costs are almost always based on *token counts*, not raw character or word counts. Different languages also tokenize with varying efficiency (e.g., English is generally more token-efficient than some other languages). LMTokenCook uses OpenAI's `tiktoken` with the `cl100k_base` encoding, which aligns well with many current high-performance models, making its serving size calculations highly relevant and practical.
+*   **🪙 What are "Tokens" in the Context of LLMs?**
+    LLMs don't process text strictly character-by-character or even always word-by-word in the way humans do. Instead, they first break down the input text (your prompt and any context you provide) into smaller units called **tokens**. A token is the fundamental unit of text that the model "sees" and processes. A single token could represent:
+    *   A whole common word (e.g., `"language"`, `"model"`, `"the"`).
+    *   A common part of a longer word (e.g., the word "tokenization" might be broken into tokens like `"token"`, `"iza"`, and `"tion"`).
+    *   A single character (e.g., the letter `"a"` if it stands alone or is part of a rare word).
+    *   Punctuation marks (e.g., `.`, `?`, `!`, `,`).
+    *   Even whitespace characters (like spaces or newlines) can sometimes be tokens or influence tokenization.
+    This process of converting raw text into a sequence of tokens is called **tokenization**, and it uses specific algorithms (like Byte Pair Encoding (BPE), WordPiece, or SentencePiece, depending on the model).
+    **The Key Takeaway for Users:** Almost all limits imposed by LLM providers (such as context window sizes, prompt input length restrictions) and the costs associated with using their APIs are based on *token counts*, not on raw character counts or word counts. Also, different languages tokenize with varying efficiency; for example, English text generally results in fewer tokens per character or word compared to some other languages. LMTokenCook utilizes OpenAI's `tiktoken` library with the `cl100k_base` encoding for its token counting. This particular encoding is used by many of OpenAI's current high-performance models (like GPT-4) and is also known to be highly relevant and closely aligned with the tokenization methods used by other major models like Google's Gemini series. This makes LMTokenCook's serving size calculations very accurate and practical for real-world use with these leading AI systems.
 
-*   **🧠 What is a Context Window (or Context Length)?**
-    This is the model's **total working memory**, measured in tokens. It represents the maximum span of text (including your input prompt, any preceding conversation turns you provide as history, and sometimes the model's own generated output for that turn) that the model can reference *simultaneously* when generating its next response. A larger context window generally allows for greater coherence over long interactions, deeper understanding of complex documents, and more nuanced reasoning. However, processing larger contexts demands significantly more computational resources, potentially increasing cost and latency. Leading models now offer context windows ranging from 32k tokens up to 1 or 2 million tokens (though the full extent is often more accessible via APIs than web UIs).
+*   **🧠 What is a "Context Window" (also called Context Length)?**
+    The context window of an LLM is essentially its **total working memory** for a given interaction or task, and it's measured in tokens. It represents the maximum span of text that the model can "see" and refer to *simultaneously* when it is generating its next piece of text (its response). This "seen" text includes:
+    *   Your current input prompt (your question or instruction).
+    *   Any preceding turns in the conversation if you are in a chat interface (the history of your messages and the AI's previous responses that you provide as context).
+    *   Sometimes, for certain models or tasks, the model's own generated output for the current turn also counts towards this context window limit.
+    A larger context window generally allows an LLM to maintain greater coherence over longer conversations, to perform deeper analysis of large documents or codebases, and to engage in more nuanced reasoning that draws upon a wider range of information. However, processing larger contexts demands significantly more computational resources (memory and processing power) from the AI provider, which can potentially lead to increased costs (for API users) and higher latency (slower response times). Leading AI models today offer context windows that can range from around 32,000 tokens (32k) up to an impressive 1 million (1M) or even 2 million (2M) tokens, although the full extent of these very large context windows is often more readily accessible and usable via direct API calls rather than through standard public web interfaces.
 
-*   **✍️ What is a Prompt/Input Limit?**
-    This is often the more immediate practical constraint, especially when using **web interfaces**. It's the **maximum number of tokens you can actually submit** in a *single* prompt or message to the LLM. This limit is frequently **much smaller** than the model's total theoretical context window. For example, while Gemini 1.5 Pro boasts a 1M token context window, its web interface might limit a single *text input* to around 60,000-128,000 tokens (file uploads can sometimes bypass this direct text limit but still count towards the overall context). These limits exist for performance optimization, cost control on the provider's side, and user interface usability reasons.
-    **LMTokenCook's "Serving Size (Max Tokens)" setting should be based on this Prompt/Input Limit of your target web interface**, leaving sufficient headroom for your own instructions/questions and the model's anticipated response length. LMTokenCook helps you overcome this input limit by segmenting your large context into these manageable servings.
+*   **✍️ What is a "Prompt Limit" or "Input Limit" (Especially in Web Interfaces)?**
+    This is often the more immediate and practical constraint that users encounter, particularly when interacting with LLMs through their **web-based chat interfaces** (like the ChatGPT website, Gemini web app, Claude.ai, etc.). The prompt/input limit is the **maximum number of tokens that you can actually submit** to the LLM in a *single* prompt, message, or input field within that web interface.
+    This limit is frequently **much smaller** than the model's total theoretical context window. For example, while a model like Gemini 1.5 Pro might boast a 1 million token total context window capability, its standard web interface might limit a single *direct text input* to somewhere around 60,000 to 128,000 tokens (though file uploads, where supported, can sometimes allow users to get more data into the context, these uploaded files still count towards the overall context window limit).
+    These per-prompt input limits exist for various reasons, including:
+    *   Performance optimization of the web interface.
+    *   Cost control on the part of the AI service provider (processing huge single prompts can be resource-intensive).
+    *   User interface usability (very large text inputs can be hard to manage in a browser window).
+    **LMTokenCook's "Serving Size (Max Tokens)" setting in its GUI should be carefully chosen based on this practical Prompt/Input Limit of the specific web interface you are targeting.** It's crucial to set this serving size to be somewhat *less* than the interface's absolute maximum input limit to leave sufficient headroom (i.e., spare tokens) for your own instructions or questions that you will add with each serving, and also for the LLM's anticipated response length (as the response also consumes tokens from the overall context window). LMTokenCook helps you overcome this single-prompt input limit by strategically segmenting your large corpus of text into these manageable, appropriately sized servings.
 
-*   **📊 Major Models & Approximate Web Interface Limits (Illustrative - Q2 2025):**
-    > **Disclaimer:** LLM capabilities and interface limits change *rapidly*! Always verify with the specific platform's official documentation and your subscription tier. These estimates focus on direct text input in primary web chat interfaces and are for general guidance. File upload mechanisms may have different effective limits.
+*   **📊 Major LLM Families & Approximate Web Interface Input Limits (Illustrative Information - Valid as of Q2 2025 but Subject to Rapid Change):**
+    > **Important Disclaimer:** The world of Large Language Models is evolving incredibly rapidly! Model capabilities, context window sizes, and especially the input limits of their web interfaces can change frequently and without much notice. The information in the table below is intended for general guidance and illustration only, based on typical observations around Q2 2025. **Always verify the current limits with the specific AI platform's official documentation and consider your individual subscription tier, as limits can vary significantly.** These estimates focus on direct text input in the primary web chat interfaces of these services. File upload mechanisms, where available, may have different effective input limits but will still contribute to the model's overall context window usage.
 
-    | Model Family (Provider)        | Specific Models (Examples)             | Max Context Window (Model Capability) | Typical *Web Interface* Prompt/Input Limit (Direct Text) | Typical Max Output Limit (Web UI) | Common Web Interface Access Points                                           |
+    | Model Family (AI Provider)        | Specific Model Examples             | Max Context Window (Underlying Model Capability) | Typical *Web Interface* Prompt/Input Limit (for Direct Text Pasting) | Typical Max Output Token Limit (from Web UI) | Common Web Interface Access Points                                           |
     | :----------------------------- | :------------------------------------- | :------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------ | :-------------------------------------------------------------------- |
-    | **OpenAI GPT Series**        | GPT-4, GPT-4 Turbo, GPT-4o           | 128k tokens (some variants more)      | **Highly Tier-Dependent:** <br/> Free Tier (often GPT-3.5/limited GPT-4o): ~8k-16k tokens? <br/> Paid Tiers (Plus/Team using GPT-4/4o): Often ~32k-64k practical input, though model sees up to 128k with history. File uploads can leverage more. | ~4k-8k tokens (can be higher) | `chat.openai.com`                                                       |
-    | **Google Gemini Series**     | Gemini 1.0 Pro, 1.5 Flash, 1.5 Pro   | 32k - 1M+ tokens (1.5 Pro)          | **Varies by Interface & Tier:** <br/> `gemini.google.com` (1.0 Pro/1.5 Flash): ~30k-60k tokens? <br/> Gemini Advanced (1.5 Pro): ~60k-128k+ tokens for direct text. File uploads can use much more of the 1M context. <br/> Google AI Studio: Can allow larger inputs, closer to API limits for 1.5 Pro. | ~8k-32k tokens (varies)   | `gemini.google.com`, `aistudio.google.com`, Google Workspace Integrations |
-    | **Anthropic Claude Series**  | Claude 3 Haiku, Sonnet, Opus         | 200k+ tokens                        | **Tier-Dependent:** <br/> Free Tier: Significantly limited, perhaps ~10k-20k tokens direct input. <br/> Pro Tier: Much higher, potentially up to ~150k-180k tokens for direct pasting. File uploads are very effective for larger contexts. | ~4k-8k tokens (can be higher) | `claude.ai`                                                             |
-    | **Mistral AI Series**        | Mistral 7B, Mixtral 8x7B, Large      | 32k - 128k+ tokens                    | **Varies Greatly by Platform:** Mistral itself doesn't have a single dominant public web UI. Limits heavily depend on the third-party host (e.g., Perplexity, Hugging Chat, etc.) and could range from ~4k to 32k+ tokens for direct input. | ~4k-8k tokens             | Primarily via Third-party platforms or specific partner integrations. |
+    | **OpenAI GPT Series**        | GPT-4, GPT-4 Turbo, GPT-4o           | Typically 128,000 tokens (some newer or specialized variants might offer more via API)      | **Highly Dependent on Subscription Tier:** <br/> *Free Tier* (often uses GPT-3.5 or a rate-limited/feature-limited version of GPT-4o): Input might be around ~8,000 to ~16,000 tokens. <br/> *Paid Tiers* (like ChatGPT Plus or Team, using models like GPT-4, GPT-4 Turbo, or GPT-4o): Often allow for practical inputs in the range of ~32,000 to ~64,000 tokens per prompt, though the model itself can "see" up to its full 128k context including conversation history. File uploads (like PDFs, documents) can help leverage more of the context window indirectly. | Usually around ~4,000 to ~8,000 tokens per response (can sometimes be higher for specific tasks or models). | `chat.openai.com`                                                       |
+    | **Google Gemini Series**     | Gemini 1.0 Pro, Gemini 1.5 Flash, Gemini 1.5 Pro   | 32,000 tokens (1.0 Pro) up to 1 Million+ tokens (1.5 Pro, potentially 2M via API for some)          | **Varies by Interface & Tier:** <br/> *Standard `gemini.google.com`* (often using 1.0 Pro or 1.5 Flash for free users): Input might be in the ~30,000 to ~60,000 token range for direct text. <br/> *Gemini Advanced* (paid tier, often using 1.5 Pro): Can allow for larger direct text inputs, perhaps ~60,000 to ~128,000+ tokens. File uploads (e.g., PDFs, videos, audio for 1.5 Pro) are a key way to utilize much more of the 1M+ token context window. <br/> *Google AI Studio:* Often allows for larger inputs that are closer to the API limits for models like 1.5 Pro, especially when configuring specific tasks, but its interface differs from the standard web chat. | Can range from ~8,000 up to ~32,000 tokens per response, depending on the model and interface.   | `gemini.google.com`, `aistudio.google.com`, integrations within Google Workspace (Docs, Sheets, etc.) |
+    | **Anthropic Claude Series**  | Claude 3 Haiku, Claude 3 Sonnet, Claude 3 Opus         | All Claude 3 models have a 200,000+ token context window.                        | **Dependent on Subscription Tier:** <br/> *Free Tier (via claude.ai):* Direct text input is significantly limited, perhaps around ~10,000 to ~20,000 tokens. <br/> *Pro Tier (paid subscription):* Allows for much higher direct text pasting, potentially up to around ~150,000 to ~180,000 tokens. File uploads (especially PDFs, text files, code files) are very effective for utilizing the full 200k context window. | Typically around ~4,000 to ~8,000 tokens per response (can be higher, especially for Opus). | `claude.ai`                                                             |
+    | **Mistral AI Series**        | Mistral 7B, Mixtral 8x7B, Mistral Large      | Context windows vary, e.g., 32,000 tokens for some, up to 128,000+ for others.                    | **Varies Greatly by the Platform Hosting the Model:** Mistral AI itself doesn't have a single dominant public web UI like the other providers mentioned. The limits for direct text input depend heavily on the third-party platform or service that is hosting or providing access to Mistral models (e.g., Perplexity, Hugging Chat, various API providers with their own interfaces). These limits could range anywhere from ~4,000 tokens up to 32,000+ tokens or more. | Typically around ~4,000 to ~8,000 tokens per response, platform-dependent.             | Primarily accessed via Third-party platforms, partner integrations, or directly via API. |
 
 ---
 
-## ❗ Mandatory Reading: Maximize Success, Minimize Surprises
+## ❗ Mandatory Reading: Maximize Success, Minimize Surprises – Important Usage Notes
 
-Before you dive in, please internalize these crucial points for optimal and safe usage:
+Before you dive into using LMTokenCook extensively, please take a moment to read and internalize these crucial points. Understanding these will help you use the tool effectively, safely, and achieve the best possible results with your LLMs:
 
-*   🎯 **Set Serving Size Wisely:** Base your "Serving Size (Max Tokens)" in LMTokenCook on the **Prompt/Input Limit** of your target LLM web interface (refer to the table above or the LLM's official documentation), *not* its maximum theoretical context window.
-    *   **Crucially, leave ample headroom!** For example, if an interface allows ~60,000 tokens input, set LMTokenCook's serving size to perhaps `55000` or even `50000`. This buffer is essential for:
-        1.  Your own instructional prompts (e.g., "Here is part X of the context. Once all parts are loaded, I will ask you to...")
-        2.  The LLM's response (it needs "space" in the context window to generate its answer).
-        3.  Potential minor discrepancies in tokenization between `tiktoken` and the specific model's internal tokenizer.
-    *   Too large a serving might get truncated by the interface or leave no room for your actual query.
+*   🎯 **Set Your "Serving Size (Max Tokens)" Wisely – Target the Prompt Limit, Not the Context Window!**
+    This is perhaps the most critical setting in LMTokenCook. When you enter a value for "Serving Size (Max Tokens)" in the GUI, you should base this value on the practical **Prompt Input Limit** of the specific Large Language Model (LLM) web interface you are planning to paste the output into (refer to the illustrative table in the "Understanding the AI Playground" section above, or, even better, check the official documentation for your target LLM service and your specific subscription tier).
+    *   **Do NOT set this serving size based on the LLM's maximum theoretical *context window* size** (which can be much larger, like 1 million tokens). You are limited by what the web interface will accept in a single paste.
+    *   **Crucially, you MUST leave ample headroom in your serving size!** For example, if you know that the web interface for Gemini Advanced typically allows you to paste around ~60,000 tokens in a single prompt, you should set LMTokenCook's "Serving Size (Max Tokens)" to a value somewhat *less* than that, perhaps `55000` or even `50000`. This buffer or headroom is absolutely essential for several reasons:
+        1.  **Your Own Instructional Prompts:** You will need to add your own text with each serving when you paste it into the LLM (e.g., "Here is part X of Y from the provided context. Please acknowledge receipt and await further parts before processing."). This instructional text consumes tokens.
+        2.  **The LLM's Response:** The LLM also needs "space" within its operational context window to generate its own response to your inputs or questions. If you fill the entire prompt input limit with just your data, there might be very little room left for the AI to actually reply.
+        3.  **Potential Minor Discrepancies in Tokenization:** While LMTokenCook uses OpenAI's `tiktoken` (specifically `cl100k_base`), which is highly accurate for many models, the *exact* way an LLM service provider tokenizes text internally might have very slight variations. Leaving some headroom helps accommodate these minor differences.
+    *   If you set your serving size too large (too close to the interface's hard limit), your pasted content might get truncated by the web interface, or the LLM might not have enough remaining context space to process your actual query effectively after all servings are loaded. It's always better to err on the side of slightly smaller servings if unsure.
 
-*   📄 **Extraction Quality is Best-Effort:** Text extraction from complex formats like PDF and DOCX is a best-effort process.
-    *   **PDFs:** Relies on a proper text layer. Image-only PDFs or heavily scanned documents without OCR will yield little to no text. Complex layouts, tables, or multi-column text might not extract perfectly.
-    *   **DOCX:** Formatting, embedded objects, and complex table structures can sometimes affect text flow or completeness.
-    *   Always review the `manifest.json` file for any errors or warnings related to file processing. For critical documents, a quick visual scan of the output `.txt` files is advisable.
+*   📄 **Quality of Text Extraction is "Best-Effort" for Complex Formats (PDF, DOCX):**
+    LMTokenCook uses well-regarded Python libraries (`pypdf` for PDFs, `python-docx` for DOCX) to extract text from these document formats. However, the process is inherently "best-effort" and its success can depend heavily on the structure and quality of the original document:
+    *   **For PDF Files:** Text extraction from PDFs relies on the PDF having a proper, selectable **text layer**. If your PDF is essentially an image (e.g., a scanned document that was saved as a PDF without undergoing Optical Character Recognition - OCR), then LMTokenCook will likely yield little to no text because there is no actual text data to extract, only pixel data. Similarly, PDFs with very complex layouts, multi-column text, heavily stylized fonts, embedded (non-text) objects, or non-standard encoding might not extract perfectly or completely.
+    *   **For DOCX Files (Microsoft Word):** While `python-docx` is good for modern `.docx` files, extraction can sometimes be affected by complex document formatting, embedded objects (like charts or images with text wrapping that isn't part of the main text flow), intricate table structures, or if the file is corrupted or password-protected. Older `.doc` formats (from pre-2007 Word) are generally not supported by this library.
+    *   **Always Review the `manifest.json` File:** After each processing run, LMTokenCook generates a `manifest.json` file in the output folder. This file contains details about which files were processed successfully and which ones encountered errors or were skipped. Check this manifest for any error messages or warnings related to file processing, especially if you suspect some documents did not yield the expected amount of text. For absolutely critical documents, a quick visual scan of the corresponding output `.txt` files (or servings) is also advisable to confirm the extraction quality.
 
-*   🪙 **Token Estimates are Estimates:** LMTokenCook uses `tiktoken` (`cl100k_base`), which is highly accurate for many models. However, the *exact* token count an LLM assigns internally can sometimes vary slightly due to proprietary tokenizer implementations or minor version differences. The headroom advice for serving size helps mitigate this. Servings might also slightly exceed the specified limit if a very long, unbreakable line of text (e.g., a minified code line or a long URL) is encountered at the split point, as LMTokenCook prioritizes not breaking such lines mid-token where feasible.
+*   🪙 **Token Estimates are Very Accurate, but Still Estimates:**
+    LMTokenCook uses OpenAI's `tiktoken` library with the `cl100k_base` encoding for all its token counting. This is considered highly accurate for many major models (like GPT-4, Gemini, Claude). However, it's important to remember that the *exact* token count that a specific LLM service provider assigns internally to a piece of text can sometimes vary by a very small margin. This can be due to proprietary tokenizer implementations, minor version differences in their tokenization algorithms, or special handling of certain characters or sequences. The "headroom" advice for setting your serving size (see above) helps to mitigate any impact from these tiny potential discrepancies.
+    Additionally, while LMTokenCook attempts to split content between servings at logical points (like newlines) to avoid breaking words or critical syntax elements, if it encounters an extremely long, unbreakable line of text (e.g., a minified line of JavaScript code, a very long URL, or a data string with no spaces) that happens to fall right at a potential split point for a serving, the serving containing that line might slightly exceed your specified token limit. This is because LMTokenCook generally prioritizes not breaking such long, single lines mid-token or mid-character where feasible, as doing so could corrupt code or data.
 
-*   🔒 **Privacy & Security – Understand Your Data Flow:**
-    *   **LMTokenCook itself runs 100% locally on your computer.** It does not transmit your files or their content over the internet during processing.
-    *   **HOWEVER, the ultimate destination of the generated `.txt` servings is a third-party LLM service (e.g., ChatGPT, Gemini, Claude).** When you copy and paste the content into these services, you are subject to *their* data usage policies, privacy terms, and security measures.
-    *   **Do NOT process highly sensitive, confidential, or classified information with LMTokenCook if you are not comfortable with that information being handled by the LLM provider you intend to paste it into.** Always review the data usage policies of the LLM service you are using. DropShock Digital LLC is not responsible for data handling by third-party LLM providers.
+*   🔒 **Privacy & Security – Understand Your Data Flow and Responsibilities:**
+    It is crucial to understand how your data is handled when using LMTokenCook and interacting with third-party LLM services:
+    *   **LMTokenCook Itself Runs 100% Locally on Your Computer:** The LMTokenCook application, when you run it (either the packaged version or from source), performs all its file scanning, text extraction, tokenization, and output file generation processes **entirely locally on your own computer.** It does not transmit your files or their content over the internet to any external server during its own processing phase. Your data remains on your machine while LMTokenCook is working with it.
+    *   **HOWEVER, the ultimate destination of the `.txt` serving files (or the `masterfile.txt`) that LMTokenCook generates is a third-party Large Language Model (LLM) service provider** (e.g., OpenAI for ChatGPT, Google for Gemini, Anthropic for Claude). When you manually copy the content from these `.txt` files and paste it into the web interface of these LLM services, you are then transmitting that data to that third-party provider. At that point, your data becomes subject to *their* data usage policies, their privacy terms, and their security measures.
+    *   **CRITICAL PRIVACY ADVICE: Do NOT process any highly sensitive, confidential, classified, or personally identifiable information (PII) with LMTokenCook if you are not completely comfortable with that specific information being handled by the third-party LLM service provider you intend to paste the servings into.** Always carefully review the data usage policies, terms of service, and privacy statements of the LLM service provider you are using *before* you submit any data to them. DropShock Digital LLC and Steven Seagondollar are not responsible for the data handling practices or security of any third-party LLM providers. You are solely responsible for the data you choose to submit to such services.
 
 ---
 
 ## 💾 Installation: Get Cooking in Minutes!
 
-LMTokenCook is designed for easy setup on both Windows and macOS.
+LMTokenCook is designed for a straightforward setup process on both Windows and macOS. Using the pre-built packaged applications is the recommended method for most users, as it does not require any prior technical knowledge of Python or command-line tools.
 
-### For Most Users: Packaged Applications (Recommended)
+### For Most Users: Packaged Applications (Recommended Method)
 
-No Python installation or command-line knowledge needed!
+This method avoids the need for Python installation or manual dependency management. Just download, install, and run!
 
-#### 🪟 Windows Installation
+#### 🪟 Windows Installation (Using the .exe Installer)
 
-Choose either the Installer or Portable version:
+LMTokenCook for Windows is provided as an `.exe` installer file, which will guide you through a standard software installation process.
 
-1.  **Download:**
-    *   **Installer:** `LMTokenCook_Installer.exe` from the [Releases Page](https://github.com/seagpt/LMTokenCook/releases/latest).
-    *   **Portable:** `LMTokenCook_Portable.zip` from the [Releases Page](https://github.com/seagpt/LMTokenCook/releases/latest).
-2.  **Run/Extract:**
-    *   **Installer:** Double-click the downloaded `.exe`.
-        *   **Windows Defender SmartScreen:** If a "Windows protected your PC" prompt appears (common for new, unsigned apps), click "**More info**", then verify the app name and click "**Run anyway**".
-        *   Follow the on-screen installer prompts (accept license, choose install location, etc.).
-    *   **Portable:** Extract the contents of the `.zip` file to a folder of your choice (e.g., `C:\Program Files\LMTokenCook` or `D:\PortableApps\LMTokenCook`).
-3.  **Launch:**
-    *   **Installer:** From your Start Menu or Desktop shortcut.
-    *   **Portable:** Double-click `LMTokenCook.exe` in the folder where you extracted it. (SmartScreen prompt might appear on first run here too; follow same steps).
+1.  **Download the Installer:**
+    *   Navigate to the [Official LMTokenCook Releases Page on GitHub](https://github.com/seagpt/LMTokenCook/releases/latest).
+    *   Download the `LMTokenCook_Installer.exe` file for the latest version (or the specific version v1.0.0 if this is the initial launch). Save it to a convenient location on your computer, such as your `Downloads` folder.
+2.  **Run the Installer Program:**
+    *   Locate the downloaded `LMTokenCook_Installer.exe` file and double-click it to start the installation wizard.
+    *   **Windows Defender SmartScreen Prompt (Important - Please Read):** It is common for new applications from independent developers (especially for an initial release like LMTokenCook, if it has not yet been digitally signed with an expensive Extended Validation (EV) certificate that builds widespread reputation with Microsoft) to trigger a "Windows protected your PC" SmartScreen prompt when you try to run the installer. This is a standard Windows security measure designed to protect users from potentially unrecognized software.
+        *   When this blue SmartScreen prompt appears, do not immediately click the "Don't run" button. Instead, look for a small text link within the dialog that says "**More info**" and click on it.
+        *   After clicking "More info," the dialog will typically expand to show more details about the application, including the application name (which should be "LMTokenCook") and sometimes the publisher (if available from a standard code signing certificate, it might show "Unknown publisher" if not signed or if using a self-signed certificate for development).
+        *   You should then see a new button appear, usually labeled "**Run anyway**". Click this "Run anyway" button to allow the LMTokenCook installer to proceed.
+    *   Follow the on-screen instructions provided by the LMTokenCook installer wizard. This process typically involves steps like:
+        *   Accepting the software license agreement (MIT License for LMTokenCook).
+        *   Choosing your preferred installation location on your hard drive (the default location is usually appropriate for most users).
+        *   Deciding whether to create Desktop shortcuts or Start Menu entries for easy access to the application after installation.
+3.  **Launch LMTokenCook:**
+    *   Once the installation process is complete, you can launch LMTokenCook. You can usually do this from your Windows Start Menu (it should be listed under recently installed programs or within its own "LMTokenCook" or "DropShock Digital" folder, depending on how the installer is configured) or by using the Desktop shortcut if one was created during the installation.
 
-#### 🍎 macOS Installation
+#### 🍎 macOS Installation (Using the .dmg.zip Archive)
 
-1.  **Download:** `LMTokenCook.dmg` from the [Releases Page](https://github.com/seagpt/LMTokenCook/releases/latest).
-2.  **Mount & Install:**
-    *   Double-click the downloaded `.dmg` file to mount it. A Finder window will open.
-    *   Drag the `LMTokenCook.app` icon into your `/Applications` folder.
-    *   You can now eject the mounted "LMTokenCook" disk image from Finder.
-3.  **First Launch (Important Security Step):**
-    *   Navigate to your `/Applications` folder.
-    *   **Right-click** (or Ctrl-click) on the `LMTokenCook.app` icon and select "**Open**" from the context menu.
-    *   A dialog may appear warning that "macOS cannot verify the developer..." or that the app is from an "unidentified developer." Click "**Open**" in this dialog.
-    *   *Alternative:* If the above doesn't work, go to **System Settings > Privacy & Security**. Scroll down to the "Security" section. You should see a message about "LMTokenCook.app was blocked..." Click the "**Open Anyway**" button. You may need to enter your Mac user password.
-    *   This security override is typically only needed for the very first launch. Subsequent launches can be done by double-clicking the app icon as usual.
+LMTokenCook for macOS is typically distributed as an Apple Disk Image (`.dmg`) file. To ensure smoother downloads from platforms like GitHub and to help prevent potential security blocks by web browsers or macOS's Gatekeeper feature that can sometimes occur with direct `.dmg` downloads, the `.dmg` file itself is usually packaged within a `.zip` archive.
 
-### For Developers: Running from Source
+1.  **Download and Unzip the Archive:**
+    *   Go to the [Official LMTokenCook Releases Page on GitHub](https://github.com/seagpt/LMTokenCook/releases/latest).
+    *   Download the `LMTokenCook.dmg.zip` file for the latest version (or version v1.0.0 for this initial launch). Save it to your `Downloads` folder or another preferred location.
+    *   Once the download is complete, locate the `LMTokenCook.dmg.zip` file and double-click it. Your Mac's built-in Archive Utility (or another unzipping tool you might have, like The Unarchiver) should automatically extract its contents. This will result in a file named `LMTokenCook.dmg` appearing in the same folder.
+2.  **Mount the Disk Image & Install the Application:**
+    *   Double-click the extracted `LMTokenCook.dmg` file. This action will "mount" the disk image on your system, and a new Finder window should automatically open, displaying the contents of this mounted virtual disk.
+    *   Inside this opened Finder window for the mounted disk image, you will typically see the `LMTokenCook.app` icon. Often, to make installation easier for users, there will also be a shortcut (an alias) to your Mac's main `/Applications` folder.
+    *   To install LMTokenCook, simply **drag the `LMTokenCook.app` icon** from this window and **drop it directly into your `/Applications` folder**. (Your `/Applications` folder is usually accessible from the Finder sidebar, or you can navigate to it by selecting "Go > Applications" from the Finder menu bar at the top of your screen). This action copies the LMTokenCook application to your Mac's hard drive, which completes the installation process.
+    *   After successfully copying the application to your Applications folder, you can "eject" the mounted "LMTokenCook" disk image to remove it from your Desktop and sidebar. You can do this by:
+        *   Dragging its icon (which might appear on your Desktop or in the Finder sidebar) to the Trash icon in your Dock (the Trash icon will temporarily change to an Eject icon when you drag the disk image over it).
+        *   Alternatively, you can find the mounted volume in the Finder sidebar, Ctrl-click (or right-click) on it, and select "Eject [Volume Name]" (e.g., "Eject LMTokenCook") from the context menu.
 
-If you prefer to run from the source code or wish to contribute:
+3.  **First Launch (Important macOS Security Step – Gatekeeper):**
+    macOS includes a security feature called Gatekeeper, which is designed to help protect your Mac from malware by controlling which applications are allowed to run. When you download an application from the internet that isn't from the Mac App Store or from an Apple-notarized developer (which is common for new independent software like LMTokenCook, especially in its initial releases), Gatekeeper may prevent it from opening directly on the first attempt with a standard double-click. You will likely need to perform a one-time override to explicitly allow LMTokenCook to run:
+    *   Navigate to your `/Applications` folder in Finder.
+    *   Locate the `LMTokenCook.app` that you just copied there.
+    *   **Right-click** (or hold the `Control` key on your keyboard and click once) on the `LMTokenCook.app` icon.
+    *   A contextual menu will appear. From this menu, select the "**Open**" option. (It's important to use this "Open" option from the context menu for the very first launch, rather than just double-clicking the app icon, as this specific action often signals to Gatekeeper that you are making a conscious decision to open an app it doesn't fully recognize, and it may present you with a more permissive dialog).
+    *   A dialog box may then appear with a warning message similar to: *"macOS cannot verify the developer of 'LMTokenCook.app'. Are you sure you want to open it?"* or *"LMTokenCook.app is an app downloaded from the Internet. Are you sure you want to open it?"* or even *"LMTokenCook.app cannot be opened because it is from an unidentified developer."* This type of warning is expected behavior for applications that haven't yet been notarized by Apple (a process that involves submitting the app to Apple for security scanning and receiving an electronic "notary ticket").
+    *   In this warning dialog box, you should see an "**Open**" button (alongside a "Cancel" button or perhaps a button to move it to Trash). Click the "**Open**" button. This action tells macOS that you trust this specific application and wish to allow it to run on your Mac.
+    *   ***Alternative Method if the "Open" button is missing or the app is still blocked by Gatekeeper:*** In some cases, especially if your Mac's Gatekeeper settings are configured to be very restrictive (e.g., "Allow apps downloaded from: App Store" only, instead of "App Store and identified developers"), the right-click > "Open" method might not directly give you an "Open" button in the warning. If this happens, or if the app is still blocked, you may need to go to your Mac's **System Settings** to grant permission:
+        1.  Open **System Settings** (you can do this from the Apple menu in the top-left corner of your screen, or by clicking its icon in your Dock).
+        2.  In the System Settings window, navigate to the **Privacy & Security** section (you might need to scroll down the sidebar on the left to find it).
+        3.  In the Privacy & Security settings, scroll down the main panel on the right until you find the "Security" subsection (it's usually near the bottom, under headings like "Allow applications downloaded from:").
+        4.  You should see a message in this area stating something like: *"LMTokenCook.app was blocked from use because it is not from an identified developer."* There should be a button next to this message labeled "**Open Anyway**". Click this "Open Anyway" button.
+        5.  You will likely be prompted to enter your Mac administrator password to confirm this action and allow the application to run.
+    *   This security override procedure (whether you use the right-click > "Open" method or the System Settings > "Open Anyway" method) is typically only necessary for the very *first* time you launch LMTokenCook after installing it. For all subsequent launches, you should be able to open the application by simply double-clicking its icon in your Applications folder or from an alias you might have placed in your Dock, just like any other application on your Mac.
 
-1.  **Prerequisites:**
-    *   Python 3.8 or newer.
-    *   `pip` (Python package installer).
-    *   `Git` (for cloning the repository).
-2.  **Get the Code:**
+### For Developers: Running from Source Code
+
+If you are a developer, wish to contribute to the LMTokenCook project, want to make custom modifications, or simply prefer running applications directly from their source code to have more control or access the latest unreleased changes, follow these instructions:
+
+1.  **Prerequisites (Essential Software to Install First):**
+    *   **Python Interpreter:** You must have Python installed on your system. LMTokenCook is developed and tested against **Python 3.8 or newer** (as indicated by the Python badge at the top of this README). While a specific 3.12.x version might be used by the primary developer for their own environment, the project aims for compatibility with Python 3.8 and later versions. You can download the appropriate Python installer for your operating system from the official Python website: [python.org/downloads/](https://www.python.org/downloads/).
+        *   Ensure that `python3` (on macOS/Linux) or `python` (on Windows, if correctly configured in your system's PATH during Python installation) and `pip` (Python's package installer for your Python 3.x version) are accessible from your command line.
+    *   **Git (Version Control System):** You will need Git installed on your system to clone (download a copy of) the LMTokenCook source code repository from its hosting location on GitHub. If you don't have Git installed, you can download it from the official Git website: [git-scm.com/downloads](https://git-scm.com/downloads).
+
+2.  **Get the LMTokenCook Source Code from GitHub:**
+    Open your terminal or command prompt application. Navigate (using the `cd` command) to your preferred directory where you store your development projects. Once there, clone the LMTokenCook repository from GitHub using the following `git clone` command:
     ```bash
     git clone https://github.com/seagpt/LMTokenCook.git
+    ```
+    This command will download the project's source code into a new folder named `LMTokenCook`. After the cloning is complete, change your current directory into this new project folder:
+    ```bash
     cd LMTokenCook
     ```
-3.  **Set Up a Virtual Environment (Highly Recommended):**
-    *   Create: `python -m venv venv`
-    *   Activate:
-        *   Windows (CMD): `venv\Scripts\activate.bat`
-        *   Windows (PowerShell): `.\venv\Scripts\Activate.ps1` (May require `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process` first)
-        *   macOS/Linux (Bash/Zsh): `source venv/bin/activate`
-    Your terminal prompt should now show `(venv)`.
-4.  **Install Dependencies:**
+
+3.  **Set Up a Python Virtual Environment (Highly Recommended for All Python Projects):**
+    It is a strong best practice in Python development to create an isolated Python virtual environment for each project. This keeps dependencies separate and avoids conflicts. From within the root `LMTokenCook` directory in your terminal:
+    *   **Create the virtual environment (you can name it `venv_lmtc` or similar):**
+        *   **macOS / Linux:**
+            ```bash
+            python3 -m venv venv_lmtc 
+            ```
+        *   **Windows (Command Prompt / PowerShell):**
+            ```bash
+            python -m venv venv_lmtc
+            ```
+    *   **Activate the virtual environment:**
+        *   **macOS / Linux (Bash/Zsh):**
+            ```bash
+            source venv_lmtc/bin/activate
+            ```
+        *   **Windows (Command Prompt):**
+            ```bash
+            venv_lmtc\Scripts\activate.bat
+            ```
+        *   **Windows (PowerShell):**
+            ```bash
+            .\venv_lmtc\Scripts\Activate.ps1
+            # If PowerShell script execution is blocked, you might first need to run:
+            # Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+            ```
+    Your terminal prompt should now be prefixed with `(venv_lmtc)` (or your chosen venv name), indicating it's active.
+
+4.  **Install Required Python Dependencies into the Virtual Environment:**
+    With your virtual environment active, install all the necessary Python packages listed in the `requirements.txt` file (located in the project root):
+    *   **Universal Command (recommended for explicitness):**
+        ```bash
+        python3 -m pip install -r requirements.txt
+        ```
+    This command will install libraries such as `customtkinter`, `Pillow`, `tiktoken`, `tkinterdnd2`, `python-docx`, `pypdf`, and `appdirs` into your isolated virtual environment.
+
+5.  **Run the LMTokenCook Application from Source Code:**
+    Ensure your virtual environment is still active and you are in the `LMTokenCook` project's root directory. The main entry point script for launching the GUI application is typically named `lmtc_gui.py` (or a similar name like `main_gui.py` or `app_gui.py` – please check your project structure for the exact main GUI script name if it differs).
     ```bash
-    pip install -r requirements.txt
+    python3 lmtc_gui.py 
     ```
-5.  **Run the Application:**
+    (Replace `lmtc_gui.py` with the actual main GUI script name if it is different in your specific version of the LMTokenCook source code).
+
+---
+
+### Quick Start for Developers (macOS/Linux Example)
+
+For experienced Python developers who want to quickly get the LMTokenCook source code up and running on a macOS or Linux system:
+
+1.  Clone the repository from GitHub and navigate into the project directory:
     ```bash
-    python lmtc_gui.py 
+    git clone https://github.com/seagpt/LMTokenCook.git && cd LMTokenCook
     ```
-    (Or the main script name if `lmtc_gui.py` is not the entry point in your version).
+2.  Create and activate a Python 3.8+ virtual environment (you can choose your preferred venv name):
+    ```bash
+    python3 -m venv venv_lmtc_dev
+    source venv_lmtc_dev/bin/activate
+    ```
+3.  Install all required Python dependencies from the `requirements.txt` file:
+    ```bash
+    python3 -m pip install -r requirements.txt
+    ```
+4.  (Optional) Review or set up your `config.json` in the user application data directory if you want to test with persistent settings (see "Configuration" section for typical paths).
+5.  Run the GUI application (assuming `lmtc_gui.py` is the main script):
+    ```bash
+    python3 lmtc_gui.py
+    ```
 
 ---
 
 ## 📖 Usage Guide: From Raw Files to AI-Ready Servings
 
-Using LMTokenCook is straightforward:
+Using LMTokenCook is designed to be a straightforward process, guiding you from selecting your input files to generating AI-ready text outputs.
 
-1.  **Launch LMTokenCook:** Open the application as installed.
-2.  **Select Input Source:**
-    *   Click the "**Browse Folder...**" button to select an entire directory for processing.
-    *   Click the "**Browse File(s)...**" button to select one or more individual files.
-    *   Alternatively, **drag and drop** your folder or file(s) directly onto the designated area in the GUI.
-3.  **Select Output Parent Directory:**
-    *   Click the "**Browse...**" button next to "Output Parent Directory". Choose a base location where LMTokenCook will create its timestamped subfolder for this run's results.
-4.  **Set Serving Size (Max Tokens):**
-    *   Enter the maximum number of tokens you want each `serving_XXX_of_YYY.txt` file to contain.
-    *   **Crucial:** Base this on your target LLM's **web interface prompt input limit**, leaving headroom (see "Mandatory Reading" section).
-    *   If you enter `0` or leave this field blank, LMTokenCook will not create servings and will only produce the `masterfile.txt` (if "Keep Master File" is checked).
-5.  **Choose Processing Options:**
-    *   ✅ **Keep Master File:** Check this if you want to retain the `masterfile.t-XXXXX.txt` which contains all concatenated content. Uncheck to save disk space if you only need the servings.
-    *   ✅ **Add Line Numbers:** Check to prepend `NNNN ` to each line of output.
-    *   ✅ **Skip Empty Lines:** Check to remove completely blank lines from the output.
-6.  **Start Processing:**
-    *   Click the prominent "**Start Processing**" button.
-7.  **Monitor Progress:**
-    *   Watch the **Status Log** area for real-time updates on what LMTokenCook is doing (scanning files, extracting text, tokenizing, writing output).
-    *   The **Progress Bar** will indicate overall progress.
-    *   The "**Cancel**" button can be used to gracefully stop the current processing job if needed.
-8.  **Completion & Accessing Results:**
-    *   Wait for the status message to indicate successful completion (e.g., "[SUCCESS] Processing complete! Output saved to: ...").
-    *   Click the "**Open Output Folder**" button. This will open your system's file explorer directly to the unique, timestamped output subfolder created for this run.
-    *   Inside, you'll find:
-        *   `manifest.json` (the detailed report).
-        *   `masterfile.t-XXXXX.txt` (if "Keep Master File" was checked).
-        *   `serving_001_of_YYY.txt`, `serving_002_of_YYY.txt`, etc. (if total tokens exceeded your serving size).
+1.  **Launch LMTokenCook:**
+    Open the LMTokenCook application using the method appropriate for your installation (e.g., from your Applications folder on macOS, Start Menu or Desktop shortcut on Windows, or by running `python3 lmtc_gui.py` from the source code if you set it up that way).
 
-9.  **Feed to Your LLM (Context Augmented Generation Workflow):**
-    This is the key step to leverage LMTokenCook's output effectively.
-    *   **If using `masterfile.txt` (for smaller total contexts that fit in one prompt):**
-        1.  Open `masterfile.txt`.
-        2.  Copy its entire content.
-        3.  Paste into your LLM's prompt window.
-        4.  Add your question or task directly after the pasted content.
-    *   **If using `serving_XXX_of_YYY.txt` files (for large contexts):**
-        1.  **Prompt 1 (First Serving):**
-            *   Open `serving_001_of_YYY.txt`.
-            *   Copy its entire content.
-            *   Paste into your LLM's prompt window. You might add a brief intro like:
-                `"I'm about to provide a large amount of context in several parts. This is part 1 of YYY. Please acknowledge you've received this part and are ready for the next. Do not summarize or analyze yet."`
+2.  **Select Your Input Source (Files or Folder):**
+    LMTokenCook needs to know which files or folders you want to process. You have several ways to do this:
+    *   **Browse for a Folder:** Click the "**Browse Folder...**" button. A system file dialog will open, allowing you to navigate to and select an entire directory. LMTokenCook will then recursively scan this directory and its subdirectories for processable files.
+    *   **Browse for File(s):** Click the "**Browse File(s)...**" button. This will open a system file dialog where you can select one or more individual files from various locations.
+    *   **Drag and Drop:** For quick and easy input, you can **drag and drop** your target folder or one or more files directly from your computer's file explorer (Finder on macOS, File Explorer on Windows) onto the designated input area within the LMTokenCook GUI.
+
+3.  **Select Your Output Parent Directory:**
+    Next, you need to tell LMTokenCook where to save its results.
+    *   Click the "**Browse...**" button located next to the "Output Parent Directory" label.
+    *   A system file dialog will appear. Use this to choose a main (parent) location on your computer where LMTokenCook will create its unique, timestamped subfolder for this specific processing run's results. For example, you might choose your `Documents` folder, a `Projects` folder, or a dedicated `LMTokenCook_Outputs` folder.
+
+4.  **Set Your "Serving Size (Max Tokens)" – This is a Key Setting:**
+    In the input field labeled "Serving Size (Max Tokens)", enter the maximum number of tokens you want each individual `serving_XXX_of_YYY.txt` file to contain.
+    *   **Crucial Guidance:** As explained in detail in the "Understanding the AI Playground" and "Mandatory Reading" sections above, you should base this value on the practical **Prompt Input Limit** of the specific Large Language Model (LLM) web interface you are planning to paste the output into. **Remember to leave ample headroom** (e.g., if the interface limit is ~60,000 tokens, set this to perhaps `55000` or `50000`) to account for your own instructional text and the LLM's response.
+    *   If you enter `0` (zero) or leave this field blank, LMTokenCook will *not* create separate serving files. In this case, it will only produce the single `masterfile.t-XXXXX.txt` (if the "Keep Master File" option is checked). This is suitable if your total context is small enough to fit within a single LLM prompt.
+
+5.  **Choose Your Processing Options (Checkboxes):**
+    LMTokenCook offers several options to customize the output:
+    *   ✅ **Keep Master File:** Check this box if you want LMTokenCook to save the `masterfile.t-XXXXX.txt`, which contains all your concatenated content in one large file. Uncheck this box if you only need the smaller "serving" files and want to save disk space (especially if your input is very large).
+    *   ✅ **Add Line Numbers:** Check this box if you want LMTokenCook to prepend a 4-digit, zero-padded line number (e.g., `0001 `) to each line of the output text. This is very useful for precisely referencing parts of your source material when prompting the LLM.
+    *   ✅ **Skip Empty Lines:** Check this box if you want LMTokenCook to remove completely blank lines (lines containing only whitespace or no characters at all) from the output. This can help create denser, more token-efficient content.
+
+6.  **Start Processing – Let LMTokenCook Work Its Magic:**
+    *   Once you have selected your input, output, serving size, and chosen your processing options, click the prominent **"Start Processing"** button.
+
+7.  **Monitor the Process:**
+    LMTokenCook will begin working, and you can monitor its progress:
+    *   Watch the **Status Log** area within the GUI. This will display real-time updates on what LMTokenCook is currently doing (e.g., "Scanning files...", "Extracting text from document.pdf...", "Tokenizing content...", "Writing serving 5 of 12...", etc.).
+    *   The **Progress Bar** will provide a visual indication of the overall progress of the current job.
+    *   If you need to stop the process for any reason, the "**Cancel**" button should be available to gracefully halt the ongoing operations.
+
+8.  **Job Completion & Accessing Your Results:**
+    *   Wait for the status message in the GUI to indicate that the processing is complete (e.g., it might say "[SUCCESS] Processing complete! Output saved to: [path_to_your_output_folder]").
+    *   Once complete, click the "**Open Output Folder**" button. This convenient button will open your computer's file explorer (Finder on macOS, File Explorer on Windows) directly to the unique, timestamped output subfolder that LMTokenCook created for this specific run.
+    *   Inside this output subfolder, you will typically find:
+        *   The `manifest.json` file (which contains a detailed report of the processing run).
+        *   The `masterfile.t-XXXXX.txt` (if you had checked the "Keep Master File" option).
+        *   A series of serving files (e.g., `serving_001_of_012.txt`, `serving_002_of_012.txt`, etc.), if your total content exceeded your specified "Serving Size (Max Tokens)" and serving generation was active.
+
+9.  **Feed Your "Cooked" Content to Your LLM (The Context Augmented Generation Workflow):**
+    This is the final and most important step to leverage LMTokenCook's output effectively with your chosen LLM through its web interface.
+    *   **If you are using the single `masterfile.t-XXXXX.txt`** (this is suitable if your total context is small enough to fit within one prompt for your target LLM):
+        1.  Open the `masterfile.t-XXXXX.txt` file in a text editor.
+        2.  Select and copy its entire content.
+        3.  Paste this content directly into your LLM's prompt input window.
+        4.  Immediately after pasting the content, type your question, instruction, or task for the LLM. Then send the prompt.
+    *   **If you are using the multiple `serving_XXX_of_YYY.txt` files** (this is the method for very large contexts that exceed single prompt limits):
+        1.  **Prompt 1 (Submitting the First Serving):**
+            *   Locate and open the first serving file, e.g., `serving_001_of_015.txt`.
+            *   Select and copy its entire content (including the instructional comments LMTokenCook added at the beginning).
+            *   Paste this content into your LLM's prompt input window. You might want to add a brief introductory message before or after the pasted content, for example:
+                `"I am about to provide you with a large amount of context that will be split into 15 parts. This is part 1 of 15. Please acknowledge that you have received this part and are ready for the next one. Please do not summarize or analyze the content until all parts have been provided and I give you the final instruction."`
+            *   Send this first prompt to the LLM. Wait for the LLM to respond with an acknowledgement (e.g., "Okay, I have received part 1. I'm ready for part 2.").
+        2.  **Prompts 2 through to YYY-1 (Submitting Intermediate Servings):**
+            *   Open the next serving file in sequence (e.g., `serving_002_of_015.txt`).
+            *   Select and copy its entire content.
+            *   Paste this into the LLM's prompt window. You might add a brief message like:
+                `"Here is part 2 of 15. Please acknowledge."`
             *   Send the prompt. Wait for the LLM's confirmation.
-        2.  **Prompt 2 to YYY-1 (Intermediate Servings):**
-            *   Open the next serving file (e.g., `serving_002_of_YYY.txt`).
-            *   Copy its content.
-            *   Paste into the LLM. You might say:
-                `"Here is part X of YYY. Please acknowledge."`
-            *   Send. Wait for confirmation. Repeat for all intermediate servings.
-        3.  **Prompt YYY (Final Serving & Your Actual Question):**
-            *   Open the last serving file (e.g., `serving_YYY_of_YYY.txt`).
-            *   Copy its content.
-            *   Paste into the LLM. Now, add your actual question or task *after* this final piece of context:
-                `"Here is the final part, YYY of YYY. [Paste content of serving_YYY_of_YYY.txt] Now that you have all the context, please [Your actual, detailed question or task, e.g., 'summarize the main arguments presented in the provided research papers', 'refactor the Python codebase to improve performance, focusing on the classes defined in src/core/', 'write a story based on the provided character backstories']." `
-            *   Send. The LLM should now process your request using the full context you've supplied across multiple turns.
+            *   Repeat this process for all the intermediate serving files, one by one, ensuring you get an acknowledgement from the LLM after each part before sending the next. This helps ensure the LLM is correctly receiving and concatenating the context in its memory.
+        3.  **Prompt YYY (Submitting the Final Serving & Your Actual Question/Task):**
+            *   Open the very last serving file (e.g., `serving_015_of_015.txt`).
+            *   Select and copy its entire content.
+            *   Paste this into the LLM's prompt window. Now, this is where you add your actual, detailed question, instruction, or task for the LLM *after* this final piece of context. For example:
+                `"Here is the final part, 15 of 15. [Now paste the full content of serving_015_of_015.txt here] Now that you have received all 15 parts of the context, please [Your actual, detailed question or task goes here. For example: 'summarize the main arguments presented in all the provided research papers, focusing on methodology and conclusions', or 'refactor the entire Python codebase provided to improve its performance and readability, paying close attention to the classes defined in the src/core/ directory', or 'write a short story based on all the character backstories and plot outlines I have provided']." `
+            *   Send this final prompt. The LLM should now process your request using the full, extensive context that you have painstakingly supplied across multiple conversational turns.
 
     <div align="center" style="margin-top: 20px; margin-bottom: 20px;">
       <figure>
-        <img src="assets/working-example.png" alt="Working Example: Gemini receiving multiple LMTokenCook servings" width="60%" style="max-width: 600px; border: 1px solid #FFEB70; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+        <img src="assets/working-example.png" alt="Working Example: Gemini receiving multiple LMTokenCook servings in sequence" width="60%" style="max-width: 600px; border: 1px solid #FFEB70; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
         <br>
-        <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;"><em>Example: Sequentially pasting LMTokenCook servings into Google Gemini, enabling analysis of content far exceeding single prompt limits.</em></figcaption>
+        <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;"><em>Illustrative example: Sequentially pasting LMTokenCook serving files into Google Gemini's web interface. This enables the analysis of content far exceeding single prompt limits by progressively building up the context within the LLM's session memory.</em></figcaption>
       </figure>
     </div>
 
 ---
 
-## ⚙️ Configuration Persistence (`config.json`)
+## ⚙️ Configuration Persistence (`config.json`) – LMTokenCook Remembers Your Settings
 
-LMTokenCook aims to make your life easier by remembering some of your settings between sessions:
+LMTokenCook aims to make your repeated use of the application more convenient by automatically remembering some of your most frequently used settings between sessions. This means you don't have to re-enter them every time you launch the application.
 
-*   **Configuration File:** `config.json`
-*   **Storage Location:** LMTokenCook uses the `appdirs` library to store this file in the standard user application configuration directory for your operating system:
+*   **Configuration File Name:** These persistent settings are saved in a file named `config.json`.
+*   **Storage Location (Platform-Specific User Application Data Directory):**
+    LMTokenCook uses the `appdirs` Python library to determine the standard, appropriate location for storing this user-specific configuration file on your operating system. This ensures it follows platform conventions and doesn't clutter your project directories. The typical locations are:
     *   **Windows:** `C:\Users\<YourUsername>\AppData\Roaming\LMTokenCook\LMTokenCook\config.json`
+        *(Note: The `AppData` folder is often hidden by default in Windows File Explorer. You may need to enable "Show hidden files, folders, and drives" in your File Explorer options to navigate to it manually.)*
     *   **macOS:** `/Users/<YourUsername>/Library/Application Support/LMTokenCook/config.json`
-    *   **Linux (if built from source):** `/home/<YourUsername>/.config/LMTokenCook/config.json`
-*   **Settings Remembered:**
-    *   `last_output_dir`: The path to the last parent output directory you selected.
-    *   `last_serving_size`: The last serving size (max tokens) you entered.
-    *   `last_keep_masterfile_bool`: True/False for "Keep Master File"
-    *   `last_add_line_numbers_bool`: True/False for "Add Line Numbers"
-    *   `last_skip_empty_lines_bool`: True/False for "Skip Empty Lines"
-*   **Resetting to Defaults:** If you wish to reset these saved preferences, simply delete the `config.json` file. LMTokenCook will create a new one with default values the next time it starts.
+        *(Note: The `~/Library` folder is also hidden by default in macOS Finder. You can access it by opening Finder, clicking "Go" in the menu bar, holding down the `Option` key on your keyboard – the "Library" option should then appear in the dropdown menu – and then navigating to `Application Support/LMTokenCook/`.)*
+    *   **Linux (if you were to build and run LMTokenCook from source on Linux):** Typically `/home/<YourUsername>/.config/LMTokenCook/config.json`.
+*   **Settings That Are Remembered by LMTokenCook:**
+    The `config.json` file usually stores the following preferences from your last session:
+    *   `last_output_dir`: The full path to the last "Output Parent Directory" you selected using the "Browse..." button.
+    *   `last_serving_size`: The last value you entered for "Serving Size (Max Tokens)".
+    *   `last_keep_masterfile_bool`: A boolean value (`true` or `false`) indicating whether the "Keep Master File" checkbox was checked in your last session.
+    *   `last_add_line_numbers_bool`: A boolean value indicating whether the "Add Line Numbers" checkbox was checked.
+    *   `last_skip_empty_lines_bool`: A boolean value indicating whether the "Skip Empty Lines" checkbox was checked.
+*   **Resetting to Default Settings:**
+    If you ever wish to reset these saved preferences and have LMTokenCook revert to its original, "factory default" settings for these fields, you can simply **delete the `config.json` file** from its storage location (as listed above for your OS). The next time you launch LMTokenCook after deleting this file, it will not find a saved configuration and will therefore start with its built-in default values. It will then create a new `config.json` file once you interact with settings that are saved.
 
 ---
 
-## 🧾 Manifest File (`manifest.json`) Deep Dive
+## 🧾 Manifest File (`manifest.json`) Deep Dive – Understanding Your Processing Run
 
-For every processing run, LMTokenCook generates a `manifest.json` file in the output subfolder. This file is a goldmine of information, offering complete transparency and traceability for your data preparation process. It's structured as follows:
+For every processing run that LMTokenCook completes, it generates a highly detailed report file named `manifest.json`. This file is saved in the unique, timestamped output subfolder created for that specific job. The `manifest.json` provides complete transparency and traceability for your data preparation process, and it can be invaluable for understanding exactly what happened, for debugging any issues, or for programmatic analysis of your corpus preparation if needed.
+
+The `manifest.json` file is structured in JSON (JavaScript Object Notation) format, which is both human-readable (with some practice) and easily parsable by other programs or scripts. It typically contains the following main sections and types of information:
 
 ```json
 {
   "metadata": {
-    "app_version": "1.x.x",
-    "run_timestamp_utc": "YYYY-MM-DDTHH:MM:SS.ffffffZ",
-    "input_source_type": "directory" / "files",
-    "input_paths": ["/path/to/source1", "/path/to/source2"],
-    "output_path_run_specific": "/path/to/output/Output_YYYY-MM-DD_HH-MM-SS",
-    "options": {
-      "serving_size_tokens": 50000,
-      "keep_master_file": true,
-      "add_line_numbers": false,
-      "skip_empty_lines": true
+    "app_version": "1.0.0", // Version of LMTokenCook used for this run
+    "run_timestamp_utc": "YYYY-MM-DDTHH:MM:SS.ffffffZ", // Precise UTC timestamp of when the run started
+    "input_source_type": "directory", // Could also be "files" if individual files were selected
+    "input_paths": [ // List of absolute paths to the input sources
+      "/path/to/your/selected_input_folder_or_file1",
+      "/path/to/your/selected_input_file2" // (if multiple files were selected)
+    ],
+    "output_path_run_specific": "/path/to/your/main_output_parent_dir/Output_YYYY-MM-DD_HH-MM-SS", // Path to the unique output folder for this run
+    "options_selected": { // A record of all user-selected processing options for this run
+      "serving_size_tokens": 50000, // The max tokens per serving specified by the user
+      "keep_master_file": true,    // Whether the master file was kept
+      "add_line_numbers": false,   // Whether line numbers were added
+      "skip_empty_lines": true     // Whether empty lines were skipped
     },
-    "file_counts": {
-      "total_scanned_files": 150,
-      "total_scanned_dirs": 20,
-      "files_processed": 120,
-      "files_skipped_binary_or_media": 20,
-      "files_skipped_unsupported_ext": 5,
-      "files_skipped_empty": 3,
-      "files_failed_extraction": 2
+    "file_counts_summary": { // Summary statistics about the files processed
+      "total_files_scanned_in_source": 150, // Total files (of any type) found in the input source
+      "total_directories_scanned_in_source": 20, // Total subdirectories scanned
+      "files_successfully_processed": 120,     // Number of files from which text was successfully extracted and included
+      "files_skipped_binary_or_media": 20,   // Number of files skipped because they were identified as binary or media types
+      "files_skipped_unsupported_extension": 5, // Number of files skipped due to having an unsupported/unrecognized file extension
+      "files_skipped_due_to_being_empty": 3,    // Number of text-based files that were skipped because they contained no actual content
+      "files_failed_extraction_or_read_error": 2 // Number of files that were of a supported type but an error occurred during text extraction or reading
     },
-    "tokenization_details": {
-      "tokenizer_name": "cl100k_base",
-      "total_estimated_tokens": 1234567
+    "tokenization_details": { // Information about the tokenization process
+      "tokenizer_used": "tiktoken_cl100k_base", // Name of the tokenizer encoding used
+      "total_estimated_tokens_in_output": 1234567 // Grand total of estimated tokens for all processed content
     },
-    "serving_output": {
-      "servings_created": true / false,
-      "number_of_servings": 25,
-      "tokens_per_serving_target": 50000,
-      "master_file_created": true / false,
-      "master_file_name": "masterfile.t-1234567.txt" (if created)
+    "serving_output_summary": { // Details about the serving file generation (if applicable)
+      "servings_were_created": true, // Boolean: true if servings were generated, false if not (e.g., total tokens < serving size, or serving size was 0)
+      "number_of_servings_generated": 25, // Total number of serving_XXX_of_YYY.txt files created
+      "tokens_per_serving_target_setting": 50000, // The user's target setting for tokens per serving
+      "master_file_was_created": true, // Boolean: true if masterfile.txt was saved, false if "Keep Master File" was unchecked
+      "master_file_name_generated": "masterfile.t-1234567.txt" // Name of the master file (if created), reflecting total tokens
     }
   },
-  "directory_structure": {
-    // Nested dictionary mirroring the input folder structure,
-    // with status for each file/folder. Example:
-    "my_project_root": {
+  "directory_structure_map": { 
+    // This section provides a nested dictionary (or similar JSON object structure) that mirrors
+    // the directory structure of your scanned input source (if a directory was provided as input).
+    // For each file and folder encountered within the source, it typically shows its processing status
+    // (e.g., "PROCESSED", "SKIPPED_BINARY", "SKIPPED_DUE_TO_EXTENSION", "ERROR_DURING_READING", etc.)
+    // and often includes a brief reason if it was skipped or if an error occurred.
+    // Example (simplified):
+    "my_project_root_folder_name": {
       "type": "directory",
-      "status": "SCANNED",
-      "files": {
-        "main.py": {"type": "file", "status": "PROCESSED", "reason": ""},
-        "README.md": {"type": "file", "status": "PROCESSED", "reason": ""}
+      "status": "SCANNED_AND_PROCESSED_CONTENTS",
+      "files_in_this_directory": {
+        "main_script.py": {"type": "file", "status": "PROCESSED_OK", "reason_if_skipped_or_error": ""},
+        "notes_for_project.txt": {"type": "file", "status": "PROCESSED_OK", "reason_if_skipped_or_error": ""}
       },
-      "sub_dir": {
+      "sub_directory_example": {
         "type": "directory",
-        "status": "SCANNED",
-        "files": {
-          "image.jpg": {"type": "file", "status": "SKIPPED_MEDIA", "reason": "Binary image file"},
-          "data.bin": {"type": "file", "status": "SKIPPED_BINARY", "reason": "Likely binary content"}
+        "status": "SCANNED_AND_PROCESSED_CONTENTS",
+        "files_in_this_directory": {
+          "logo_image.jpg": {"type": "file", "status": "SKIPPED_MEDIA_TYPE", "reason_if_skipped_or_error": "Skipped: Identified as a binary image file."},
+          "temporary_binary_data.bin": {"type": "file", "status": "SKIPPED_BINARY_CONTENT", "reason_if_skipped_or_error": "Skipped: File appears to have binary content."}
         }
       }
     }
+    // (If individual files were selected as input, this section might list them directly with their status)
   },
-  "processed_files_summary": [
-    // Ordered list of successfully processed files. Example:
+  "processed_files_detailed_list": [
+    // This section provides an ordered list (usually in the order the files were processed or encountered)
+    // containing more detailed information for each file that was successfully processed and included in the output.
+    // Example for one processed file:
     {
-      "id": 1,
-      "relative_path": "my_project_root/main.py",
-      "absolute_path": "/full/path/to/my_project_root/main.py",
-      "char_count_original": 5020,
-      "char_count_processed": 5000, // After skipping empty lines, etc.
-      "estimated_tokens": 1234,
-      "extraction_method": "text/plain",
-      "encoding_detected": "utf-8",
-      "processing_status": "PROCESSED_OK"
-    },
-    // ... more files
+      "processing_order_id": 1, // A unique sequential ID for this file in this processing run
+      "relative_path_from_input_root": "my_project_root_folder_name/main_script.py", // Path relative to the input source
+      "absolute_path_on_disk": "/full/path/on/your/computer/to/my_project_root_folder_name/main_script.py", // Full absolute path
+      "original_character_count_in_file": 5020, // Number of characters in the file as read from disk
+      "processed_character_count_for_output": 5000, // Number of characters included in the output (might differ if e.g., empty lines were skipped)
+      "final_estimated_token_count_for_this_file": 1234, // Estimated tokens for just this file's content
+      "text_extraction_method_used": "text/plain_or_code", // How text was extracted (e.g., "docx_extraction", "pdf_text_layer")
+      "detected_or_used_file_encoding": "utf-8", // Character encoding used to read the file
+      "final_processing_status_for_file": "PROCESSED_OK_INCLUDED_IN_OUTPUT"
+    }
+    // ... more entries for other successfully processed files would follow here
   ],
-  "error_log_summary": [
-      // List of files that had issues. Example:
+  "files_with_errors_or_skipped_summary": [
+      // This section provides a list of any files that were encountered during scanning but had issues
+      // that prevented them from being processed, or caused them to be intentionally skipped.
+      // Example for one file that had an error:
       {
-          "relative_path": "my_project_root/corrupted.docx",
-          "absolute_path": "/full/path/to/my_project_root/corrupted.docx",
-          "error_message": "Failed to extract text: Document is corrupted or password-protected."
+          "relative_path_from_input_root": "my_project_root_folder_name/documents/corrupted_report.docx",
+          "absolute_path_on_disk": "/full/path/on/your/computer/to/my_project_root_folder_name/documents/corrupted_report.docx",
+          "reason_for_error_or_skip": "ERROR_DURING_EXTRACTION",
+          "error_message_details": "Failed to extract text from DOCX: The document file appears to be corrupted or is password-protected and could not be opened."
+      },
+      // Example for a file that was intentionally skipped:
+      {
+          "relative_path_from_input_root": "my_project_root_folder_name/assets/archive.zip",
+          "absolute_path_on_disk": "/full/path/on/your/computer/to/my_project_root_folder_name/assets/archive.zip",
+          "reason_for_error_or_skip": "SKIPPED_ARCHIVE_TYPE",
+          "error_message_details": "Skipped: File extension .zip is recognized as an archive and not processed for text content."
       }
+      // ... more entries for other files with errors or skips would follow here
   ]
 }
 ```
-This detailed manifest is invaluable for:
-*   Verifying which files were included or excluded.
-*   Understanding the token impact of individual files.
-*   Debugging issues with text extraction.
-*   Programmatic analysis of your corpus preparation.
+This detailed `manifest.json` is invaluable for several purposes:
+*   **Verification:** Allows you to verify exactly which files from your input source were included in the final output and which ones were excluded (and why).
+*   **Token Analysis:** Helps you understand the token impact of individual files or groups of files within your dataset.
+*   **Debugging:** If you find that expected text is missing from your output, or if a job seems to have processed fewer files than you anticipated, the manifest (especially the `directory_structure_map` and `files_with_errors_or_skipped_summary` sections) can help you quickly identify which files caused problems or were skipped.
+*   **Programmatic Post-Processing:** If you have workflows that involve further programmatic analysis or manipulation of your text corpus after LMTokenCook has prepared it, the manifest provides structured metadata (like character offsets, token counts per file, relative paths) that can be very useful for such downstream tasks.
 
 ---
 
 ## 🛠️ Technical Details & Development Insights
 
-*   **Core Architecture:** LMTokenCook is built with Python (3.8+) and utilizes the [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) library for its modern, themeable graphical user interface.
-*   **Responsive Processing:** It employs Python's `threading` and `queue.Queue` modules to perform intensive file I/O, text extraction, tokenization (`tiktoken`), and output writing operations in background threads. This ensures the GUI remains responsive and provides real-time progress updates even when processing large datasets.
-*   **Efficient Content Handling:** The processing pipeline is designed to handle content modifications (line numbering, skipping empty lines) efficiently before generating the final output stream(s), minimizing memory footprint where possible.
-*   **Development Environment:** A significant portion of LMTokenCook was developed using Python directly within the **Windsurf IDE**. Windsurf, an AI-centric fork of VS Code developed by Steven Seagondollar, facilitated the use of advanced AI models for coding assistance, debugging, and feature ideation. Notably, **OpenAI's GPT-4 models (including early access to variants like GPT-4.1 via API through Windsurf) were instrumental in accelerating development and refining the application's logic.**
-*   **Key Dependencies:** Python 3.8+, `customtkinter`, `Pillow` (for image handling in GUI assets), `tiktoken`, `tkinterdnd2` (for drag-and-drop), `python-docx` (for `.docx`), `pypdf` (for `.pdf`), `appdirs` (for config file location). *(See `requirements.txt` in the source repository for specific versions used in development.)*
-*   **Distribution:** Standalone applications for Windows and macOS are created using [PyInstaller](https://pyinstaller.org/), bundling all necessary dependencies.
+A brief look under the hood at how LMTokenCook is built and some of the key technologies it uses:
+
+*   **Core Architecture:** LMTokenCook is primarily a Python application (requiring Python 3.8 or newer if running from source). Its modern, themeable Graphical User Interface (GUI) is built using the excellent [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) library, which provides an enhanced and more visually appealing widget set on top of Python's standard Tkinter GUI toolkit.
+*   **Responsive Processing through Background Threading:** To ensure that the GUI remains responsive and does not freeze or hang during potentially long-running operations (like scanning thousands of files, extracting text from large documents, or tokenizing vast amounts of content), LMTokenCook employs Python's built-in `threading` and `queue.Queue` modules. These allow intensive tasks to be performed in background threads, separate from the main GUI thread. This enables the application to provide real-time progress updates to the user (via its progress bar and status log area) and to remain interactive (e.g., allowing the user to click the "Cancel" button if needed) even when it's busy working on a large job.
+*   **Efficient Content Handling and Modification:** The internal processing pipeline of LMTokenCook is designed to handle content modifications (such as adding line numbers or skipping empty lines, if these options are selected by the user) efficiently. These modifications are typically applied to the text streams *before* the final consolidated output file(s) are written to disk. This approach aims to minimize memory footprint where possible, especially when dealing with very large input datasets.
+*   **Development Environment & AI Assistance:** A significant portion of LMTokenCook was developed by Steven Seagondollar using Python directly within the **Windsurf IDE**. Windsurf is an AI-centric Integrated Development Environment, itself a fork of VS Code, also developed by Steven Seagondollar at DropShock Digital. This environment facilitated the use of advanced AI models (like OpenAI's GPT-4 series, including early access to variants such as GPT-4.1, via API calls integrated into Windsurf) for various aspects of the development process. These AI models provided valuable assistance with tasks such as code generation, debugging complex logic, refactoring code for clarity and efficiency, and exploring alternative approaches for feature implementation. This AI-assisted development process helped to accelerate the creation of LMTokenCook and refine many of its core functionalities.
+*   **Key Python Dependencies (Libraries Used):**
+    LMTokenCook relies on several powerful open-source Python libraries. The main ones include:
+    *   Python 3.8+ (as the base language)
+    *   `customtkinter` (for the GUI framework)
+    *   `Pillow` (the Python Imaging Library fork, used for handling image assets within the GUI, like the logo)
+    *   `tiktoken` (from OpenAI, for accurate language model token counting)
+    *   `tkinterdnd2` (for enabling drag-and-drop functionality in the Tkinter-based GUI)
+    *   `python-docx` (for reading text content from `.docx` Microsoft Word files)
+    *   `pypdf` (for extracting text content from `.pdf` files that have a text layer)
+    *   `appdirs` (for determining standard platform-specific directories to store the `config.json` user preferences file)
+    *(For a complete list of dependencies and their specific versions used during development, please refer to the `requirements.txt` file in the LMTokenCook source code repository.)*
+*   **Distribution (Packaged Applications):**
+    The standalone, ready-to-run application packages for Windows (as an `.exe` installer) and macOS (as a `.dmg` disk image) are created using the [PyInstaller](https://pyinstaller.org/) tool. PyInstaller bundles the LMTokenCook Python application code and all its necessary dependencies into a single package that users can easily install and run without needing to have Python or any of the libraries installed on their system separately.
 
 ---
 
 ## 🌟 Steven Seagondollar & DropShock Digital LLC: Professional Overview
 
-This section provides insight into the developer and the company behind LMTokenCook.
+This section provides insight into the developer and the company behind LMTokenCook, offering context about the expertise and vision driving the project.
 
 ### Steven Seagondollar
 
-Steven Seagondollar, the founder of DropShock Digital LLC, is a professional who operates at the intersection of advanced technology and digital creativity.
+Steven Seagondollar, the founder and driving force behind DropShock Digital LLC, is a multifaceted professional operating at the dynamic intersection of advanced technology, digital creativity, and strategic business development. His work is characterized by a commitment to innovation and a practical approach to solving complex challenges.
 
-*   **Technological Proficiencies:** Steven possesses a strong and rapidly developing expertise in cutting-edge computational methods. His skills encompass the design, development, and application of intelligent systems, as well as a deep understanding of computer architecture and network infrastructure.
-*   **Digital Development:** Steven is actively expanding his capabilities in building complex online applications and platforms. His skillset includes various programming languages, web development technologies, and database management.
-*   **Creative Production:** Steven demonstrates mastery in a range of digital creative fields. This includes visual content creation, digital media production, and the design and management of online presences.
-*   **Business & Leadership Acumen:** Steven has a proven track record in:
-    *   Managing complex projects and programs.
-    *   Designing and implementing operational frameworks.
-    *   Leading and mentoring teams.
-    *   Developing and executing revenue strategies.
-    *   Providing strategic business guidance.
-    *   Managing client relationships and communication.
-    *   Entrepreneurial ventures and business development.
-*   **Communication & Interpersonal Skills:** Steven exhibits strong abilities in:
-    *   Communicating complex information clearly and effectively.
-    *   Adapting his communication style to different contexts.
-    *   Facilitating learning and knowledge transfer.
-    *   Collaborating with others in a professional setting.
+*   **Technological Proficiencies & Engineering Acumen:** Steven possesses a strong and continually evolving expertise in cutting-edge computational methods and software engineering. His skills encompass the full lifecycle of software development, including the architectural design, robust development, rigorous testing, and effective application of intelligent systems and complex software solutions. He has a deep and practical understanding of computer architecture, network infrastructure, data structures, and algorithms, which informs his approach to building scalable and efficient applications.
+*   **Digital Development & Platform Architecture:** Steven is actively engaged in expanding his capabilities in building sophisticated online applications, backend systems, and integrated digital platforms. His technical skillset is broad, including proficiency in various programming languages (with a strong focus on Python for projects like LMTokenCook), modern web development technologies (front-end and back-end frameworks), database design and management (SQL and NoSQL), API development (RESTful, GraphQL), and cloud computing platforms.
+*   **Creative Production & Digital Media Expertise:** Beyond pure technology, Steven demonstrates a significant mastery in a range of digital creative fields. This includes hands-on experience and a keen eye for visual content creation (photography, videography, graphic design), digital media production workflows, user interface (UI) and user experience (UX) design principles, and the strategic design and effective management of compelling online presences for businesses and individuals.
+*   **Business & Leadership Acumen – From Vision to Execution:** Steven brings to the table a proven track record in several key business and leadership domains:
+    *   **Project & Program Management:** Successfully managing complex technical projects from conception through to delivery, ensuring they meet objectives, timelines, and budget constraints.
+    *   **Operational Framework Design:** Designing and implementing efficient operational frameworks, workflows, and standard operating procedures to streamline processes and enhance productivity.
+    *   **Team Leadership & Mentorship:** Leading, motivating, and mentoring technical and creative teams, fostering a collaborative and high-performance environment.
+    *   **Revenue Strategy & Business Development:** Developing and executing effective revenue generation strategies, identifying new business opportunities, and driving entrepreneurial ventures from idea to market viability.
+    *   **Strategic Business Guidance:** Providing insightful strategic business consulting and guidance to help organizations leverage digital tools, advanced technologies, and innovative strategies to achieve their goals.
+    *   **Client Relationship Management & Communication:** Building and maintaining strong client relationships through clear, proactive communication, understanding client needs, and ensuring high levels of satisfaction.
+*   **Exceptional Communication & Interpersonal Skills:** Steven exhibits strong and versatile abilities in professional communication:
+    *   Clearly and effectively articulating complex technical information and strategic concepts to diverse audiences, both technical and non-technical.
+    *   Adapting his communication style and approach to suit different contexts, individuals, and objectives.
+    *   Facilitating learning, knowledge transfer, and training within teams and for clients.
+    *   Collaborating effectively and constructively with team members, partners, and stakeholders in a professional and results-oriented setting.
 
 ### DropShock Digital LLC
 
-DropShock Digital LLC provides a suite of digital solutions, emphasizing the use of advanced technologies.
+DropShock Digital LLC, founded by Steven Seagondollar, is a dynamic company that provides a comprehensive suite of cutting-edge digital solutions and strategic services. The company's philosophy emphasizes the practical and innovative application of advanced technologies to solve real-world problems and create tangible value for its clients.
 
-*   **Intelligent Systems:** The company focuses on developing and implementing intelligent systems to improve digital processes and user interactions.
-*   **Digital Media:** DropShock Digital offers expertise in creating digital media and visual content.
-*   **Digital Platforms:** The company designs and builds digital platforms and online infrastructures.
-*   **Strategic Consulting:** DropShock Digital provides strategic guidance to help businesses leverage digital tools and strategies.
+*   **Intelligent Systems & AI-Powered Solutions:** A core focus of DropShock Digital is the development and implementation of intelligent systems, leveraging artificial intelligence (AI), machine learning (ML), and data analytics to automate processes, enhance digital user interactions, derive actionable insights from data, and create smarter software products.
+*   **Digital Media Creation & Production:** DropShock Digital offers deep expertise in the creation, production, and management of high-quality digital media and visual content. This includes professional photography, videography, motion graphics, animation, graphic design, and content strategy tailored for various digital platforms.
+*   **Digital Platform Design & Development:** The company specializes in designing and building robust, scalable, and user-centric digital platforms and online infrastructures. This encompasses custom web application development, mobile app development, e-commerce solutions, content management systems (CMS), and API integrations.
+*   **Strategic Digital Consulting & Guidance:** DropShock Digital provides expert strategic consulting to help businesses and organizations effectively navigate the digital landscape. This includes advising on digital transformation initiatives, technology adoption, online marketing strategies, data utilization, and how to best leverage digital tools and innovative strategies to achieve specific business objectives and gain a competitive edge.
 
-DropShock Digital LLC is committed to delivering innovative and effective digital solutions by integrating technical expertise with a focus on client needs.
+DropShock Digital LLC is passionately committed to delivering innovative, effective, and high-impact digital solutions by seamlessly integrating deep technical expertise with a strong focus on understanding and addressing the unique needs and goals of each client. The aim is always to provide solutions that are not just technologically advanced, but also practical, sustainable, and drive measurable results.
 
 ---
 
-## ❓ Troubleshooting / FAQ
+## ❓ Troubleshooting / Frequently Asked Questions (FAQ)
 
-Encountering an issue? Check these common questions first. For persistent problems, refer to the "Support & Contact" section.
+Encountering an issue while using LMTokenCook, or have a question about its behavior? Check these common questions and solutions first. For persistent problems that aren't addressed here, please refer to the "Support & Contact Information" section further down for how to get help.
 
-1.  **`ModuleNotFoundError` (when running from source):**
-    *   **Cause:** Python dependencies not installed or virtual environment (`venv`) not active.
-    *   **Solution:** Ensure `venv` is active (see "Running from Source") and run `pip install -r requirements.txt`. If packaged, try reinstalling the application.
+1.  **Error Message: `ModuleNotFoundError: No module named 'customtkinter'` (or `'tiktoken'`, `'pypdf'`, `'docx'`, etc.) when I try to run LMTokenCook from its source code.**
+    *   **Probable Cause:** This error almost always indicates that one or more of the necessary Python libraries (which are called "dependencies") that LMTokenCook needs to function correctly are not installed in your current Python environment. Another common cause is that your Python virtual environment (e.g., `venv_lmtc`) is not currently active when you are attempting to run the script.
+    *   **Solution Steps:**
+        1.  First, ensure that you have navigated your terminal or command prompt to the main LMTokenCook project's root directory (the one that contains the `requirements.txt` file).
+        2.  Next, make absolutely sure that you have **activated the Python virtual environment** that you created specifically for this project (see the "For Developers: Running from Source Code" part of the "Installation" section for activation commands for your OS). Your terminal prompt should be prefixed with the venv name (e.g., `(venv_lmtc)`).
+        3.  Now that your virtual environment is active, re-install or ensure all dependencies are installed using `pip` (Python's package installer), making sure to use the `pip` associated with your Python 3.8+ environment (using `python3 -m pip` is often the most explicit way):
+            ```bash
+            python3 -m pip install -r requirements.txt
+            ```
+            This command reads the `requirements.txt` file and installs all listed packages into your active virtual environment. If a module is still reported missing after this, double-check that the installation process completed without errors and that `requirements.txt` is complete and correctly formatted.
 
-2.  **Application is Unresponsive or Hangs:**
-    *   **Cause:** Processing very large files or a huge number of files can take time, even with background threading. It might also indicate an unexpected error.
-    *   **Solution:** Allow sufficient time for heavy I/O operations. Check the status log in the GUI for any messages. If it remains unresponsive for an unusually long time, you may need to force quit. Check the `manifest.json` (if created) or console logs (if running from source) for error clues. Report persistent hangs as bugs on GitHub with as much detail as possible.
+2.  **Application is Unresponsive or Appears to Hang During Processing:**
+    *   **Probable Cause:** Processing very large files, a huge number of individual files, or files in complex formats (like some PDFs or DOCX) can be computationally intensive and take a significant amount of time, even though LMTokenCook uses background threading to try to keep the GUI responsive. In some cases, an unexpected error during a background task might also cause the application to appear unresponsive if the error isn't caught and handled in a way that updates the GUI.
+    *   **Solution Steps:**
+        *   **Allow Sufficient Time:** Especially for very large inputs, allow a reasonable amount of time for LMTokenCook to complete its work. Check the status log in the GUI for any messages indicating activity.
+        *   **Check System Resources:** If your computer's CPU usage is very high or if you are running low on available RAM (memory), this can slow down all applications, including LMTokenCook. Close other resource-intensive programs if possible.
+        *   **Cancel and Retry (with simpler input if needed):** If the application remains unresponsive for an unusually long time and the progress bar isn't moving, you can try using the "Cancel" button (if it's responsive). If you have to force quit, try restarting LMTokenCook and processing a smaller subset of your data or simpler file types first to see if the issue is related to a specific problematic file or the sheer volume of data.
+        *   **Review `manifest.json` (if generated):** If a previous run partially completed or if you manage to get a run to finish after a hang, the `manifest.json` file (in the output folder for that run) might provide clues in its error log section about specific files that caused problems.
+        *   **Report Persistent Hangs:** If you encounter persistent hangs with specific types of files or datasets that you believe should be manageable, please report this as a bug (see "Support & Contact Information"), providing as much detail as possible about your input data and system.
 
-3.  **Issues with PDF or DOCX Text Extraction (Empty or Partial Output):**
-    *   **Cause:**
-        *   **PDF:** File may be image-only (scanned, no text layer - LMTokenCook doesn't do OCR), password-protected, encrypted, or have a very complex/non-standard layout. The `pypdf` library does its best but has limitations.
-        *   **DOCX:** File may be corrupted, password-protected, an older `.doc` format (not `.docx`), or contain highly complex embedded objects or formatting that `python-docx` struggles with.
-    *   **Solution:** Check the `manifest.json` for specific error messages related to the file. Try opening and re-saving the problematic file in its native application (e.g., Adobe Acrobat, Microsoft Word) to a standard format. For image-only PDFs, you'll need an external OCR tool to convert them to text-selectable PDFs first.
+3.  **Issues with Text Extraction from PDF or DOCX Files (e.g., output is empty, incomplete, or garbled for these files):**
+    *   **Probable Causes:**
+        *   **For PDF Files:**
+            *   **Image-Only PDF (No Text Layer):** The most common issue. If your PDF is essentially a collection of scanned images and does not have an actual selectable text layer (i.e., you can't select text with your mouse in a PDF viewer), then LMTokenCook (which uses `pypdf`) will not be able to extract text from it because `pypdf` does not perform Optical Character Recognition (OCR).
+            *   **Password-Protected or Encrypted PDF:** LMTokenCook cannot process password-protected or encrypted PDFs. You would need to remove the protection first using other tools.
+            *   **Complex Layouts or Non-Standard Fonts/Encodings:** PDFs with very complex visual layouts (e.g., multiple columns that don't flow linearly, text embedded within intricate graphics, unusual table structures) or those using non-standard fonts or character encodings might not be parsed correctly by `pypdf`, leading to missing or garbled text.
+        *   **For DOCX Files (Microsoft Word):**
+            *   **Corrupted File:** The `.docx` file itself might be corrupted and unreadable by `python-docx`.
+            *   **Password-Protected File:** Password-protected `.docx` files cannot be processed.
+            *   **Older `.doc` Format:** LMTokenCook (via `python-docx`) is designed for the modern XML-based `.docx` format (from Word 2007 and later). It generally does not support the older binary `.doc` format (from Word 97-2003). You would need to convert such files to `.docx` first using Microsoft Word or another converter.
+            *   **Highly Complex Embedded Objects or Formatting:** While `python-docx` handles standard text well, very complex embedded objects (like intricate charts, SmartArt with text, or images with unusual text wrapping that isn't part of the main document text flow) or extremely complex formatting might sometimes affect the completeness or flow of the extracted text.
+    *   **Solution Steps:**
+        *   **Check the `manifest.json`:** After a processing run, always look at the `manifest.json` file in your output folder. It will contain error messages or skip reasons for any files that could not be processed correctly. This is your first clue.
+        *   **For Image-Only PDFs:** You will need to use an external Optical Character Recognition (OCR) tool (there are many available, both free and commercial, online and offline) to convert your image-only PDFs into PDFs that have a selectable text layer *before* you process them with LMTokenCook.
+        *   **For Password-Protected Files:** You must remove the password protection using the originating application (e.g., Adobe Acrobat for PDFs, Microsoft Word for DOCX) or another appropriate tool before LMTokenCook can process them.
+        *   **For Older `.doc` Files:** Open them in Microsoft Word (or a compatible editor like LibreOffice Writer) and re-save them in the modern `.docx` format.
+        *   **For Complex Layouts/Formatting:** If text is missing from a complex PDF or DOCX, try simplifying the document's layout if possible, or copy-pasting the text into a plain text file (`.txt`) as a workaround before processing with LMTokenCook if the formatting is not essential for the LLM's understanding. Extraction from these formats is always a "best-effort" process.
 
-4.  **Token Counts or Serving Sizes Seem Slightly Off:**
-    *   **Cause:** As mentioned in "Mandatory Reading," `tiktoken` counts are highly accurate estimates, but minor variations can occur with an LLM's specific internal tokenizer. Also, LMTokenCook tries not to break very long single lines (like minified code or URLs) mid-token, which might cause a serving to slightly exceed the target if such a line falls at a split point.
-    *   **Solution:** The "headroom" you leave when setting your serving size is designed to accommodate these minor variations. Always check the `manifest.json` for the final token counts if precision is critical for analysis.
+4.  **The Token Counts or the Size of the "Servings" Seem Slightly Different From What I Expected, or a Serving Slightly Exceeds My Max Token Limit.**
+    *   **Probable Causes & Explanation:**
+        *   **Tokenization is an Estimate (Though a Very Good One):** As explained in the "Understanding the AI Playground" section, LMTokenCook uses OpenAI's `tiktoken` library with the `cl100k_base` encoding, which is highly accurate for many major models. However, the *absolute exact* token count that a specific LLM service provider (like Google for Gemini or Anthropic for Claude) assigns internally to a piece of text can sometimes vary by a very small margin from `tiktoken`'s count. This can be due to their own proprietary tokenizer implementations, minor version differences in their tokenization algorithms, or special handling of certain unique characters or sequences by their internal systems. The "headroom" you leave when setting your "Serving Size (Max Tokens)" (as advised in the "Mandatory Reading" section) is designed to comfortably accommodate these minor potential variations.
+        *   **Handling of Very Long, Unbreakable Lines:** LMTokenCook's logic for splitting content into servings tries to do so at logical points (like newlines between paragraphs or code lines) to maintain readability and structural integrity. However, if it encounters an extremely long, single line of text that has no natural break points (e.g., a minified line of JavaScript code, a very long URL, a base64 encoded data string, or a line from a log file with no spaces) and this long line happens to fall right at a potential split point for a serving, the serving containing that line might end up slightly exceeding your specified token limit. This is because LMTokenCook generally prioritizes not breaking such long, single lines in the middle of a token or character sequence where feasible, as doing so could corrupt code, data, or meaning. It's a trade-off between strict adherence to the token limit and preserving the integrity of such lines. This is another reason why leaving some headroom in your serving size setting is a good practice.
+    *   **Solution / Best Practice:**
+        *   The most important thing is to follow the advice in the "Mandatory Reading" section: **always set your "Serving Size (Max Tokens)" in LMTokenCook to be somewhat *less* than the absolute maximum prompt input limit of your target LLM web interface.** This buffer accounts for these small variations and for the tokens needed for your own instructions.
+        *   If you need very precise token counts for analysis (e.g., for API cost estimation if you were using an API), the `manifest.json` file provides the final estimated token counts for each processed file and for the total output, which are based on `tiktoken`. These are excellent for such estimations.
 
-5.  **How to Reset Saved Settings (Last Output Path, Serving Size)?**
-    *   **Solution:** Delete the `config.json` file. See the "Configuration (`config.json`)" section for its location on your OS. LMTokenCook will create a new one with defaults on its next launch.
+5.  **How Can I Reset LMTokenCook's Saved Settings (like the last output path I used, or my last serving size setting) Back to Their Original Defaults?**
+    *   **Solution:** LMTokenCook saves these preferences in a `config.json` file located in your user-specific application data directory (see the "Configuration Persistence (`config.json`)" section above for the typical paths for your operating system). To reset these saved settings and have LMTokenCook start with its "factory defaults" again, simply **delete this `config.json` file** from its storage location.
+        *   Make sure LMTokenCook is not running when you delete the file.
+        *   The next time you launch LMTokenCook after deleting this file, it will not find a saved configuration and will therefore start up with its built-in default values for these settings. It will then create a new `config.json` file in that location once you interact with settings that are normally saved (e.g., when you choose an output path or set a serving size and then close the application, or if it saves on change).
 
-6.  **Drag-and-Drop Not Working:**
-    *   **Cause:** Relies on the `TkinterDnd2` library, which is generally robust but can occasionally have OS-specific quirks or conflicts with other software.
-    *   **Solution:** Always use the "Browse Folder..." or "Browse File(s)..." buttons as the primary and most reliable method for selecting input. If running from source on Linux, `TkinterDnd2` might require manual installation of `tkdnd` library system-wide.
+6.  **Drag-and-Drop Functionality for Input Files/Folders Doesn't Seem to Be Working on My System.**
+    *   **Probable Cause:** Drag-and-drop functionality in LMTokenCook (which is a Tkinter-based application using CustomTkinter) relies on an underlying library called `TkinterDnd2`. While this library is generally robust and works well on Windows and macOS, there can occasionally be OS-specific quirks, conflicts with other software running on your system that might interfere with drag-and-drop events, or (very rarely) issues with how it's bundled in the packaged application if a specific system library it depends on is missing or incompatible on your particular OS setup.
+    *   **Solution / Workaround:**
+        *   **Always use the "Browse Folder..." or "Browse File(s)..." buttons within the LMTokenCook GUI as the primary and most reliable method for selecting your input sources.** These buttons use standard system file dialogs which are very robust.
+        *   If you are running LMTokenCook from its source code, particularly on Linux, the `TkinterDnd2` library might sometimes require the manual installation of an underlying `tkdnd` system library package (e.g., via your Linux distribution's package manager like `apt` or `yum`). Check the `TkinterDnd2` library's documentation if you encounter issues specifically on Linux from source. For packaged Windows and macOS versions, all necessary components for drag-and-drop should ideally be bundled.
 
-7.  **"Permission Denied" Errors when Selecting Output Folder or During Processing:**
-    *   **Cause:** Your user account may lack write permissions to the selected output parent directory or one of its subdirectories. Antivirus software could also interfere.
-    *   **Solution:** Choose an output directory where your user account has full read/write permissions (e.g., your Documents folder, Desktop, or a dedicated projects folder). Ensure your antivirus isn't blocking LMTokenCook's write operations.
+7.  **I'm getting "Permission Denied" or similar errors when I try to select an Output Parent Directory, or when LMTokenCook tries to write files during processing.**
+    *   **Probable Cause:** This usually means that your current user account on the computer does not have the necessary "write" permissions for the specific output parent directory you have selected, or for one of the subdirectories that LMTokenCook is trying to create within it (like the timestamped run folder or the serving file folders). Antivirus software or other system security tools could also, in rare cases, interfere and block write operations if they mistakenly flag LMTokenCook's activity as suspicious.
+    *   **Solution Steps:**
+        *   **Choose a Writable Output Location:** Ensure that you select an output parent directory for which your current user account has full read and write permissions. Good choices are usually folders within your own user profile (like your `Documents` folder, your `Desktop`, or a dedicated `Projects` or `LMTokenCook_Outputs` folder you create there). Avoid trying to write directly to restricted system folders (like the root of C: on Windows, or system-level Program Files folders, or system folders on macOS) unless you have explicitly adjusted permissions or are running with administrative rights (which is generally not recommended for routine use – see below).
+        *   **Check Folder Permissions (if needed):** If you are trying to write to a specific folder and encounter issues, you can check its permissions using your operating system's tools (as described in FAQ #3 above for source folder permissions – the process is the same for checking output folder permissions).
+        *   **Antivirus/Security Software:** As a temporary diagnostic step if you strongly suspect interference, you could try briefly disabling your antivirus or other security software, or adding LMTokenCook to its exclusion list. Remember to re-enable your security software or refine its rules afterward.
+        *   **Avoid Running as Administrator/Root (Unless Absolutely Necessary and Understood):** While running LMTokenCook with elevated (Administrator on Windows or `sudo` on macOS/Linux) privileges might seem like a quick way to bypass permission errors, it's generally not a good practice for everyday application use. It can sometimes lead to the application creating files and folders with ownership or permissions that are then problematic for your regular, non-administrator user account to access or modify later. It's usually better to ensure that the output locations you choose are correctly permissioned for your standard user account.
+
+---
+
+## 🛠️ Technical Details & Development Insights
+
+A brief look under the hood at how LMTokenCook is built and some of the key technologies it uses:
+
+*   **Core Architecture:** LMTokenCook is primarily a Python application (requiring Python 3.8 or newer if running from source). Its modern, themeable Graphical User Interface (GUI) is built using the excellent [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) library, which provides an enhanced and more visually appealing widget set on top of Python's standard Tkinter GUI toolkit.
+*   **Responsive Processing through Background Threading:** To ensure that the GUI remains responsive and does not freeze or hang during potentially long-running operations (like scanning thousands of files, extracting text from large documents, or tokenizing vast amounts of content), LMTokenCook employs Python's built-in `threading` and `queue.Queue` modules. These allow intensive tasks to be performed in background threads, separate from the main GUI thread. This enables the application to provide real-time progress updates to the user (via its progress bar and status log area) and to remain interactive (e.g., allowing the user to click the "Cancel" button if needed) even when it's busy working on a large job.
+*   **Efficient Content Handling and Modification:** The internal processing pipeline of LMTokenCook is designed to handle content modifications (such as adding line numbers or skipping empty lines, if these options are selected by the user) efficiently. These modifications are typically applied to the text streams *before* the final consolidated output file(s) are written to disk. This approach aims to minimize memory footprint where possible, especially when dealing with very large input datasets.
+*   **Development Environment & AI Assistance:** A significant portion of LMTokenCook was developed by Steven Seagondollar using Python directly within the **Windsurf IDE**. Windsurf is an AI-centric Integrated Development Environment, itself a fork of VS Code, also developed by Steven Seagondollar at DropShock Digital. This environment facilitated the use of advanced AI models (like OpenAI's GPT-4 series, including early access to variants such as GPT-4.1, via API calls integrated into Windsurf) for various aspects of the development process. These AI models provided valuable assistance with tasks such as code generation, debugging complex logic, refactoring code for clarity and efficiency, and exploring alternative approaches for feature implementation. This AI-assisted development process helped to accelerate the creation of LMTokenCook and refine many of its core functionalities.
+*   **Key Python Dependencies (Libraries Used):**
+    LMTokenCook relies on several powerful open-source Python libraries. The main ones include:
+    *   Python 3.8+ (as the base language)
+    *   `customtkinter` (for the GUI framework)
+    *   `Pillow` (the Python Imaging Library fork, used for handling image assets within the GUI, like the logo)
+    *   `tiktoken` (from OpenAI, for accurate language model token counting)
+    *   `tkinterdnd2` (for enabling drag-and-drop functionality in the Tkinter-based GUI)
+    *   `python-docx` (for reading text content from `.docx` Microsoft Word files)
+    *   `pypdf` (for extracting text content from `.pdf` files that have a text layer)
+    *   `appdirs` (for determining standard platform-specific directories to store the `config.json` user preferences file)
+    *(For a complete list of dependencies and their specific versions used during development, please refer to the `requirements.txt` file in the LMTokenCook source code repository.)*
+*   **Distribution (Packaged Applications):**
+    The standalone, ready-to-run application packages for Windows (as an `.exe` installer) and macOS (as a `.dmg` disk image, distributed within a `.zip` archive) are created using the [PyInstaller](https://pyinstaller.org/) tool. PyInstaller bundles the LMTokenCook Python application code and all its necessary dependencies into a single package that users can easily install and run without needing to have Python or any of the libraries installed on their system separately.
+
+---
+
+## 🌟 Steven Seagondollar & DropShock Digital LLC: Professional Overview
+
+This section provides insight into the developer and the company behind LMTokenCook, offering context about the expertise and vision driving the project.
+
+### Steven Seagondollar
+
+Steven Seagondollar, the founder and driving force behind DropShock Digital LLC, is a multifaceted professional operating at the dynamic intersection of advanced technology, digital creativity, and strategic business development. His work is characterized by a commitment to innovation and a practical approach to solving complex challenges.
+
+*   **Technological Proficiencies & Engineering Acumen:** Steven possesses a strong and continually evolving expertise in cutting-edge computational methods and software engineering. His skills encompass the full lifecycle of software development, including the architectural design, robust development, rigorous testing, and effective application of intelligent systems and complex software solutions. He has a deep and practical understanding of computer architecture, network infrastructure, data structures, and algorithms, which informs his approach to building scalable and efficient applications.
+*   **Digital Development & Platform Architecture:** Steven is actively engaged in expanding his capabilities in building sophisticated online applications, backend systems, and integrated digital platforms. His technical skillset is broad, including proficiency in various programming languages (with a strong focus on Python for projects like LMTokenCook), modern web development technologies (front-end and back-end frameworks), database design and management (SQL and NoSQL), API development (RESTful, GraphQL), and cloud computing platforms.
+*   **Creative Production & Digital Media Expertise:** Beyond pure technology, Steven demonstrates a significant mastery in a range of digital creative fields. This includes hands-on experience and a keen eye for visual content creation (photography, videography, graphic design), digital media production workflows, user interface (UI) and user experience (UX) design principles, and the strategic design and effective management of compelling online presences for businesses and individuals.
+*   **Business & Leadership Acumen – From Vision to Execution:** Steven brings to the table a proven track record in several key business and leadership domains:
+    *   **Project & Program Management:** Successfully managing complex technical projects from conception through to delivery, ensuring they meet objectives, timelines, and budget constraints.
+    *   **Operational Framework Design:** Designing and implementing efficient operational frameworks, workflows, and standard operating procedures to streamline processes and enhance productivity.
+    *   **Team Leadership & Mentorship:** Leading, motivating, and mentoring technical and creative teams, fostering a collaborative and high-performance environment.
+    *   **Revenue Strategy & Business Development:** Developing and executing effective revenue generation strategies, identifying new business opportunities, and driving entrepreneurial ventures from idea to market viability.
+    *   **Strategic Business Guidance:** Providing insightful strategic business consulting and guidance to help organizations leverage digital tools, advanced technologies, and innovative strategies to achieve their goals.
+    *   **Client Relationship Management & Communication:** Building and maintaining strong client relationships through clear, proactive communication, understanding client needs, and ensuring high levels of satisfaction.
+*   **Exceptional Communication & Interpersonal Skills:** Steven exhibits strong and versatile abilities in professional communication:
+    *   Clearly and effectively articulating complex technical information and strategic concepts to diverse audiences, both technical and non-technical.
+    *   Adapting his communication style and approach to suit different contexts, individuals, and objectives.
+    *   Facilitating learning, knowledge transfer, and training within teams and for clients.
+    *   Collaborating effectively and constructively with team members, partners, and stakeholders in a professional and results-oriented setting.
+
+### DropShock Digital LLC
+
+DropShock Digital LLC, founded by Steven Seagondollar, is a dynamic company that provides a comprehensive suite of cutting-edge digital solutions and strategic services. The company's philosophy emphasizes the practical and innovative application of advanced technologies to solve real-world problems and create tangible value for its clients.
+
+*   **Intelligent Systems & AI-Powered Solutions:** A core focus of DropShock Digital is the development and implementation of intelligent systems, leveraging artificial intelligence (AI), machine learning (ML), and data analytics to automate processes, enhance digital user interactions, derive actionable insights from data, and create smarter software products.
+*   **Digital Media Creation & Production:** DropShock Digital offers deep expertise in the creation, production, and management of high-quality digital media and visual content. This includes professional photography, videography, motion graphics, animation, graphic design, and content strategy tailored for various digital platforms.
+*   **Digital Platform Design & Development:** The company specializes in designing and building robust, scalable, and user-centric digital platforms and online infrastructures. This encompasses custom web application development, mobile app development, e-commerce solutions, content management systems (CMS), and API integrations.
+*   **Strategic Digital Consulting & Guidance:** DropShock Digital provides expert strategic consulting to help businesses and organizations effectively navigate the digital landscape. This includes advising on digital transformation initiatives, technology adoption, online marketing strategies, data utilization, and how to best leverage digital tools and innovative strategies to achieve specific business objectives and gain a competitive edge.
+
+DropShock Digital LLC is passionately committed to delivering innovative, effective, and high-impact digital solutions by seamlessly integrating deep technical expertise with a strong focus on understanding and addressing the unique needs and goals of each client. The aim is always to provide solutions that are not just technologically advanced, but also practical, sustainable, and drive measurable results.
 
 ---
 
 ## 🤝 Contributing & Special Thanks
 
-Contributions, bug reports, and feature suggestions are warmly welcome! Please use the [**GitHub Issues**](https://github.com/seagpt/LMTokenCook/issues) page for the project to:
-*   Report bugs (please include OS, LMTokenCook version, steps to reproduce, and `manifest.json` if relevant).
-*   Suggest new features or enhancements.
-*   Ask questions if the README or existing issues don't cover them.
+Contributions to LMTokenCook in the form of bug reports and feature suggestions are warmly welcome! The best way to contribute is by using the [**GitHub Issues page**](https://github.com/seagpt/LMTokenCook/issues) for the project. Please feel free to:
+*   **Report Bugs:** If you find something that's not working as expected, please create a new issue. Try to include details like your operating system, the version of LMTokenCook you are using, clear steps to reproduce the bug, what you expected to happen, and what actually happened. If a `manifest.json` file was generated and is relevant to the bug, including its contents (or parts of it) can be very helpful.
+*   **Suggest New Features or Enhancements:** If you have ideas for new functionalities that would make LMTokenCook even more useful, or improvements to existing features, please share them by creating a feature request issue.
+*   **Ask Questions:** If you have questions about using LMTokenCook that aren't covered in this README or in existing issues, feel free to ask.
 
 **Special Thanks To:**
 
-*   **Garrett Montagne:** For invaluable technical assistance in resolving complex `tiktoken` dependency issues and cross-platform packaging challenges for both Windows and macOS. His expertise significantly improved build reliability and provided crucial troubleshooting support during critical development phases.
+*   **Garrett Montagne:** For his invaluable technical assistance and expertise in resolving complex challenges related to `tiktoken` dependencies and the cross-platform packaging of LMTokenCook for both Windows and macOS. Garrett's contributions significantly improved the reliability of the build process and provided crucial troubleshooting support during key phases of development. His help was instrumental in making the packaged applications robust.
 
 ---
 
-## 🙏 Acknowledgements: Standing on the Shoulders of Giants
+## 🙏 Acknowledgements: Built with the Best of Open Source
 
-LMTokenCook leverages the power of the Python ecosystem and several key open-source libraries. Our sincere gratitude to their developers and maintainers:
+LMTokenCook stands on the shoulders of giants, leveraging the power and innovation of the Python ecosystem and several key open-source libraries. Our sincere gratitude goes to the talented developers, dedicated maintainers, and vibrant communities behind these projects for their incredible work and their commitment to sharing:
 
-*   **[Python](https://www.python.org/)**: The versatile and powerful language that forms the foundation.
-*   **[CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)**: For the beautiful and modern themed Tkinter GUI widgets.
-*   **[OpenAI Tiktoken](https://github.com/openai/tiktoken)**: For accurate and efficient token counting.
-*   **[pypdf](https://github.com/py-pdf/pypdf)**: For PDF text extraction capabilities.
-*   **[python-docx](https://github.com/python-openxml/python-docx)**: For `.docx` file reading.
-*   **[Appdirs](https://github.com/ActiveState/appdirs)**: For locating appropriate user-specific configuration directories.
-*   **[TkinterDnd2](https://github.com/python-tkdnd/tkdnd/)**: For enabling drag-and-drop functionality in the GUI.
-*   **[Pillow (PIL Fork)](https://python-pillow.org/)**: For image manipulation (used for GUI assets).
-*   **[PyInstaller](https://pyinstaller.org/)**: For packaging LMTokenCook into standalone applications.
+*   **[Python Programming Language](https://www.python.org/)**: The versatile, powerful, and elegant high-level programming language (LMTokenCook targets Python 3.8 and newer) that forms the very foundation of this application.
+*   **[CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)**: An excellent Python library by Tom Schimansky that provides beautiful, modern, and themeable Tkinter GUI widgets, allowing LMTokenCook to have a polished and user-friendly interface.
+*   **[OpenAI Tiktoken](https://github.com/openai/tiktoken)**: The official token counting library from OpenAI, used by LMTokenCook for accurate and efficient estimation of language model token counts, crucial for its "serving" functionality.
+*   **[pypdf](https://github.com/py-pdf/pypdf)**: A robust Python library for working with PDF files, utilized by LMTokenCook for its PDF text extraction capabilities (from PDFs with existing text layers).
+*   **[python-docx](https://github.com/python-openxml/python-docx)**: The go-to Python library for creating and updating Microsoft Word (`.docx`) files, used here for reading and extracting text content from `.docx` documents.
+*   **[Appdirs](https://github.com/ActiveState/appdirs)**: A helpful Python module for determining appropriate platform-specific directories for storing application data, such as LMTokenCook's user configuration file (`config.json`).
+*   **[TkinterDnd2](https://github.com/python-tkdnd/tkdnd/)**: A Python wrapper for the Tk DND (Drag and Drop) extension, enabling the convenient drag-and-drop functionality for input files and folders in LMTokenCook's GUI.
+*   **[Pillow (The Friendly PIL Fork)](https://python-pillow.org/)**: The indispensable Python Imaging Library, used by LMTokenCook primarily for handling image assets within its GUI (such as the application logo).
+*   **[PyInstaller](https://pyinstaller.org/)**: The powerful and widely-used tool that bundles the LMTokenCook Python application and all its dependencies into standalone executables for Windows (`.exe`) and macOS (`.app` bundles). This makes LMTokenCook easily accessible to end-users who may not have a Python environment installed on their computers.
+
+And a broader, heartfelt thank you to the vast and vibrant **Python open-source community** as a whole. The incredible array of high-quality libraries, the collaborative spirit, and the wealth of shared knowledge make it possible for useful tools like LMTokenCook to be developed efficiently and shared with users worldwide.
 
 ---
 
 ## 🛟 Need Help? Support & Contact Information
 
-Your experience with LMTokenCook is important to us. If you encounter any issues, bugs, security concerns, or have questions that aren't addressed in this README, please reach out. Your feedback is essential for the reliability, security, and ongoing improvement of this tool.
+Your experience with LMTokenCook is very important to us at DropShock Digital LLC. If you encounter any issues while using the application, believe you've discovered a potential bug, have security concerns, have brilliant ideas for new features or improvements, or simply want to share your general feedback or ask questions that aren't addressed in this README, please don't hesitate to reach out. Your input is essential for the reliability, security, and ongoing improvement of this tool.
 
 **How to Contact DropShock Digital LLC for Support:**
 
-*   **Preferred Method (Email):**
-    [support@dropshockdigital.com](mailto:support@dropshockdigital.com?subject=LMTokenCook%20Support%2FFeedback)
-*   **Business Inquiries & Direct Contact (Phone):**
-    +1 (760) 209-5480 (Please note this is a US number; email is preferred for initial technical support)
-*   **Project Website & Company Information:**
-    [https://www.dropshockdigital.com](https://www.dropshockdigital.com)
-*   **GitHub Issues (for public bug reports & feature requests):**
+*   **Preferred Method for Technical Support & Bug Reports (Email):**
+    For technical support inquiries, reporting bugs (especially if you can provide the `manifest.json` file from a problematic run for detailed diagnosis), or if you have private feedback or questions, please email us directly at:
+    [support@dropshockdigital.com](mailto:support@dropshockdigital.com?subject=LMTokenCook%20Support%2FFeedback%20(Version%201.0.0))
+    *(When emailing, please try to include "LMTokenCook" and the version number (e.g., "v1.0.0" for this initial release) in your subject line. This helps us categorize and respond to your inquiry more effectively.)*
+
+*   **GitHub Issues (The official platform for public bug tracking, feature requests & community discussion):**
+    The project's GitHub Issues page is the official and preferred place to report bugs that other users might also encounter, to request new features or enhancements you'd like to see, and to engage in discussions about technical aspects or potential improvements for LMTokenCook:
     [https://github.com/seagpt/LMTokenCook/issues](https://github.com/seagpt/LMTokenCook/issues)
+    *   ***Before submitting a new issue:*** Please take a moment to search through the existing open and closed issues on the GitHub page. It's possible that your problem or suggestion has already been discussed, reported, or even resolved. This helps avoid duplicate efforts and keeps the issue tracker organized for everyone.
+    *   ***When reporting a bug:*** Please provide as much detail as possible. Refer to the checklist at the end of the "Troubleshooting / FAQ" section for a list of helpful information to include in your bug report (such as your OS version, the LMTokenCook version you are using, clear steps to reproduce the issue, any error messages, screenshots, and the relevant `manifest.json` file if applicable).
 
-**When contacting support, please try to include as much detail as possible:**
-*   Your Operating System and version (e.g., Windows 11 Pro v23H2, macOS Sonoma 14.3).
-*   The version of LMTokenCook you are using (from the app title bar or release notes).
-*   Clear, step-by-step instructions to reproduce the issue.
-*   Any error messages shown in the GUI or console.
-*   Screenshots of the application state or error messages.
-*   The relevant `manifest.json` file (if the issue relates to a specific processing run).
+*   **Company Website & General Business Inquiries:**
+    For more information about DropShock Digital LLC, our other software projects, digital media services, or for general business-related inquiries, please visit our official website:
+    [https://www.dropshockdigital.com](https://www.dropshockdigital.com)
 
-**Privacy & Security of Your Support Requests:**
-All support requests made directly to DropShock Digital LLC via email or phone are handled with confidentiality. We aim to respond to all inquiries as promptly as possible.
+*   **Direct Contact (Phone - primarily for urgent business inquiries or specific pre-arranged consultations):**
+    +1 (760) 209-5480 (This is a United States phone number). *Please note that for general technical support with LMTokenCook, using email or the GitHub Issues page is typically more efficient, as these channels allow for easier tracking of issues and the exchange of detailed information like log files, manifests, and screenshots.*
 
-Thank you for using LMTokenCook and for helping us make it an even better tool for the AI community!
+**What to Include When Contacting Support for an Issue:**
+To help us assist you as quickly and effectively as possible, please try to include the following details when you report an issue:
+*   Your **Operating System and its exact version** (e.g., "Windows 11 Pro Version 23H2 OS Build 22631.xxxx", or "macOS Sonoma Version 14.4.1 (23E224)").
+*   The **version of LMTokenCook** you are using (e.g., "v1.0.0" for this initial release; this is often found in an "About" dialog in the GUI or in the release notes for the version you downloaded).
+*   **Clear, precise, step-by-step instructions** on how to reliably reproduce the issue you are experiencing. The more detail you can provide about what you did leading up to the problem, the better.
+*   Any **error messages** that were displayed on your screen by LMTokenCook (either within the GUI's log area, in a pop-up error dialog window, or in the console output if you were running from source). Screenshots of these messages are very helpful.
+*   The relevant **`manifest.json` file** (if the issue relates to a specific processing run and a manifest was generated). You can often attach this file to emails or include its content in GitHub issues.
+*   A brief but clear description of the **expected behavior** (i.e., what you thought LMTokenCook *should* have done) versus the **actual behavior** you observed.
+
+**Your Privacy and Security When Requesting Support:**
+All support requests made directly to DropShock Digital LLC via email or phone are handled with strict confidentiality. We are committed to helping you use LMTokenCook effectively and aim to respond to all inquiries as promptly and thoroughly as possible.
+
+Thank you for using LMTokenCook and for helping us make it an even better and more valuable tool for the AI user community!
 
 ---
 
-## 📜 License
+## 📜 License Information
 
-**LMTokenCook**
+**LMTokenCook Application Software**
 Copyright (c) 2024-2025 Steven Seagondollar, DropShock Digital LLC.
+All Rights Reserved by DropShock Digital LLC and Steven Seagondollar as applicable under copyright law.
 
-This project is licensed under the terms of the **MIT License**.
-A copy of the license is included in the `LICENSE.md` file in the root of this project's source code repository.
+This LMTokenCook project is licensed to you, the user, under the terms of the **MIT License**.
+A complete copy of the full license text is included in the file named `LICENSE.md`, which should be located in the root directory of this project's source code repository. If you downloaded a pre-built packaged version of LMTokenCook, the license file may also be included with the application installer or accessible via an "About" dialog within the application itself.
 
-**In brief, the MIT License grants you permission to:**
-*   Freely use, copy, modify, and merge the software.
-*   Publish, distribute, sublicense, and/or sell copies of the software.
-*   Use the software for private or commercial purposes.
+**Key Permissions & Conditions of the MIT License (Summary for General Understanding):**
 
-**The main conditions are:**
-*   The original copyright notice (as above) and this permission notice must be included in all copies or substantial portions of the Software.
-*   The software is provided "AS IS", without warranty of any kind. The authors or copyright holders are not liable for any claim, damages, or other liability.
+The MIT License is a very permissive and widely used free software license. This means it places minimal restrictions on how you, as a user or developer, can use, modify, and distribute the software. In essence, it grants you broad freedoms:
 
-Please review the full `LICENSE.md` text for complete details.
+*   **Freedom to Use:** You are completely free to use the LMTokenCook software for any purpose you see fit. This includes using it for commercial (business) ventures, private personal projects, academic research, and educational activities, without any royalty payments or usage fees being due to DropShock Digital LLC.
+*   **Freedom to Modify:** If you have the source code, you have the right to modify the LMTokenCook software to suit your specific needs, to fix bugs you might find, or to add new features and improvements for your own use or to share with others.
+*   **Freedom to Distribute:** You are permitted to redistribute copies of the LMTokenCook software to others, either in its original, unmodified form or as modified by you (provided you adhere to the license conditions, primarily regarding notice preservation).
+*   **Freedom to Sublicense:** You can grant sublicenses to others, allowing them to also use, modify, and distribute the software under the same terms of the MIT license.
+
+**The primary conditions and obligations that come with the MIT License are simple and straightforward:**
+
+1.  **Preservation of Copyright Notice and Permission Notice:** The original copyright notice (as stated at the top of this section, typically in the format "Copyright (c) YEAR Author Name") and the permission notice (which is the full text of the MIT License itself, as found in the `LICENSE.md` file) must be included in all copies or substantial portions of the Software that you distribute. This is a standard requirement of most open-source licenses and ensures that the original authorship and the terms under which the software is shared are always clear.
+2.  **"AS IS" Warranty Disclaimer & No Liability:** The LMTokenCook software is provided to you "AS IS", WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED. This means that there is no guarantee from DropShock Digital LLC or Steven Seagondollar that the software is perfect, completely error-free, or will meet all your specific requirements or expectations. This disclaimer of warranty includes, but is not limited to, any implied warranties of MERCHANTABILITY (i.e., that the software is of a certain average quality or fit for general sale) and FITNESS FOR A PARTICULAR PURPOSE (i.e., that the software will successfully do what you specifically want it to do for your use case), and NON-INFRINGEMENT (i.e., that the software doesn't violate someone else's patents, copyrights, or other intellectual property rights).
+    Furthermore, IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS (Steven Seagondollar, DropShock Digital LLC) BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE ITSELF OR FROM YOUR USE OR INABILITY TO USE THE SOFTWARE. This comprehensive limitation of liability includes (but is not limited to) any loss of data, loss of profits, business interruption, or any other direct, indirect, incidental, special, exemplary, or consequential damages that might arise from your use of, or inability to use, LMTokenCook, even if you have been advised of the possibility of such damages.
+
+Please take the time to review the full `LICENSE.md` text for the complete, official, and legally binding terms and conditions under which LMTokenCook is provided. Your decision to download, install, use, modify, or distribute LMTokenCook signifies your understanding and acceptance of these MIT License terms.
