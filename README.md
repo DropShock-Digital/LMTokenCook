@@ -1,7 +1,7 @@
 <div align="center">
   <img src="assets/LMTC_Patch.png" alt="LMTokenCook Logo" width="400" style="margin-bottom:10px;"/>
   <h1>LMTokenCook</h1>
-  <h3 align="center" style="font-weight: normal; margin-top: -10px; margin-bottom: 10px;">Cook Your Files into AI-Ready Servings 🍳</h3>
+  <h3 align="center" style="font-weight: normal; margin-top: -10px; margin-bottom: 10px;">Cook Your Files into AI-Inferface Ready Servings 🍳</h3>
   <p><strong>A powerful utility for AI users by <a href="https://www.dropshockdigital.com" target="_blank" rel="noopener noreferrer">Steven Seagondollar, DropShock Digital LLC</a></strong></p>
   <br>
   <a href="https://www.dropshockdigital.com" target="_blank" rel="noopener noreferrer">
