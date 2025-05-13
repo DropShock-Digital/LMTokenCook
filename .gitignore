@@ -81,3 +81,5 @@ secrets.yml
 # Add any other project-specific files/folders to ignore below
 # e.g., large data files, temporary output directories not meant for commit
 .bootstrap_cache
+*.dmg
+*.zip
