@@ -83,3 +83,5 @@ secrets.yml
 .bootstrap_cache
 *.dmg
 *.zip
+src/server/stats.db
+
