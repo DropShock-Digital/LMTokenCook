@@ -1,6 +1,5 @@
-customtkinter
-Pillow
+fastapi
+uvicorn[standard]
+python-multipart
 tiktoken
-tkinterdnd2
-python-docx
-pypdf
+# packaging
