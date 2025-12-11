@@ -9,7 +9,7 @@ app = FastAPI()
 # Enable CORS for Frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:5176"], # Vite Dev Ports
+    allow_origins=["*"], # Allow all for Docker/Tunnel flexibility
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -26,7 +26,7 @@ def init_db():
     # Init row if empty
     c.execute("SELECT * FROM global_stats WHERE id=1")
     if not c.fetchone():
-        c.execute("INSERT INTO global_stats (id, tokens, chunks, runs) VALUES (1, 12500000, 4500, 120)")
+        c.execute("INSERT INTO global_stats (id, tokens, chunks, runs) VALUES (1, 0, 0, 0)")
     conn.commit()
     conn.close()
 

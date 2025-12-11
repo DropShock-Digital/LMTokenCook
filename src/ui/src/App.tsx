@@ -228,7 +228,9 @@ function App() {
             })
 
             // Report Stats to Backend (Fire & Forget)
-            fetch('http://localhost:8000/stats/increment', {
+            // Report Stats to Backend (Fire & Forget)
+            // Use relative path so Vite proxy (dev) or Nginx (prod) can route to backend
+            fetch('/stats/increment', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -339,23 +341,44 @@ function App() {
                         </div>
 
                         {/* Token Slider */}
-                        <div className="space-y-3 pt-4">
-                            <Tooltip content="Define the maximum number of tokens per file serving. Match this to your AI's context window (e.g., 30k for basic, 128k for GPT-4).">
-                                <div className="flex justify-between text-xs text-white/50 uppercase tracking-wider font-bold cursor-help">
-                                    <span>Max Tokens Per Serving</span>
-                                    <span className="font-mono text-amber-400">{chunkSize.toLocaleString()}</span>
+                        <div className="space-y-4 pt-4">
+                            <Tooltip content="Define the maximum number of tokens per file serving. Match this to your AI's context window.">
+                                <div className="flex justify-between text-xs text-white/50 uppercase tracking-wider font-bold cursor-help mb-2">
+                                    <span>Max Tokens Per Serving: </span>
+                                    <span className="font-mono text-amber-400 text-sm">{chunkSize.toLocaleString()}</span>
                                 </div>
                             </Tooltip>
+
+                            {/* Presets */}
+                            <div className="flex gap-3 mb-2">
+                                <Tooltip content="Gemini Advanced WebUI often limits input to ~60k tokens despite the 1M+ context window. (Subject to change)">
+                                    <button
+                                        onClick={() => setChunkSize(60000)}
+                                        className="px-3 py-1.5 rounded-lg bg-neutral-800 border border-white/5 text-[10px] text-neutral-400 hover:text-amber-400 hover:border-amber-500/30 transition-all font-mono"
+                                    >
+                                        Gemini (60k)
+                                    </button>
+                                </Tooltip>
+                                <Tooltip content="ChatGPT WebUI typically limits input to ~28k - 32k tokens per message. (Subject to change)">
+                                    <button
+                                        onClick={() => setChunkSize(28000)}
+                                        className="px-3 py-1.5 rounded-lg bg-neutral-800 border border-white/5 text-[10px] text-neutral-400 hover:text-amber-400 hover:border-amber-500/30 transition-all font-mono"
+                                    >
+                                        ChatGPT (28k)
+                                    </button>
+                                </Tooltip>
+                            </div>
+
                             <input
                                 type="range"
-                                min="1000" max="128000" step="1000"
+                                min="1" max="1000000" step="100"
                                 value={chunkSize}
                                 onChange={(e) => setChunkSize(Number(e.target.value))}
                                 className="w-full accent-amber-500 h-2 bg-white/10 rounded-lg appearance-none cursor-pointer"
                             />
                             <div className="flex justify-between text-[10px] text-white/20 font-mono">
-                                <span>1k (Strict)</span>
-                                <span>128k (GPT-4)</span>
+                                <span>1 Token</span>
+                                <span>1 Million Tokens</span>
                             </div>
                         </div>
                     </div>
@@ -367,39 +390,48 @@ function App() {
                             <span className="text-xs font-bold uppercase">Cook Configuration</span>
                         </div>
 
-                        <div className="space-y-4">
-                            <Tooltip content="Automatically injects 'Chunk X of Y' headers and 'Do not respond yet' footers. Essential for preventing hallucinations during sequential input." side="left">
-                                <label className="flex items-center justify-between cursor-pointer group">
-                                    <span className="text-sm text-white/70 group-hover:text-white transition-colors">Smart Context Headers</span>
-                                    <div onClick={() => toggleConfig('smartPrompts')} className={clsx("w-10 h-5 rounded-full relative transition-colors", config.smartPrompts ? "bg-amber-600" : "bg-white/10")}>
+                        <div className="space-y-4"> {/* Reduced spacing to fit more items if needed */}
+                            <Tooltip content="Automatically adds 'Chunk X of Y' headers and 'Do not respond yet' footers to each file part. This instructs the AI to wait for the full context before processing, preventing premature or hallucinatory responses." side="left">
+                                <label className="flex items-center justify-between cursor-pointer group p-2 hover:bg-white/5 rounded-lg transition-colors gap-4">
+                                    <span className="text-sm text-white/70 group-hover:text-white transition-colors truncate">Smart Context Headers</span>
+                                    <div onClick={() => toggleConfig('smartPrompts')} className={clsx("w-10 h-5 rounded-full relative transition-colors flex-shrink-0", config.smartPrompts ? "bg-amber-600" : "bg-white/10")}>
                                         <div className={clsx("absolute top-1 left-1 w-3 h-3 bg-white rounded-full transition-transform", config.smartPrompts ? "translate-x-5" : "translate-x-0")} />
                                     </div>
                                 </label>
                             </Tooltip>
 
-                            <Tooltip content="Generates a Table of Contents (Recursive Map) of all files and their token counts at the start of the first chunk. Gives the AI a high-level overview." side="left">
-                                <label className="flex items-center justify-between cursor-pointer group">
-                                    <span className="text-sm text-white/70 group-hover:text-white transition-colors">Generate File Map</span>
-                                    <div onClick={() => toggleConfig('fileMap')} className={clsx("w-10 h-5 rounded-full relative transition-colors", config.fileMap ? "bg-amber-600" : "bg-white/10")}>
+                            <Tooltip content="Creates a comprehensive '000_structure_map.txt' file that lists every file and its token count. This acts as a Table of Contents, giving the AI a high-level map of your repository before it dives into the code." side="left">
+                                <label className="flex items-center justify-between cursor-pointer group p-2 hover:bg-white/5 rounded-lg transition-colors gap-4">
+                                    <span className="text-sm text-white/70 group-hover:text-white transition-colors truncate">Generate File Map</span>
+                                    <div onClick={() => toggleConfig('fileMap')} className={clsx("w-10 h-5 rounded-full relative transition-colors flex-shrink-0", config.fileMap ? "bg-amber-600" : "bg-white/10")}>
                                         <div className={clsx("absolute top-1 left-1 w-3 h-3 bg-white rounded-full transition-transform", config.fileMap ? "translate-x-5" : "translate-x-0")} />
                                     </div>
                                 </label>
                             </Tooltip>
 
-                            <Tooltip content="Prepends 4-digit line numbers (0001:) to every line of code. Critical for asking the AI to 'Refactor lines 50-60' accurately." side="left">
-                                <label className="flex items-center justify-between cursor-pointer group">
-                                    <span className="text-sm text-white/70 group-hover:text-white transition-colors">Add Line Numbers</span>
-                                    <div onClick={() => toggleConfig('lineNumbers')} className={clsx("w-10 h-5 rounded-full relative transition-colors", config.lineNumbers ? "bg-amber-600" : "bg-white/10")}>
+                            <Tooltip content="Prepends line numbers (e.g., '0042: ') to every line of code. This is crucial when you want to ask the AI to 'Refactor lines 40 through 60', allowing for precise, surgical code edits." side="left">
+                                <label className="flex items-center justify-between cursor-pointer group p-2 hover:bg-white/5 rounded-lg transition-colors gap-4">
+                                    <span className="text-sm text-white/70 group-hover:text-white transition-colors truncate">Add Line Numbers</span>
+                                    <div onClick={() => toggleConfig('lineNumbers')} className={clsx("w-10 h-5 rounded-full relative transition-colors flex-shrink-0", config.lineNumbers ? "bg-amber-600" : "bg-white/10")}>
                                         <div className={clsx("absolute top-1 left-1 w-3 h-3 bg-white rounded-full transition-transform", config.lineNumbers ? "translate-x-5" : "translate-x-0")} />
                                     </div>
                                 </label>
                             </Tooltip>
 
-                            <Tooltip content="Removes completely blank lines to save tokens and condense the output. Useful for inconsistently formatted source files." side="left">
-                                <label className="flex items-center justify-between cursor-pointer group">
-                                    <span className="text-sm text-white/70 group-hover:text-white transition-colors">Skip Empty Lines</span>
-                                    <div onClick={() => toggleConfig('skipEmptyLines')} className={clsx("w-10 h-5 rounded-full relative transition-colors", config.skipEmptyLines ? "bg-amber-600" : "bg-white/10")}>
+                            <Tooltip content="Removes purely empty lines from your source files. This optimizes token usage, squeezing more code into each prompt window without sacrificing readability." side="left">
+                                <label className="flex items-center justify-between cursor-pointer group p-2 hover:bg-white/5 rounded-lg transition-colors gap-4">
+                                    <span className="text-sm text-white/70 group-hover:text-white transition-colors truncate">Skip Empty Lines</span>
+                                    <div onClick={() => toggleConfig('skipEmptyLines')} className={clsx("w-10 h-5 rounded-full relative transition-colors flex-shrink-0", config.skipEmptyLines ? "bg-amber-600" : "bg-white/10")}>
                                         <div className={clsx("absolute top-1 left-1 w-3 h-3 bg-white rounded-full transition-transform", config.skipEmptyLines ? "translate-x-5" : "translate-x-0")} />
+                                    </div>
+                                </label>
+                            </Tooltip>
+
+                            <Tooltip content="Copies all processing files into a single, massive 'master file' in addition to the chunked output. Useful if you have a model with a massive context window (like Gemini 1.5 Pro) and want to upload just one file." side="left">
+                                <label className="flex items-center justify-between cursor-pointer group p-2 hover:bg-white/5 rounded-lg transition-colors gap-4">
+                                    <span className="text-sm text-white/70 group-hover:text-white transition-colors truncate">Deliver Master File</span>
+                                    <div onClick={() => toggleConfig('keepMaster')} className={clsx("w-10 h-5 rounded-full relative transition-colors flex-shrink-0", config.keepMaster ? "bg-amber-600" : "bg-white/10")}>
+                                        <div className={clsx("absolute top-1 left-1 w-3 h-3 bg-white rounded-full transition-transform", config.keepMaster ? "translate-x-5" : "translate-x-0")} />
                                     </div>
                                 </label>
                             </Tooltip>
