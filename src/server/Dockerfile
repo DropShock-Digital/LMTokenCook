@@ -18,8 +18,13 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 5. Copy Application Code
 COPY . .
 
-# 6. Expose Port (Internal Docker Network)
+# 6. Security: Create Non-Root User
+# Create a user with UID 1000 to avoid root privileges
+RUN adduser --disabled-password --gecos "" appuser && chown -R appuser /app
+USER appuser
+
+# 7. Expose Port (Internal Docker Network)
 EXPOSE 8000
 
-# 7. Run Command
+# 8. Run Command
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

@@ -13,8 +13,12 @@ RUN npm ci
 # 4. Copy Application Code
 COPY . .
 
-# 5. Expose Port (Internal Docker Network)
+# 5. Security: Run as Non-Root User
+# The node image comes with a 'node' user (UID 1000)
+USER node
+
+# 6. Expose Port (Internal Docker Network)
 EXPOSE 5173
 
-# 6. Run Command (Dev Mode for now, can switch to build later)
+# 7. Run Command (Dev Mode for now, can switch to build later)
 CMD ["npm", "run", "dev", "--", "--host"]

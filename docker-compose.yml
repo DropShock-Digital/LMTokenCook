@@ -35,19 +35,33 @@ services:
     networks:
       - lmtokencook-net
   # ----------------------------
+  # 🚦 NGINX (Reverse Proxy)
+  # ----------------------------
+  nginx:
+    image: nginx:alpine
+    container_name: lmtokencook-nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "127.0.0.1:8080:80" # Local access to the Unified Proxy
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - lmtokencook-net
+
+  # ----------------------------
   # ☁️ CLOUDFLARE (Sidecar)
   # ----------------------------
   tunnel:
     image: cloudflare/cloudflared:latest
     container_name: lmtokencook-tunnel
     restart: unless-stopped
-    command: tunnel --config /etc/cloudflared/config.yml run
-    volumes:
-      - ./config.yml:/etc/cloudflared/config.yml
+    command: tunnel --url http://nginx:80
     networks:
       - lmtokencook-net
     depends_on:
-      - frontend
+      - nginx
 
 networks:
   lmtokencook-net:

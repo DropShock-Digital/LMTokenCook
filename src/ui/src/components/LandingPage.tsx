@@ -454,6 +454,11 @@ export function LandingPage({ onStart }: LandingPageProps) {
                         <button onClick={() => setLegalOpen('privacy')} className="hover:text-white transition-colors">Privacy Policy</button>
                         <button onClick={() => setLegalOpen('terms')} className="hover:text-white transition-colors">Terms of Use</button>
                         <a href="mailto:support@dropshockdigital.com" className="hover:text-white transition-colors">Support</a>
+                        <div className="w-px h-4 bg-white/20 mx-2 hidden md:block"></div>
+                        <a href="https://github.com/DropShock-Digital/LMTokenCook/issues/new?labels=enhancement&template=feature_request.md" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-amber-500 transition-colors">
+                            <span className="w-2 h-2 rounded-full bg-amber-500"></span> Request Feature
+                        </a>
+                        <a href="https://github.com/DropShock-Digital/LMTokenCook/issues/new?labels=bug&template=bug_report.md" target="_blank" rel="noreferrer" className="hover:text-red-400 transition-colors">Report Bug</a>
                     </div>
                 </div>
             </footer>
