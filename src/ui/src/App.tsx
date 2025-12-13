@@ -207,7 +207,7 @@ function App() {
                     skipEmptyLines: config.skipEmptyLines
                 })
 
-                totalTokens += chunks.reduce((acc, c) => acc + countTokens(c), 0)
+                totalTokens += chunks.reduce((acc: number, c: string) => acc + countTokens(c), 0)
 
                 for (let i = 0; i < chunks.length; i++) {
                     const chunkName = `serving_${globalChunkIndex}_${doc.path.replace(/[\/\\]/g, '_')}.txt`
@@ -228,7 +228,6 @@ function App() {
             })
 
             // Report Stats to Backend (Fire & Forget)
-            // Report Stats to Backend (Fire & Forget)
             // Use relative path so Vite proxy (dev) or Nginx (prod) can route to backend
             fetch('/stats/increment', {
                 method: 'POST',
@@ -238,12 +237,12 @@ function App() {
                     chunks: globalChunkIndex - 1,
                     runs: 1
                 })
-            }).catch(err => console.error("Stats reporting failed (Backend offline?)", err));
+            }).catch((err: unknown) => console.error("Stats reporting failed (Backend offline?)", err));
 
             setStatus("done")
             setMessage(`Cooking Complete! ${globalChunkIndex - 1} chunks created.`)
 
-        } catch (e) {
+        } catch (e: unknown) {
             console.error(e)
             setStatus("error")
             setMessage("Error during processing. See console.")

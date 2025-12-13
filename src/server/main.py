@@ -4,16 +4,7 @@ from pydantic import BaseModel
 import sqlite3
 import os
 
-app = FastAPI()
-
-# Enable CORS for Frontend
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"], # Allow all for Docker/Tunnel flexibility
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+from contextlib import asynccontextmanager
 
 # Database Setup
 DB_FILE = "stats.db"
@@ -30,7 +21,21 @@ def init_db():
     conn.commit()
     conn.close()
 
-init_db()
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    init_db()
+    yield
+
+app = FastAPI(lifespan=lifespan)
+
+# Enable CORS for Frontend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], # Allow all for Docker/Tunnel flexibility
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class StatsUpdate(BaseModel):
     tokens: int
