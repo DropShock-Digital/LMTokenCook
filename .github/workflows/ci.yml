@@ -36,8 +36,7 @@ jobs:
 
     - name: Run Tests
       run: |
-        export PYTHONPATH=$PYTHONPATH:.
-        pytest tests/
+        python -m pytest tests/
 
   frontend-build:
     runs-on: ubuntu-latest

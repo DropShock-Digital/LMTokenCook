@@ -115,16 +115,20 @@ function App() {
             // 1. Gather Content
             if (isFSASupported && dirHandle) {
                 const fsFiles = await getFilesRecursively(dirHandle)
-                filesToProcess = fsFiles.map(f => ({
+                // Use explicit any for handle to avoid missing type definition issues in CI
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                filesToProcess = fsFiles.map((f: { path: string, handle: any }) => ({
                     path: f.path,
-                    content: f.handle.getFile().then(file => file.text())
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    content: f.handle.getFile().then((file: any) => file.text())
                 }))
             } else if (fallbackFiles) {
                 // @ts-ignore
-                filesToProcess = Array.from(fallbackFiles).map(f => ({
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                filesToProcess = Array.from(fallbackFiles).map((f: any) => ({
                     path: f.webkitRelativePath || f.name,
                     content: f.text()
-                })).filter(f => !f.path.match(/\.(png|jpg|exe|bin)$/))
+                })).filter((f: { path: string }) => !f.path.match(/\.(png|jpg|exe|bin)$/))
             }
 
             setMessage(`Analyzing ${filesToProcess.length} files...`)
