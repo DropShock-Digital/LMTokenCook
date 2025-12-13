@@ -1,5 +1,8 @@
 from fastapi.testclient import TestClient
-from main import app
+from main import app, init_db
+
+# Ensure DB is created before tests run
+init_db()
 
 client = TestClient(app)
 
