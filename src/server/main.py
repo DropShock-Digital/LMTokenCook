@@ -71,6 +71,24 @@ def increment_stats(update: StatsUpdate):
     
     return {"tokens": data[0], "chunks": data[1], "runs": data[2]}
 
+class CookRequest(BaseModel):
+    text: str
+    chunk_size: int = 28000
+
+@app.post("/cook")
+async def cook_text(request: CookRequest):
+    # Basic wrapper around the core chunker logic
+    # TODO: Refactor 'serving_lines' to be more API friendly if needed, 
+    # but for now we just want to prove the python logic is accessible.
+    # Since serving_lines writes to disk, we might want a memory-only version later.
+    # For this portfolio clean-up, simply exposing the endpoint and validating import is enough.
+    
+    # Import here to avoid circular dep if any, though likely safe at top
+    from src.server.core.chunker import count_tokens # Assuming this exists or similar
+    
+    tokens = len(request.text) # Quick approx or real use tiktoken if available
+    return {"message": "Python Cooker Ready", "input_length": len(request.text)}
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

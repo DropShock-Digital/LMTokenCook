@@ -2,4 +2,4 @@ fastapi
 uvicorn[standard]
 python-multipart
 tiktoken
-# packaging
+pytest

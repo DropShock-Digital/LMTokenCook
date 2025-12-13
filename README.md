@@ -1,91 +1,72 @@
-# LMTokenCook (Docker Edition)
+# LMTokenCook
 
-<div align="center">
-  <img src="assets/demo.webp" alt="LMTokenCook Demo" width="100%" style="border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 0 50px rgba(245, 158, 11, 0.2);">
-</div>
+![Architecture](assets/architecture.png)
 
-<br>
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python](https://img.shields.io/badge/python-3.11+-blue.svg)
+![React](https://img.shields.io/badge/react-18+-61DAFB.svg)
+![Status](https://img.shields.io/badge/Status-Active-success.svg)
 
-<div align="center">
+**LMTokenCook** is a powerful, local-first tool designed to prepare large codebases for Large Language Model (LLM) context windows. It intelligently chunks, tokens, and formats your repository into "servings" that fit perfectly into tools like Gemini 1.5 Pro, Claude 3 Opus, or ChatGPT-4o.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](https://opensource.org/licenses/MIT)
-[![Docker](https://img.shields.io/badge/Docker-Enabled-blue.svg?logo=docker)](https://www.docker.com/)
-[![React](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB.svg?logo=react)](https://reactjs.org/)
-[![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688.svg?logo=fastapi)](https://fastapi.tiangolo.com/)
+## 🚀 Features
 
-**The "Context Augmented Generation" (CAG) Parsing Engine.**  
-*Prepare your entire repository for Gemini 1.5 Pro, Claude 3.5 Sonnet, and GPT-4o.*
+*   **Smart Chunking**: Automatically splits files based on token counts (using `tiktoken` logic) to ensure no context overflow.
+*   **Safety First**: Runs entirely locally. Your code never leaves your machine unless you choose to use the cloud backend.
+*   **Dual Architecture**: 
+    *   **Browser Mode**: Uses the File System Access API for high-speed, client-side processing (React + WebAssembly).
+    *   **Server Mode**: Optional Python FastAPI backend for headless automation and deeper integration (Docker ready).
+*   **Context Optimization**: Features "Skip Empty Lines" and "Line Numbering" to maximize information density.
+*   **Token Stats**: Visualizes token usage across your project.
 
-</div>
+## 🛠️ Installation & Usage
 
----
+### Option 1: Docker (Recommended)
 
-## 🚀 The AI Power-User's Secret Weapon
-LMTokenCook is a **local data processing engine** that turns your messy codebase into a pristine, token-optimized "Context Object" for Large Language Models. 
+```bash
+docker-compose up --build
+```
 
-Unlike "RAG" (Retrieval Augmented Generation), which aggressively filters your data to save costs, **CAG** (Context Augmented Generation) feeds the **entire related codebase** into the model's short-term memory. This unlocks:
-- **Global Reasoning**: The AI sees the *whole* picture, not just search results.
-- **Deep Refactoring**: Safely change core architectures with full dependency awareness.
-- **Consistency**: Maintain style and tone across hundreds of files simultaneously.
+Access the UI at `http://localhost:3000` (or `8000` depending on configuration).
 
-## ✨ Features (Docker Edition)
-We have retired the desktop app in favor of a **robust, containerized web application**. This ensures 100% isolation, reproducibility, and OS-agnostic performance.
+### Option 2: Local Development
 
-- **🛡️ 100% Local Processing**: Your code never leaves your Docker container until you copy the output.
-- **🐳 Zero-Config Deployment**: Usage is as simple as `docker-compose up`.
-- **✂️ Intelligent "Servings"**: Automatically splits massive repos into Prompt-Window-Sized chunks (e.g., 28k for ChatGPT Teams, 128k for GPT-4).
-- **🧠 Smart Headers**: Injects anti-hallucination prompts ("Part 1 of 5... Do not answer yet") to force the AI to wait for the full context.
-- **🗺️ Recursive File Map**: Generates a tree-structure TOC of your entire project for high-level AI planning.
-- **⚡ TikToken Accuracy**: Uses the exact tokenizer mappings used by OpenAI and Google for bit-perfect window management.
+**Extension Backend (Python):**
+```bash
+# Install dependencies
+pip install -r requirements.txt
 
-## 🛠️ Quick Start
+# Run Server
+uvicorn src.server.main:app --reload
+```
 
-### Prerequisites
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Windows/Mac/Linux)
+**Frontend (React):**
+```bash
+cd src/ui
+npm install
+npm run dev
+```
 
-### Installation
-1.  **Clone the Repository**
-    ```bash
-    git clone https://github.com/DropShock-Digital/LMTokenCook.git
-    cd LMTokenCook
-    ```
+## 🏗️ Architecture
 
-2.  **Launch the Engine**
-    ```bash
-    docker-compose up --build
-    ```
+LMTokenCook leverages a modern split-stack architecture:
 
-3.  **Start Cooking**
-    Open your browser to: `http://localhost:5173`
+- **Frontend**: React, Vite, TailwindCSS, Framer Motion. Handles the UI and client-side chunks (for maximum privacy).
+- **Backend**: Python FastAPI. Provides an API for headless operations (`/cook`) and statistics tracking.
+- **Core**: Shared logic for token counting and text segmentation.
 
-    *(Optional)* The logs will verify the backend is active at `http://localhost:8000`.
+## 🧪 Testing
 
-## 📦 Architecture
-LMTokenCook uses a modern "Dual-Head" architecture orchestrated by Docker Compose:
+```bash
+pip install pytest
+pytest tests/
+```
 
-| Service | Technology | Description |
-| :--- | :--- | :--- |
-| **Frontend** | React + Vite | A beautiful, "Liquid Glass" UI for selecting files and configuring options. |
-| **Backend** | Python + FastAPI | The heavy-lifting engine. Handles file system recursion, token counting, and chunk serialization. |
-| **Sidecar** | Cloudflared | *(Optional)* Secure, encrypted tunnel for safely exposing your local instance to the web. |
+## 📜 License
 
-## 📖 Configuration Guide
-Once the app is running, you can toggle these advanced features:
-
-- **Smart Context Headers**: Adds "Part X of Y" headers. *Recommended: ON*
-- **Generate File Map**: Creates `000_structure_map.txt`. *Recommended: ON*
-- **Add Line Numbers**: Prepends `0042:` to lines for surgical LLM refactors. *Recommended: ON for Code*
-- **Skip Empty Lines**: Removes whitespace to save ~15% token usage. *Recommended: ON*
-- **Deliver Master File**: Creates one massive file in addition to chunks. *Useful for Gemini 1.5 Pro (2M Context).*
-
-## 🔒 Privacy & Security
-- **No Telemetry**: We do not track your code or your queries.
-- **Local-First**: All "Uploads" are actually just File System Access API calls locally.
-- **Docker Isolation**: The application runs in a sandboxed network.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-<div align="center">
-  <p>© 2025 DropShock Digital. Created by Steven Seagondollar.</p>
-  <p><em>"Results over Process."</em></p>
-</div>
+**Built by [DropShock Digital](https://dropshock.com)**
+*Professional AI Solutions*

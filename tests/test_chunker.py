@@ -3,7 +3,7 @@ from unittest.mock import MagicMock, patch
 import tempfile
 import shutil
 import pathlib
-from src.core.chunker import serving_lines
+from src.server.core.chunker import serving_lines
 
 class TestChunker(unittest.TestCase):
 
