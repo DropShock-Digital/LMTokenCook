@@ -4,10 +4,10 @@ import { FolderOpen, Play, FileText, Settings, Activity, Cpu, Download } from 'l
 import clsx from 'clsx'
 import JSZip from 'jszip'
 import { saveAs } from 'file-saver'
-import { getFilesRecursively, verifyPermission } from './lib/fs-handler'
-import { processFileContent, countTokens } from './lib/chunker'
-import { LandingPage } from './components/LandingPage'
-import { Tooltip } from './components/Tooltip'
+import { getFilesRecursively, verifyPermission } from '@/lib/fs-handler'
+import { processFileContent, countTokens } from '@/lib/chunker'
+import { LandingPage } from '@/components/LandingPage'
+import { Tooltip } from '@/components/Tooltip'
 
 function App() {
     // Modes: 'landing' or 'app'
