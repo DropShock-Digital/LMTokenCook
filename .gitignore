@@ -85,3 +85,6 @@ secrets.yml
 *.zip
 src/server/stats.db
 
+# Whitelist UI Lib
+!src/ui/src/lib/
+
