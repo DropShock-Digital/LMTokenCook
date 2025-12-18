@@ -283,7 +283,7 @@ function App() {
                 <div className="flex items-start justify-between border-b border-white/5 pb-6">
                     <div className="flex items-center gap-4">
                         <div className="p-2 rounded-2xl bg-amber-500/10 border border-amber-500/20 shadow-[0_0_30px_rgba(245,158,11,0.1)]">
-                            <img src="/logo.png" alt="LMTokenCook Logo" className="w-12 h-12 object-contain" />
+                            <img src="/LMTC_Icon.png" alt="LMTokenCook Logo" className="w-12 h-12 object-contain" />
                         </div>
                         <div>
                             <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-orange-400 to-amber-600">

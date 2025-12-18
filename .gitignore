@@ -84,7 +84,13 @@ secrets.yml
 *.dmg
 *.zip
 src/server/stats.db
+stats.db
 
 # Whitelist UI Lib
 !src/ui/src/lib/
+
+# --- Binaries ---
+*.exe
+*.dll
+tools/cloudflared.exe
 

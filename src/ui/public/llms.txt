@@ -1,0 +1,27 @@
+# LMTokenCook
+The Context-Augmented Generation (CAG) Parsing Engine.
+
+## Purpose
+LMTokenCook allows AI power-users to process entire local repositories into token-optimized "servings" for Large Language Model context windows (like Gemini 1.5 Pro, Claude 3.5 Sonnet, GPT-4o).
+
+## Core Features
+1. **Local Processing**: Runs entirely client-side using WebAssembly and File System Access API. Your code never leaves your machine.
+2. **Smart Chunking**: Automatically splits files based on token counts (tiktoken) to fit specific context windows (e.g. 28k, 128k).
+3. **Sequential Headers**: Injects "Part X of Y... Wait" prompts to prevent premature AI responses.
+4. **Context Preservation**: Generates a recursive file map (Table of Contents) for global reasoning.
+
+## Usage
+1. Open the web interface.
+2. Click "Select Folder" to grant read permissions.
+3. Configure your target "Serving Size" (tokens).
+4. Click "Cook".
+5. Copy the generated text chunks into your LLM chat window sequentially.
+
+## Technical Details
+- **Frontend**: React, Vite, TailwindCSS (Liquid Glass Design)
+- **Backend**: Python FastAPI (Optional, for stats tracking)
+- **Tokenization**: CL100k_base (OpenAI standard)
+
+## Creator
+Created by Steven Seagondollar | DropShock Digital
+https://dropshockdigital.com

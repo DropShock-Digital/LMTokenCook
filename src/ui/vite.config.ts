@@ -13,7 +13,7 @@ export default defineConfig({
         port: 5173,
         host: true,
         strictPort: true,
-        allowedHosts: ['math-total-either-switched.trycloudflare.com'],
+        allowedHosts: true,
         proxy: {
             '/stats': {
                 target: process.env.VITE_API_URL || 'http://backend:8000',

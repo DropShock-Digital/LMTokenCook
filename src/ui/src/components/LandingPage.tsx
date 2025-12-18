@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Shield, Database, FileCode, Zap, Github, Globe, Activity, ArrowDown, Linkedin, Mail, BookOpen, AlertTriangle, ArrowRight } from 'lucide-react';
+import { Shield, Database, FileCode, Zap, Github, Globe, ArrowDown, Linkedin, Mail, BookOpen, AlertTriangle, ArrowRight } from 'lucide-react';
 import { LegalModal } from './LegalModal';
 import clsx from 'clsx';
 
@@ -64,7 +64,7 @@ export function LandingPage({ onStart }: LandingPageProps) {
             <nav className={clsx("fixed top-0 w-full z-50 border-b transition-all duration-300", scrolled ? "bg-black/80 backdrop-blur-md border-white/5" : "bg-transparent border-transparent")}>
                 <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                        <img src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
+                        <img src="/LMTC_Icon.png" alt="Logo" className="w-8 h-8 object-contain" />
                         <span className="font-bold tracking-tight hidden sm:block">LMTokenCook</span>
                     </div>
 
@@ -87,9 +87,19 @@ export function LandingPage({ onStart }: LandingPageProps) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <div className="inline-block px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider mb-6 backdrop-blur-md">
+                    <div className="inline-block px-4 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider mb-8 backdrop-blur-md">
                         The AI Power-User's CAG Parsing Engine
                     </div>
+
+                    {/* Logo Patch */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                        className="mb-8 flex justify-center"
+                    >
+                        <img src="/LMTC_Patch.png" alt="LMTokenCook Patch" className="w-48 h-48 object-contain drop-shadow-[0_0_30px_rgba(245,158,11,0.3)]" />
+                    </motion.div>
 
                     {/* Animated Text Background */}
                     <div className="relative">
@@ -118,7 +128,7 @@ export function LandingPage({ onStart }: LandingPageProps) {
                         onClick={onStart}
                         className="group relative inline-flex items-center gap-3 px-8 py-5 bg-white text-black rounded-full font-bold text-xl hover:bg-neutral-200 transition-all shadow-[0_0_50px_rgba(255,255,255,0.2)] hover:scale-[1.02] active:scale-[0.98]"
                     >
-                        <img src="/logo.png" alt="LMTokenCook" className="w-8 h-8 object-contain" />
+                        <img src="/LMTC_Icon.png" alt="LMTokenCook" className="w-8 h-8 object-contain" />
                         <span>Start Cooking Now</span>
                     </button>
 
@@ -184,7 +194,7 @@ export function LandingPage({ onStart }: LandingPageProps) {
                             <ul className="space-y-6 text-sm text-neutral-400 leading-relaxed flex-1">
                                 <li>
                                     <strong className="text-red-200 block mb-1 text-base">The Hidden Interface Limit</strong>
-                                    You pay an AI subscription to save on API costs, but to offset costs, the web interface <strong>limits how many tokens you can send</strong> in a single prompt (often as low as 8k-32k tokens, down from the model's actual 128K - 1M capacity).
+                                    You pay an AI subscription to save on API costs, but to offset the providers costs, the web interface <strong>limits how many tokens you can send</strong> in a single prompt (often as low as 8k-32k tokens, down from the model's actual 128K - 1M capacity).
                                 </li>
                                 <li>
                                     <strong className="text-red-200 block mb-1 text-base">Forced "RAG" (Search)</strong>
@@ -226,35 +236,39 @@ export function LandingPage({ onStart }: LandingPageProps) {
                 </div>
             </section>
 
-            {/* Showcase Animation */}
+            {/* Showcase Animation (Replaced by App Screenshot) */}
             <section className="py-12 bg-black relative z-10">
-                <div className="max-w-4xl mx-auto px-6">
+                <div className="max-w-6xl mx-auto px-6 text-center">
+                    <div className="mb-10">
+                        <span className="text-xs font-bold text-neutral-500 tracking-[0.2em] uppercase block mb-2">DropShock Digital Presents</span>
+                        <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">LMTokenCook</h2>
+                    </div>
+
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="relative rounded-xl overflow-hidden shadow-[0_0_100px_rgba(245,158,11,0.1)] border border-white/10"
+                        className="relative rounded-xl overflow-hidden shadow-[0_0_100px_rgba(245,158,11,0.15)] border border-white/10"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10" />
-                        <div className="bg-neutral-900 aspect-video flex items-center justify-center relative overflow-hidden group">
-                            {/* Simulation of code scanning */}
-                            <div className="absolute inset-x-0 top-0 h-1 bg-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.8)] z-20 animate-[scan_3s_ease-in-out_infinite]" />
-                            <div className="space-y-3 p-12 w-full opacity-30 font-mono text-xs text-left">
-                                <div className="flex gap-4">
-                                    <div className="w-12 h-64 bg-white/5 rounded" />
-                                    <div className="flex-1 space-y-4">
-                                        {Array.from({ length: 8 }).map((_, i) => (
-                                            <div key={i} className="h-2 bg-white/20 rounded w-full" style={{ width: `${Math.random() * 50 + 40}%` }} />
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="absolute inset-0 flex items-center justify-center flex-col gap-4 z-30">
-                                <span className="px-6 py-3 bg-black/80 backdrop-blur-md border border-amber-500/30 rounded-full text-lg font-mono text-amber-100 flex items-center gap-3 shadow-2xl">
-                                    <Activity className="w-5 h-5 text-amber-500 animate-pulse" />
-                                    Scanning & Tokenizing...
-                                </span>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 pointer-events-none" />
+
+                        {/* App Screenshot */}
+                        <div className="relative group text-center">
+                            <img
+                                src="/app_hero_screenshot.png"
+                                alt="LMTokenCook Application Interface"
+                                className="w-full h-auto max-h-[80vh] object-contain mx-auto opacity-90 group-hover:opacity-100 transition-opacity"
+                                onError={(e) => {
+                                    // Fallback if screenshot missing (auto-recovery to abstract)
+                                    (e.target as HTMLImageElement).style.display = 'none';
+                                    (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
+                                }}
+                            />
+                            {/* Fallback Abstract (Hidden by default unless error) */}
+                            <div className="hidden absolute inset-0 bg-neutral-900 flex items-center justify-center">
+                                <div className="absolute inset-x-0 top-0 h-1 bg-amber-500 shadow-[0_0_20px_rgba(245,158,11,0.8)] z-20 animate-[scan_3s_ease-in-out_infinite]" />
+                                <span className="text-amber-500 font-mono">Scanning... (Screenshot Placeholder)</span>
                             </div>
                         </div>
                     </motion.div>
@@ -273,7 +287,7 @@ export function LandingPage({ onStart }: LandingPageProps) {
                         <div className="flex items-center justify-center gap-2 mb-6 text-amber-500 text-sm font-bold tracking-widest uppercase">
                             <Globe className="w-4 h-4" /> Global Community Impact
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-bold mb-10">Used by AI Engineers Worldwide</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-10">Used by AI Power-Users Worldwide</h2>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-white/5">
                             <div className="p-4">
@@ -430,7 +444,7 @@ export function LandingPage({ onStart }: LandingPageProps) {
                                 In a previous role, I was tasked with analyzing <strong>years' worth of enterprise sales transcripts</strong> to create all new product documentation based on characteristics that satisfied clients. I was provided <strong>hundreds of videos</strong> that would've required me to spend the next month manually reviewing, but I needed to deliver fast. So I considered ways to solve the issue using AI. While we had no approved budget for API calls, we had a <strong>corporate subscription to ChatGPT Teams</strong>.
                             </p>
                             <p>
-                                I couldn't paste <strong>almost 100,000 tokens</strong> of transcripts into the context of ChatGPT Teams due to its <strong>28,000 token maximum prompt window</strong>, and RAG wouldn't be comprehensive enough to consider the <strong>subliminal across-transcript details</strong> that shifted client sentiments. To solve this problem, I wrote a script to <strong>chop the data into 'servings'</strong> that ChatGPT would accept sequentially. That script was later iterated, creating this fully featured product.
+                                I couldn't paste <strong>almost 100,000 tokens</strong> of transcripts into the context of ChatGPT Teams due to its <strong>28,000 token maximum prompt window</strong>, and RAG wouldn't be comprehensive enough to consider the <strong>subliminal across-transcript details</strong> that shifted client sentiments. To solve this problem, I wrote a workflow patching script to chop the data into 'servings' that ChatGPT would accept sequentially. That script was later iterated, creating this fully featured patch program.
                             </p>
                         </div>
                     </div>
@@ -450,15 +464,21 @@ export function LandingPage({ onStart }: LandingPageProps) {
                         </p>
                     </div>
                     <p className="text-center md:text-left">© 2025 DropShock Digital. Created by Steven Seagondollar.</p>
-                    <div className="flex flex-wrap justify-center gap-6">
-                        <button onClick={() => setLegalOpen('privacy')} className="hover:text-white transition-colors">Privacy Policy</button>
-                        <button onClick={() => setLegalOpen('terms')} className="hover:text-white transition-colors">Terms of Use</button>
-                        <a href="mailto:support@dropshockdigital.com" className="hover:text-white transition-colors">Support</a>
-                        <div className="w-px h-4 bg-white/20 mx-2 hidden md:block"></div>
-                        <a href="https://github.com/DropShock-Digital/LMTokenCook/issues/new?labels=enhancement&template=feature_request.md" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-amber-500 transition-colors">
-                            <span className="w-2 h-2 rounded-full bg-amber-500"></span> Request Feature
-                        </a>
-                        <a href="https://github.com/DropShock-Digital/LMTokenCook/issues/new?labels=bug&template=bug_report.md" target="_blank" rel="noreferrer" className="hover:text-red-400 transition-colors">Report Bug</a>
+                    <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+                        <div className="flex gap-6">
+                            <button onClick={() => setLegalOpen('privacy')} className="hover:text-white transition-colors">Privacy Policy</button>
+                            <button onClick={() => setLegalOpen('terms')} className="hover:text-white transition-colors">Terms of Use</button>
+                            <a href="mailto:support@dropshockdigital.com" className="hover:text-white transition-colors">Support</a>
+                        </div>
+                        <div className="hidden md:block w-px h-4 bg-white/10"></div>
+                        <div className="flex gap-6">
+                            <a href="https://github.com/DropShock-Digital/LMTokenCook/issues/new?labels=enhancement&template=feature_request.md" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-amber-500 transition-colors">
+                                <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Request Feature
+                            </a>
+                            <a href="https://github.com/DropShock-Digital/LMTokenCook/issues/new?labels=bug&template=bug_report.md" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-red-400 transition-colors">
+                                <AlertTriangle className="w-3 h-3" /> Report Bug
+                            </a>
+                        </div>
                     </div>
                 </div>
             </footer>
