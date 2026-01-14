@@ -63,7 +63,7 @@ We don't just dump text. We inject **sequential logic headers** into every chunk
 
 ## 🧩 Architecture
 
-LMTokenCook follows a **Dual-Head Monolith** pattern, designed for maximum flexibility (Local Dev vs. Power User Deployment).
+LMTokenCook follows a **Unified Stack** pattern, designed for maximum flexibility (Local Dev vs. Power User Deployment).
 
 ### Tech Stack
 - **Frontend**: React 18 (Vite), TailwindCSS, Framer Motion for "Glassmorphism" UI.
