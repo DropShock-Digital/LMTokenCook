@@ -15,9 +15,8 @@ docker-compose up --build
 
 ### 3. Usage
 *   **Web App**: Open [http://localhost:5173](http://localhost:5173) in your browser.
-*   **API**: Running internally on [http://localhost:8000](http://localhost:8000).
 
-> **Security Note**: This setup creates a virtual network. The app cannot access your `C:` drive or other files unless they are in the `src` folder we explicitly mounted.
+> **Security Note**: This setup runs a purely client-side application. The application only accesses files you explicitly pick via the Browser File System Access API. No data is stored or transmitted outside your computer.
 
 ---
 

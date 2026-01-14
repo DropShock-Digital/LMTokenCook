@@ -19,7 +19,6 @@ LMTokenCook allows AI power-users to process entire local repositories into toke
 
 ## Technical Details
 - **Frontend**: React, Vite, TailwindCSS (Liquid Glass Design)
-- **Backend**: Python FastAPI (Optional, for stats tracking)
 - **Tokenization**: CL100k_base (OpenAI standard)
 
 ## Creator

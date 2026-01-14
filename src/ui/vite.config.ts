@@ -14,12 +14,6 @@ export default defineConfig({
         host: true,
         strictPort: true,
         allowedHosts: true,
-        proxy: {
-            '/stats': {
-                target: process.env.VITE_API_URL || 'http://backend:8000',
-                changeOrigin: true,
-            }
-        }
     },
     build: {
         outDir: 'dist',

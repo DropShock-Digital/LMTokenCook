@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
-import { Shield, Database, FileCode, Zap, Globe, ArrowDown, BookOpen, AlertTriangle, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { Shield, Database, FileCode, Zap, ArrowDown, BookOpen, AlertTriangle, ArrowRight } from 'lucide-react';
 import { LegalModal } from './LegalModal';
 import { LogicModal } from './LogicModal';
 import { PayoffModal } from './PayoffModal';
@@ -15,30 +15,7 @@ export function LandingPage({ onStart }: LandingPageProps) {
     const [logicOpen, setLogicOpen] = useState(false);
     const [payoffOpen, setPayoffOpen] = useState(false);
     const [founderOpen, setFounderOpen] = useState(false);
-    const [stats, setStats] = useState({ tokens: 12500000, chunks: 4500, runs: 120 });
 
-    // Fetch Real Stats (Mock for now, will connect to API next)
-    useEffect(() => {
-        const fetchStats = async () => {
-            try {
-                // In a real scenario, this would be: await fetch('/api/stats')
-                // For now, simpler mock or localStorage could be used, but user wants REAL tracking.
-                // We will implement the fetch logic assuming the backend exists on port 8000
-                // Use relative path for Vite proxy (dev) or Nginx (prod)
-                const res = await fetch('/stats').catch(() => null);
-                if (res && res.ok) {
-                    const data = await res.json();
-                    setStats(data);
-                }
-            } catch (e) {
-                console.log("Stats fetch failed (Endpoint might not be ready)");
-            }
-        };
-        fetchStats();
-        // Poll every 60s
-        const interval = setInterval(fetchStats, 60000);
-        return () => clearInterval(interval);
-    }, []);
 
 
 
@@ -242,43 +219,7 @@ export function LandingPage({ onStart }: LandingPageProps) {
 
             <div className="w-full h-px bg-gradient-to-r from-transparent via-amber-500/10 to-transparent" />
 
-            {/* STATS CARD (New Placement) */}
-            <section className="py-24 px-6 relative z-10">
-                <div className="max-w-4xl mx-auto">
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        className="bg-neutral-900/50 border border-white/10 rounded-3xl p-8 backdrop-blur text-center"
-                    >
-                        <div className="flex items-center justify-center gap-2 mb-6 text-amber-500 text-sm font-bold tracking-widest uppercase">
-                            <Globe className="w-4 h-4" /> Global Community Impact
-                        </div>
-                        <h2 className="text-3xl md:text-5xl font-bold mb-10">Used by AI Engineers Worldwide</h2>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-white/5">
-                            <div className="p-4">
-                                <div className="text-4xl font-mono font-bold text-white mb-2">{stats.tokens.toLocaleString()}</div>
-                                <div className="text-sm text-neutral-500 uppercase tracking-wider">Tokens Processed</div>
-                            </div>
-                            <div className="p-4">
-                                <div className="text-4xl font-mono font-bold text-white mb-2">{stats.chunks.toLocaleString()}</div>
-                                <div className="text-sm text-neutral-500 uppercase tracking-wider">Chunks Cooked</div>
-                            </div>
-                            <div className="p-4">
-                                <div className="text-4xl font-mono font-bold text-white mb-2">{stats.runs.toLocaleString()}</div>
-                                <div className="text-sm text-neutral-500 uppercase tracking-wider">Happy Cooks</div>
-                            </div>
-                        </div>
-
-                        <p className="mt-8 text-xs text-neutral-500">
-                            * Real-time metrics from the distributed LMTokenCook network.
-                        </p>
-                    </motion.div>
-                </div>
-            </section>
-
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-amber-500/10 to-transparent" />
 
             {/* NEW 3-COLUMN GRID SECTION (Replacing Payoff, Logic, Founder) */}
             <section className="py-32 px-6 relative z-10 max-w-7xl mx-auto">
@@ -455,25 +396,8 @@ export function LandingPage({ onStart }: LandingPageProps) {
                         </section>
 
                         <section>
-                            <h3 className="text-white font-bold mb-2">2. Data Collection (Global Stats)</h3>
-                            <p>To monitor the utility and adoption of the tool, the application may send anonymous, aggregate usage counters to our central dashboard.</p>
-                            <ul className="list-disc pl-5 space-y-2 mt-2 bg-white/5 p-4 rounded-lg">
-                                <li><strong>What we count:</strong> Incrementing integers (e.g., "+1 chunking run", "+450 tokens processed").</li>
-                                <li><strong>What we DO NOT count:</strong> Filenames, file contents, IP addresses, user agents, or any personally identifiable information (PII).</li>
-                                <li><strong>Purpose:</strong> To display the "Community Stats" bar on the landing page and validate development resources.</li>
-                            </ul>
-                        </section>
-
-                        <section>
-                            <h3 className="text-white font-bold mb-2">3. No Third-Party Tracking</h3>
+                            <h2 className="text-white font-bold mb-4">2. No Third-Party Tracking</h2>
                             <p>We do not use Google Analytics, Facebook Pixels, or third-party cookies. Your usage remains a private interaction between you and your computer.</p>
-                        </section>
-
-                        <section>
-                            <h3 className="text-white font-bold mb-2">4. Data Accuracy Disclaimer</h3>
-                            <div className="p-4 bg-amber-900/10 border border-amber-500/20 rounded-lg text-amber-200">
-                                <p>The "Community Stats" displayed are best-effort aggregate counters. As this is an independent open-source project, we cannot guarantee 100% precision in these numbers. Please view them as an indicative measure of our growing community rather than a certified data audit.</p>
-                            </div>
                         </section>
                     </div>
                 }

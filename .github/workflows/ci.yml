@@ -7,35 +7,6 @@ on:
     branches: [ "main" ]
 
 jobs:
-  backend-test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
-        cache: 'pip'
-
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r src/server/requirements.txt
-
-    - name: Lint with flake8
-      run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 src/server --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings.
-        flake8 src/server --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-
-    - name: Run Tests
-      env:
-        PYTHONPATH: ${{ github.workspace }}
-      run: |
-        python -m pytest tests/
-
   frontend-build:
     runs-on: ubuntu-latest
     defaults:

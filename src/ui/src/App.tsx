@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { FolderOpen, Play, FileText, Settings, Activity, Cpu, Download, XCircle, Github } from 'lucide-react'
+import { FolderOpen, Play, FileText, Settings, Activity, Cpu, Download, Github } from 'lucide-react'
 import clsx from 'clsx'
 import JSZip from 'jszip'
 import { saveAs } from 'file-saver'
@@ -241,17 +241,7 @@ function App() {
                 chunks: globalChunkIndex - 1
             })
 
-            // Report Stats to Backend (Fire & Forget)
-            // Use relative path so Vite proxy (dev) or Nginx (prod) can route to backend
-            fetch('/stats/increment', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    tokens: totalTokens,
-                    chunks: globalChunkIndex - 1,
-                    runs: 1
-                })
-            }).catch((err: unknown) => console.error("Stats reporting failed (Backend offline?)", err));
+
 
             setStatus("done")
             setMessage(`Cooking Complete! ${globalChunkIndex - 1} chunks created.`)
