@@ -15,7 +15,7 @@ COPY . .
 
 # 5. Security: Run as Non-Root User
 # The node image comes with a 'node' user (UID 1000)
-USER node
+# USER node
 
 # 6. Expose Port (Internal Docker Network)
 EXPOSE 5173

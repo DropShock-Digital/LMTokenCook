@@ -4,6 +4,7 @@ venv/
 .venv/
 env/
 ENV/
+**/node_modules/
 
 # --- Python Bytecode and Cache ---
 # Compiled Python files and cache directories

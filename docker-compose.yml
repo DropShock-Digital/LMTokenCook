@@ -28,8 +28,8 @@ services:
       - ./src/ui:/app
       - /app/node_modules # Isolate node_modules inside container
     environment:
-      # Browser runs outside container, so it hits localhost:8000 mapped port
       - VITE_API_URL=http://backend:8000
+    command: npm run dev -- --host
     depends_on:
       - backend
     networks:

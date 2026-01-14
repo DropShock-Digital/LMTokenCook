@@ -13,7 +13,7 @@
 **The AI Power-User's Context-Augmented Generation (CAG) Parsing Engine.**  
 *Chop giant codebases into bite-sized "servings" for Gemini 1.5 Pro, Claude 3 Opus, and ChatGPT.*
 
-[Features](#-features) • [Installation](#-installation) • [Architecture](#-architecture) • [How It Works](#-how-it-works)
+[Features](#-features) • [Philosophy](#-core-philosophy) • [Architecture](#-architecture) • [Installation](#-installation)
 
 </div>
 
@@ -23,19 +23,75 @@
 
 In the era of **Context-Augmented Generation (CAG)**, simply pasting code isn't enough. You need **precision**.
 
-Most AI engineers struggle with context windows. "Paste this file" turns into "Content too long." `LMTokenCook` solves this by treating your codebase like a dataset. It recursively scans your repository, counts tokens in real-time, and **intelligently segments** your code into "servings" that perfectly max out your chosen LLM's context window (e.g., 28k for ChatGPT, 60k for Gemini).
+Most AI engineers struggle with context windows. "Paste this file" turns into "Content too long." `LMTokenCook` solves this by treating your codebase like a dataset. It recursively scans your repository, counts tokens in real-time using model-native encoders, and **intelligently segments** your code into "servings" that perfectly max out your chosen LLM's context window (e.g., 128k for GPT-4o, 2M for Gemini 1.5 Pro).
 
-> "I couldn't paste 100k tokens of data into ChatGPT. So I built the workflow patching script that evolved into this tool."
+> "There is a fundamental gap between what AI models **can** do and what web interfaces **allow** you to do. We bridge that gap by 'cheating' the prompt window mechanics."
+
+---
+
+## 🧠 Core Philosophy: Context Augmented Generation
+
+This tool is built on three pillars of "Deep Context" reasoning:
+
+### 1. Deep Reasoning
+True reasoning requires global context. Instead of forcing an LLM to "search" for keywords (RAG), we let it "read" the whole book (CAG). This allows the model to:
+- Identify hidden trends and cyclic dependencies scattered across hundreds of files.
+- Eliminate "Lossy Summarization" by feeding raw source material directly.
+
+### 2. Better Code
+When the AI sees the full stack, it writes better code:
+- Refactor complex architectures with full visibility of up/downstream effects.
+- Generate integration tests that accurately reflect the logic of the entire repository.
+- Standardize coding patterns across legacy and modern directories simultaneously.
+
+### 3. Intelligent Servings
+We don't just dump text. We inject **sequential logic headers** into every chunk. This strictly instructs the AI to 'hold state' and wait for the final file before executing, preventing premature or fragmented answers.
+
+---
 
 ## 🚀 Features
 
-*   **🧠 Smart Context Headers**: Every chunk includes a header explaining *exactly* which file it came from and which part (e.g., "Part 1 of 3"), preserving model context retention.
-*   **🔒 Local-First & Private**: Powered by the **File System Access API**. Your code is processed entirely in your browser or local Docker container. No cloud uploads.
-*   **⚔️ Dual-Head Architecture**:
-    *   **Browser Mode (Glaze)**: Instant, zero-setup processing via WebAssembly.
-    *   **Server Mode (Iron)**: A FastAPI backend for heavy-duty, headless automation and statistics tracking.
-*   **📊 Token Analytics**: Visualize the "weight" of your repository before you even start cooking.
-*   **🐋 Docker Ready**: One command (`docker-compose up`) spins up the entire stack, including a secure Cloudflare Tunnel for remote access.
+*   **⚡ Smart Scan & Extract**: Recursively scans folders, filtering out non-text assets (images, binaries, `.git` bloat) to ensure high-value token density.
+*   **🔢 Structure & Tokenize**: Maps file hierarchy and counts tokens using `cl100k_base`—the exact encoding logic used by Frontier Models. ensures mathematical precision.
+*   **🧩 Dual-Head Architecture**:
+    *   **Browser Mode (Glaze)**: Instant, zero-setup processing via WebAssembly and the File System Access API.
+    *   **Server Mode (Iron)**: (Docker Only) A FastAPI backend for heavy-duty automation and statistics tracking.
+*   **🔒 Local-First Privacy**: Your code is processed entirely in your browser or local Docker container. No cloud uploads to third-party servers.
+*   **📊 Global Community Stats**: (Docker Only) Real-time tracking of tokens processed worldwide by the distributed network of "Cooks".
+
+---
+
+## 🧩 Architecture
+
+LMTokenCook follows a **Dual-Head Monolith** pattern, designed for maximum flexibility (Local Dev vs. Power User Deployment).
+
+### Tech Stack
+- **Frontend**: React 18 (Vite), TailwindCSS, Framer Motion for "Glassmorphism" UI.
+- **Backend**: Python 3.11, FastAPI, Uvicorn (Async).
+- **Tokenization**: `js-tiktoken` (WASM) on the client, `tiktoken` (Python) on the server.
+- **Container**: Docker Compose with Nginx Reverse Proxy and Cloudflare Tunnel integration.
+
+### System Topology
+```mermaid
+graph TD
+    User[User / Browser] -->|HTTP/443| Cloudflare[Cloudflare Tunnel]
+    Cloudflare -->|HTTP/80| Nginx[Active Nginx Proxy]
+    
+    subgraph "Docker Network"
+        Nginx -->|/api| Backend[FastAPI Server]
+        Nginx -->|/| Frontend[Vite/React Static]
+    end
+    
+    Backend -->|SQL| DB[(Stats.db)]
+    Frontend -- FSA API --> LocalDisk[Local File System]
+```
+
+### The "Cooking" Process (Sequence)
+1.  **Selection**: User selects a folder via the browser's native file picker.
+2.  **Access**: Browser grants read-only access to that specific directory.
+3.  **Tokenization**: Browser-side WASM tokenizer calculates weight per file.
+4.  **Chunking**: Algorithm slices content to fill the `Target Context Window`.
+5.  **Serving**: Resulting text files are zipped and offered for download.
 
 ---
 
@@ -50,121 +106,46 @@ cd LMTokenCook
 docker-compose up --build
 ```
 
-> **Access**: Open `http://localhost:5173`.
-> **Public**: Check container logs for your unique `https://*.trycloudflare.com` URL.
+**Access**: 
+- Local: `http://localhost:5173`
+- Public: Check container logs for your unique `https://*.trycloudflare.com` URL (if Tunnel is enabled).
 
 ### Option 2: The "Contributor" (Local Dev) 💻
 Run the stack natively for debugging or contributing.
 
 **Backend (Python):**
 ```bash
-# In /src/server
+cd src/server
 pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 ```
 
 **Frontend (React):**
 ```bash
-# In /src/ui
+cd src/ui
 npm install
 npm run dev
+# Tests
+npm test
 ```
 
 ---
 
-## 🧩 Architecture
-
-LMTokenCook follows a **Dual-Head Monolith** pattern. See [STRUCTURE.md](STRUCTURE.md) for a deep dive into the folder structure.
-
-### System Topology
-```mermaid
-graph TD
-    User[User / Browser] -->|HTTP/443| Cloudflare[Cloudflare Tunnel]
-    Cloudflare -->|HTTP/80| Nginx[Active Nginx Proxy]
-    
-    subgraph "Docker Network"
-        Nginx -->|/api| Backend[FastAPI Server]
-        Nginx -->|/| Frontend[Vite/React Static]
-    end
-    
-    Backend -->|SQL| DB[(Stats.db)]
-```
-
----
-
-## ⚙️ How It Works
-
-<details>
-<summary><strong>See the Data Flow (Click to Expand)</strong></summary>
-
-### The "Local Cook" Loop
-1.  **Selection**: You pick a folder via the browser's native file picker.
-2.  **Access**: The browser grants read-only access to that specific directory.
-3.  **Scan**: The app recursively walks the tree, ignoring patterns in `.dockerignore`.
-4.  **Tokenization**: An in-browser WASM tokenizer (TikToken) calculates weight.
-5.  **Chunking**: The algorithm slices files at line breaks to fill the `Target Context Window` (e.g., 28,000 tokens).
-6.  **Serving**: Resulting text files are zipped and offered for download.
-
-```mermaid
-sequenceDiagram
-    participant U as User
-    participant B as Browser (FSA API)
-    participant W as WebWorker (TikToken)
-    participant D as Disk (Local)
-
-    U->>B: Select Input Folder
-    B->>D: Request Read Permission
-    D-->>B: Permission Granted
-    
-    loop Recursively Scan
-        B->>D: Read File
-        D-->>B: Content
-    end
-
-    B->>W: Send Content for Tokenizing
-    W-->>B: Return Chunks + Stats
-    
-    B->>D: Write "Cooked" Files (Zip/Folder)
-    B->>U: Show "Cooking Complete"
-```
-</details>
-
----
-
-## 🧪 Testing & CI/CD
+## 🧪 Testing
 
 We maintain a rigorous standard of code quality.
 
-*   **Linting**: Strict `flake8` implementation for Python.
-*   **Testing**: `pytest` suite covers the core chunking logic to ensure no data loss.
-*   **CI**: GitHub Actions run on every push to `main`.
-
-Run tests locally:
-```bash
-python -m pytest tests/
-```
+*   **Frontend**: `vitest` suite covers the core chunking logic to ensure no data loss during the slicing process.
+*   **Backend**: `pytest` for API endpoints and stats aggregation.
+*   **CI**: GitHub Actions run on every push to `main` to verify build integrity.
 
 ---
 
-## 🤝 Contributing
-
-We welcome Pull Requests! Please see the [Issues](https://github.com/DropShock-Digital/LMTokenCook/issues) tab for "Good First Issues".
-
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
-
----
-
-## 📜 License
+## 📝 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
----
-
 <div align="center">
   <strong>Built with 🧡 by DropShock Digital</strong><br>
-  <em>Professional AI Solutions</em>
+  <em>Professional AI Solutions • Founder: Steven Seagondollar</em>
 </div>
